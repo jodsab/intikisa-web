@@ -1,0 +1,27 @@
+.navbar_container{
+
+    .navbar_logo{
+        display: flex;
+        align-items: center;
+
+        .navbar_nav_menu{
+            .nav_list{
+                display: flex;
+                list-style-type: none;
+                li{
+                    padding: 0 10px;
+                }
+                li:hover{
+                    background-color: rgb(127, 193, 255);
+                    cursor: pointer;
+                }
+                li:active{
+                    background-color: rgb(105, 105, 105);
+                }
+            }
+        }
+    }
+
+    
+
+}
