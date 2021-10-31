@@ -1,0 +1,17 @@
+
+[
+    {
+        "id": 1,
+        "section": "Tiendas y Servicios",
+        "sub_section": "Zonas de reparto"
+    },
+    {
+        "id": 2,
+        "section": "Atención al cliente",
+        "sub_section": "Contáctanos"
+    },
+    {
+        "id": 3,
+        "section": "Políticas y términos"
+    }
+]
