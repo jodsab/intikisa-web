@@ -1,7 +1,9 @@
+import { FaFacebook } from "react-icons/fa";
+
 function Footer() {
     return(
         <div>
-            
+            <FaFacebook />
         </div>
     )
 }
