@@ -20,7 +20,7 @@ function Navbar() {
                 </div>
             </div>
             <div className='navbar_cuenta'>
-
+                <h1>Iniciar Sesión</h1>
             </div>
         </div>
     )
