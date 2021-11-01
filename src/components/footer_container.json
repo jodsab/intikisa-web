@@ -10,21 +10,21 @@
     {
         "id": 2,
         "section": "Atención al cliente",
-        "sub_section": "Contáctanos",
-        "sub_section2": "Comunicate a intikisa.pe@gmail.com"
+        "sub_section4": "Contáctanos",
+        "sub_section5": "Comunicate a intikisa.pe@gmail.com"
     },
     {
         "id": 3,
         "section": "Políticas y términos",
-        "sub_section2": "Políticas de envío",
-        "sub_section3": "Políticas de reembolso",
-        "sub_section4": "Políticas de privacidad"
+        "sub_section": "Políticas de envío",
+        "sub_section2": "Políticas de reembolso",
+        "sub_section3": "Políticas de privacidad"
     },
     {
-        "id": 1,
+        "id": 4,
         "section": "Zonas de reparto",
-        "sub_section": "Lima, Perú",
-        "sub_section2": "Miami, Florida"
+        "sub_section4": "Lima, Perú",
+        "sub_section5": "Miami, Florida"
 
     }
 ]

@@ -23,24 +23,28 @@ function Footer() {
                                 <p><a href="">{item.sub_section}</a></p>
                                 <p><a href="">{item.sub_section2}</a></p>
                                 <p><a href="">{item.sub_section3}</a></p>
-                                <p><a href="">{item.sub_section4}</a></p>
+                                <p>{item.sub_section4}</p>
+                                <p>{item.sub_section5}</p> 
                              </li> 
                         ))
                         
-                        }
-                        <div className="redes_sociales_container">
-                        <a href="https://www.facebook.com">
-                        <FaFacebook className="rs_icon"/>
-                        </a>
-                        <a href="https://www.instagram.com">
-                        <SiInstagram className="rs_icon"/>
-                        </a>
-                        <a href="https://www.tiktok.com">
-                        <FaTiktok className="rs_icon"/>
-                        </a>
-                       </div> 
+                        }      
+                            <li>
+                              <h1>Nuestras redes</h1>
+                              <h2></h2>
+                              <div className="redes_sociales_container">
+                               <a href="https://www.facebook.com">
+                               <FaFacebook className="rs_icon"/>
+                               </a>
+                               <a href="https://www.instagram.com">
+                               <SiInstagram className="rs_icon"/>
+                               </a>
+                               <a href="https://www.tiktok.com">
+                               <FaTiktok className="rs_icon"/>
+                               </a>
+                               </div> 
+                            </li>
          </ul>
- 
         </div>
         <div className="bottom_footer_container">
         <div className="derechos_container">
