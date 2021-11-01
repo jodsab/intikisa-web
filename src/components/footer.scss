@@ -18,8 +18,15 @@
         .options_list h1 {
             font-size: 15px;
         }
-        .options_list p {
+
+        .options_list p a {
+            text-decoration: none;
+            color: white;
             font-size: 14px;
+        }
+        .options_list p a:hover {
+            color: rgb(84, 224, 138);
+            cursor: pointer;
         }
         .options_list h2 {
             border-bottom: 1px solid rgb(84, 224, 138);
@@ -31,13 +38,18 @@
             justify-items: center;
             .rs_icon{
                 margin: 10px;
+                color: white;
+            }
+            .rs_icon:hover {
+               color: rgb(84, 224, 138);
             }
         }
     }
     .bottom_footer_container{
         display: flex;
-        justify-content: space-around;
         font-size: 13px;
+        align-items: center;
+        /*cel flex-direction: column; */
         .derechos_container {
             display: flex;
             align-items: center;

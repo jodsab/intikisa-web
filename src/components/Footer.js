@@ -20,25 +20,31 @@ function Footer() {
                              <li key={item.id}>
                                 <h1>{item.section}</h1>
                                 <h2></h2>
-                                <p>{item.sub_section}</p>
-                                <p>{item.sub_section2}</p>
-                                <p>{item.sub_section3}</p>
-                                <p>{item.sub_section4}</p>
+                                <p><a href="">{item.sub_section}</a></p>
+                                <p><a href="">{item.sub_section2}</a></p>
+                                <p><a href="">{item.sub_section3}</a></p>
+                                <p><a href="">{item.sub_section4}</a></p>
                              </li> 
                         ))
                         
                         }
                         <div className="redes_sociales_container">
+                        <a href="https://www.facebook.com">
                         <FaFacebook className="rs_icon"/>
+                        </a>
+                        <a href="https://www.instagram.com">
                         <SiInstagram className="rs_icon"/>
+                        </a>
+                        <a href="https://www.tiktok.com">
                         <FaTiktok className="rs_icon"/>
+                        </a>
                        </div> 
          </ul>
  
         </div>
         <div className="bottom_footer_container">
         <div className="derechos_container">
-            <p>Copyright © Intikisa Corp. Todos los derechos reservados 2021.</p>
+            <p>Copyright © Intikisa Corp. 2021 - Todos los derechos reservados.</p>
          </div>
          <div className="metodos_pago_container">
          <RiVisaFill className="rs_icon" />

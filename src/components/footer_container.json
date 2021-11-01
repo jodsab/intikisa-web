@@ -2,18 +2,16 @@
 [
     {
         "id": 1,
-        "section": "Tiendas y Servicios",
-        "sub_section": "Zonas de reparto",
-        "sub_section2": "Lima, Perú",
-        "sub_section3": "Miami, Florida"
+        "section": "Compañia",
+        "sub_section": "¿Quienes somos?",
+        "sub_section2": "Únete a nuestra travesia"
 
     },
     {
         "id": 2,
         "section": "Atención al cliente",
         "sub_section": "Contáctanos",
-        "sub_section2": "Puedes comunicarte a",
-        "sub_section3": "intikisa.pe@gmail.com"
+        "sub_section2": "Comunicate a intikisa.pe@gmail.com"
     },
     {
         "id": 3,
@@ -21,5 +19,12 @@
         "sub_section2": "Políticas de envío",
         "sub_section3": "Políticas de reembolso",
         "sub_section4": "Políticas de privacidad"
+    },
+    {
+        "id": 1,
+        "section": "Zonas de reparto",
+        "sub_section": "Lima, Perú",
+        "sub_section2": "Miami, Florida"
+
     }
 ]
