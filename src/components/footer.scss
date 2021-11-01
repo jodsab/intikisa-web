@@ -3,40 +3,55 @@
     flex-direction: column;
     align-items: center;
     box-shadow: 0 0 30px #c7c5c5;
-    background-color: #1b1b1b;
+    background-color: #2d2d2d;
     color: #f1f1f1;
-    
-
-    .redes_sociales_container{
+    .options_div{
         display: flex;
-        align-items: center;
-        .rs_icon{
-            margin: 10px;
+        justify-content: center;
+        width: 80%;
+        margin: auto;
+        .options_list {
+            display: flex;
+            list-style-type: none;
+            gap: 100px;
+        }
+        .options_list h1 {
+            font-size: 15px;
+        }
+        .options_list p {
+            font-size: 14px;
+        }
+        .options_list h2 {
+            border-bottom: 1px solid rgb(84, 224, 138);
+            width: 110px;
+        }
+        .redes_sociales_container{
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            .rs_icon{
+                margin: 10px;
+            }
         }
     }
-    .redes_sociales_container p {
+    .bottom_footer_container{
+        display: flex;
+        justify-content: space-around;
         font-size: 13px;
+        .derechos_container {
+            display: flex;
+            align-items: center;
+            justify-items: center;
+            .derechos_container p{
+                font-size: 13px;
+            }
+        }
+        .metodos_pago_container {
+            .rs_icon {
+                margin: 10px;
+                font-size: 50px;
+            }
+        }
     }
 }
 
-.options_div{
-    display: flex;
-    justify-content: center;
-    width: 80%;
-    margin: auto;
-    .options_list {
-        display: flex;
-        list-style-type: none;
-        gap: 100px;
-    }
-    .options_list h1 {
-        font-size: 15px;
-    }
-    .options_list p {
-        font-size: 14px;
-    }
-    .options_list h2 {
-        border-bottom: 1px solid rgb(84, 224, 138);
-        width: 110px;
-    }
-}
