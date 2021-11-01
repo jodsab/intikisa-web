@@ -16,7 +16,11 @@ function Footer() {
                         footeroptions.map((item) => (
                              <li key={item.id}>
                                 <h1>{item.section}</h1>
+                                <h2>{item.half_border}</h2>
                                 <p>{item.sub_section}</p>
+                                <p>{item.sub_section2}</p>
+                                <p>{item.sub_section3}</p>
+                                <p>{item.sub_section4}</p>
                              </li>
                         ))
                         }
@@ -27,6 +31,7 @@ function Footer() {
             <FaFacebook className="rs_icon"/>
             <SiInstagram className="rs_icon"/>
             <FaTiktok className="rs_icon"/>
+            <p>Copyright © Intikisa Corp. Todos los derechos reservados 2021.</p>
          </div>       
         </div>
         /*<div>
