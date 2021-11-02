@@ -8,7 +8,9 @@ function Navbar() {
 
     return(
         <div className='navbar_container'>
+            <a href="">
             <img src={require('../img/navbar/logointikisa.png').default} />
+            </a>
                 <div className='navbar_nav_menu'>
                     <ul className='nav_list'>
                         {
