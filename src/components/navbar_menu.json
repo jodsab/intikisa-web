@@ -1,23 +1,14 @@
 [
     {
         "id": 1,
-        "section": "CARTA"
+        "section": "Productos"
     },
     {
         "id": 2,
-        "section": "PROMOCIONES"
+        "section": "Promociones"
     },
     {
         "id": 3,
-        "section": "¿QUIENES SOMOS?"
-    },
-    {
-        "id": 4,
-        "section": "RECETAS"
-    },
-    {
-        "id":5,
-        "section": "PUNTOS DE VENTA"
+        "section": "Recetas"
     }
-    
 ]
