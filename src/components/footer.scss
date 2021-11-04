@@ -9,8 +9,10 @@
         width: 80%;
         .options_list {
             display: grid;
+            text-align: center;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             list-style-type: none;
+            padding: 0;
         }
 
         .options_list h1 {
@@ -19,7 +21,7 @@
             font-weight: 700;
         }
         .options_list h2 {
-            width: 110px;
+            width: 50%;
             border-bottom: 1px solid rgb(84, 224, 138);
         }
         .options_list p {
@@ -36,7 +38,8 @@
         }
         .redes_sociales_container{
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
+            
             .rs_icon{
                 margin: 10px;
                 color: white;
