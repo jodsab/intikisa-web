@@ -41,20 +41,24 @@ function Footer() {
                                <FaTiktok className="rs_icon"/>
                                </a>
                                </div> 
-                            </li>
+                            </li>                  
          </ul>
         </div>
-        <div className="bottom_footer_container">
+        <div >
+            <div className="bottom_footer_container" >
         <div className="derechos_container">
-            <p>Copyright © Intikisa Corp. 2021 - Todos los derechos reservados.</p>
-         </div>
-         <div className="metodos_pago_container">
-         <RiVisaFill className="rs_icon" />
-         <FaCcMastercard className="rs_icon"/>
-         <FaCcPaypal className="rs_icon"/>
-             </div>
-        </div>     
+            <p> © 2021 Intikisa Corp.</p> 
+            
+            <p>Todos los derechos reservados.</p>
         </div>
+        <div className="metodos_pago">
+         <RiVisaFill className="rs_icon" />
+         <FaCcPaypal className="rs_icon"/>
+         <FaCcMastercard className="rs_icon"/>
+         </div>
+        </div>  
+        </div>
+        </div>   
     )
 }
 
