@@ -18,8 +18,7 @@ function Footer() {
                     {
                         footeroptions.map((item) => (
                              <li key={item.id}>
-                                <h1>{item.section}</h1>
-                                <h2></h2>
+                                <strong>{item.section}</strong>
                                 <p><a href="" target="_blank">{item.sub_section}</a></p>
                                 <p><a href="" target="_blank">{item.sub_section2}</a></p>
                                 <p><a href="" target="_blank">{item.sub_section3}</a></p>
@@ -30,32 +29,31 @@ function Footer() {
                         
                         }      
                             <li>
-                              <h1>Nuestras redes</h1>
-                              <h2></h2>
+                              <strong>Nuestras redes</strong>
                               <div className="redes_sociales_container">
-                               <a href="https://www.facebook.com" target="_blank" >
-                               <FaFacebook className="rs_icon"/>
-                               </a>
-                               <a href="https://www.instagram.com" target="_blank">
-                               <SiInstagram className="rs_icon"/>
-                               </a>
-                               <a href="https://www.tiktok.com" target="_blank">
-                               <FaTiktok className="rs_icon"/>
-                               </a>
+                                <a href="https://www.facebook.com" target="_blank" >
+                                    <FaFacebook className="rs_icon"/>
+                                </a>
+                                <a href="https://www.instagram.com" target="_blank">
+                                    <SiInstagram className="rs_icon"/>
+                                </a>
+                                <a href="https://www.tiktok.com" target="_blank">
+                                    <FaTiktok className="rs_icon"/>
+                                </a>
                                </div> 
                             </li>                  
          </ul>
         </div>
         <div className="bottom_footer_container" >
-         <div className="derechos_container">
-            <span> © 2021 Intikisa Corp. </span> 
-            <span>Todos los derechos reservados.</span>
-         </div> 
-        <div className="metodos_pago">
-         <RiVisaFill className="rs_icon" />
-         <FaCcPaypal className="rs_icon"/>
-         <FaCcMastercard className="rs_icon"/>
-         </div>
+            <div className="derechos_container">
+                <span> © 2021 Intikisa Corp. </span> 
+                <span>Todos los derechos reservados.</span>
+            </div> 
+            <div className="metodos_pago">
+                <RiVisaFill className="rs_icon" />
+                <FaCcPaypal className="rs_icon"/>
+                <FaCcMastercard className="rs_icon"/>
+            </div>
         </div>
         </div>   
     )

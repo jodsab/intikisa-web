@@ -7,19 +7,20 @@
     color: #f1f1f1;
     .options_div{
         width: 80%;
+
+
         .options_list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             list-style-type: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            justify-items: center;
         }
 
-        .options_list h1 {
-            font-size: 14px;
-            color: #f1f1f1;
-            font-weight: 700;
-        }
-        .options_list h2 {
-            width: 110px;
+        .options_list strong {
+            padding: 4px;
             border-bottom: 1px solid rgb(84, 224, 138);
         }
         .options_list p {
@@ -36,7 +37,9 @@
         }
         .redes_sociales_container{
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
+            margin: 5px;
+
             .rs_icon{
                 margin: 10px;
                 color: white;
@@ -47,12 +50,12 @@
         }
     }
     .bottom_footer_container{
-        width: 80%;
-        align-items: center;
-        justify-content: space-between;
         font-size: 13px;
         text-align: center;
-        margin-bottom: 20px;
+        margin: 30px 0 30px 0;
+        display: flex;
+        flex-direction: column-reverse;
+
         .derechos_container {
             gap: 5px;
         }
@@ -63,27 +66,3 @@
             }
     }
 }
-
-@media screen and (max-width: 360px) {
-    .bottom_footer_container {
-        justify-content: stretch;
-    }
-    .derechos_container span {
-        display: flex;
-        justify-content: center;
-    }
-    .logo_footer {
-        width: 120px;
-    }
-    .metodos_pago {
-        display: grid;
-        justify-items: center;
-    }
-
-}
-@media screen and (min-width: 1000px){
-    .bottom_footer_container {
-        display: flex;
-    }
-}
-    
