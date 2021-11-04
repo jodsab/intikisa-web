@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/intikisa-web/static/css/main.95230bdf.chunk.css",
-    "main.js": "/intikisa-web/static/js/main.254d274b.chunk.js",
-    "main.js.map": "/intikisa-web/static/js/main.254d274b.chunk.js.map",
+    "main.css": "/intikisa-web/static/css/main.35dee4c4.chunk.css",
+    "main.js": "/intikisa-web/static/js/main.00443dfe.chunk.js",
+    "main.js.map": "/intikisa-web/static/js/main.00443dfe.chunk.js.map",
     "runtime-main.js": "/intikisa-web/static/js/runtime-main.1b30d4d4.js",
     "runtime-main.js.map": "/intikisa-web/static/js/runtime-main.1b30d4d4.js.map",
     "static/js/2.1b7c746b.chunk.js": "/intikisa-web/static/js/2.1b7c746b.chunk.js",
     "static/js/2.1b7c746b.chunk.js.map": "/intikisa-web/static/js/2.1b7c746b.chunk.js.map",
     "index.html": "/intikisa-web/index.html",
-    "static/css/main.95230bdf.chunk.css.map": "/intikisa-web/static/css/main.95230bdf.chunk.css.map",
+    "static/css/main.35dee4c4.chunk.css.map": "/intikisa-web/static/css/main.35dee4c4.chunk.css.map",
     "static/js/2.1b7c746b.chunk.js.LICENSE.txt": "/intikisa-web/static/js/2.1b7c746b.chunk.js.LICENSE.txt",
     "static/media/inkagoldenmix.jpg": "/intikisa-web/static/media/inkagoldenmix.7c7de819.jpg",
     "static/media/intikisachocolate.jpg": "/intikisa-web/static/media/intikisachocolate.37908188.jpg",
@@ -20,7 +20,7 @@
   "entrypoints": [
     "static/js/runtime-main.1b30d4d4.js",
     "static/js/2.1b7c746b.chunk.js",
-    "static/css/main.95230bdf.chunk.css",
-    "static/js/main.254d274b.chunk.js"
+    "static/css/main.35dee4c4.chunk.css",
+    "static/js/main.00443dfe.chunk.js"
   ]
 }
