@@ -3,36 +3,42 @@
         "id": 1,
         "name": "MACHU PICCHU GOLDEN MIX",
         "ingredientes": "MACA, QUINUA, CACAO",
+        "src": "machupicchugoldenmix.jpg",
         "propiedades": "Machu picchu Golden mix es una mezcla de sabores andinos y de la amazonia de nuestro Perú; La quinua con su alto valor nutritivo, la maca con sus fuentes de vitaminas y el cacao con su fuente energética hacen de este mix el indicado para tu alimentación diaria por sus innumerables beneficios."
     },
     {
         "id": 2,
         "name": "INKA GOLDEN MIX",
         "ingredientes": "TARWI, MACA, CACAO",
+        "src": "inkagoldenmix.jpg",
         "propiedades": "INKA GOLDEN MIX es una mezcla de sabores andinos de nuestro Perú; El Tarwi con su fuente proteínas, la maca con sus fuentes de vitaminas y el cacao con su fuente energética hacen de este mix el indicado para tu alimentación diaria por sus innumerables beneficios."
     },
     {
         "id": 3,
         "name": "MACA GELATINIZADA EN POLVO",
         "ingredientes": "MACA AMARILLA",
+        "src": "macagelatinizada.jpg",
         "propiedades": "La maca gelatinizada en polvo de Intikisa Perú está elaborada con 100% maca andina el cual está lleno de propiedades y beneficios para nuestra salud, además de impulsar nuestra energía."
     },
     {
         "id": 4,
         "name": "ZAPALLO LOCHE DESHIDRATADO",
         "ingredientes": "ZAPALLO LOCHE",
+        "src": "zapallolochedeshidratado.jpg",
         "propiedades": "Este producto contiene 100% zapallo loche y no cuenta con preservantes, fue elaborado con la idea de que nuestros clientes puedan agregarlo con practicidad a las comidas de su dia a dia."
     },
     {
         "id": 5,
         "name": "ZAPALLO LOCHE EN PASTA",
         "ingredientes": "ZAPALLO LOCHE",
+        "src": "zapallolochenpasta.jpg",
         "propiedades": "Este producto contiene 100% zapallo loche y no cuenta con preservantes, fue elaborado en presentación de pasta con la idea de que nuestros clientes puedan agregarlo con practicidad a las comidas de su dia a dia."
     },
     {
         "id": 6,
         "name": "INTIKISA CHOCOLATE DE TAZA",
         "ingredientes": "100 % CACAO",
+        "src": "intikisachocolate.jpg",
         "propiedades": "Intikisa chocolate de taza contiene 100% cacao lo cual trae muchos beneficios a nuestra salud, ya que presenta una gran concentración de antioxidantes. Además es un alimento rico en magnesio y hierro."
     }
 ]
