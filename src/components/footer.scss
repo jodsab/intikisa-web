@@ -7,8 +7,6 @@
     color: #f1f1f1;
     .options_div{
         width: 80%;
-        margin: auto;
-        text-align: center;
         .options_list {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -19,6 +17,10 @@
             font-size: 14px;
             color: #f1f1f1;
             font-weight: 700;
+        }
+        .options_list h2 {
+            width: 45%;
+            border-bottom: 1px solid rgb(84, 224, 138);
         }
         .options_list p {
             font-size: 13px;
@@ -34,7 +36,7 @@
         }
         .redes_sociales_container{
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             .rs_icon{
                 margin: 10px;
                 color: white;
@@ -45,30 +47,43 @@
         }
     }
     .bottom_footer_container{
-        display: flex;
+        width: 80%;
         align-items: center;
-        
-        gap: 5px;
+        justify-content: space-between;
         font-size: 13px;
         text-align: center;
-        .derechos_container span {
+        margin-bottom: 20px;
+        .derechos_container {
             gap: 5px;
         }
          
             .rs_icon {
-                margin: 7.5px;
+                margin: 5px;
                 font-size: 50px;
             }
     }
 }
 
-@media screen and (max-width: 600px) {
-    .derechos_container{
-        display: grid;
-        gap: 10px;
+@media screen and (max-width: 300px) {
+    .bottom_footer_container {
+        justify-content: stretch;
+    }
+    .derechos_container span {
+        display: flex;
+        justify-content: center;
+    }
+    .logo_footer {
+        width: 120px;
     }
     .metodos_pago {
         display: grid;
         justify-items: center;
     }
+
 }
+@media screen and (min-width: 1000px){
+    .bottom_footer_container {
+        display: flex;
+    }
+}
+    
