@@ -45,21 +45,30 @@
         }
     }
     .bottom_footer_container{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        display: flex;
         align-items: center;
-        justify-items: center;
+        
         gap: 5px;
         font-size: 13px;
-        .derechos_container {
-            display: flex;
+        text-align: center;
+        .derechos_container span {
             gap: 5px;
         }
          
             .rs_icon {
-                margin: 10px;
+                margin: 7.5px;
                 font-size: 50px;
             }
     }
 }
 
+@media screen and (max-width: 600px) {
+    .derechos_container{
+        display: grid;
+        gap: 10px;
+    }
+    .metodos_pago {
+        display: grid;
+        justify-items: center;
+    }
+}

@@ -44,20 +44,17 @@ function Footer() {
                             </li>                  
          </ul>
         </div>
-        <div >
-            <div className="bottom_footer_container" >
-        <div className="derechos_container">
-            <p> © 2021 Intikisa Corp.</p> 
-            
-            <p>Todos los derechos reservados.</p>
-        </div>
-        <div className="metodos_pago">
+        <div className="bottom_footer_container" >
+         <div className="derechos_container">
+            <span> © 2021 Intikisa Corp. </span> 
+            <span>Todos los derechos reservados.</span>
+         </div>
+         <div className="metodos_pago">
          <RiVisaFill className="rs_icon" />
          <FaCcPaypal className="rs_icon"/>
          <FaCcMastercard className="rs_icon"/>
          </div>
         </div>  
-        </div>
         </div>   
     )
 }
