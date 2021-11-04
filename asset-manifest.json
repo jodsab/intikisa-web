@@ -1,20 +1,26 @@
 {
   "files": {
-    "main.css": "/intikisa-web/static/css/main.4c98e3cc.chunk.css",
-    "main.js": "/intikisa-web/static/js/main.c575ba7b.chunk.js",
-    "main.js.map": "/intikisa-web/static/js/main.c575ba7b.chunk.js.map",
+    "main.css": "/intikisa-web/static/css/main.032ab6a6.chunk.css",
+    "main.js": "/intikisa-web/static/js/main.b2839753.chunk.js",
+    "main.js.map": "/intikisa-web/static/js/main.b2839753.chunk.js.map",
     "runtime-main.js": "/intikisa-web/static/js/runtime-main.1b30d4d4.js",
     "runtime-main.js.map": "/intikisa-web/static/js/runtime-main.1b30d4d4.js.map",
     "static/js/2.d39f3fcd.chunk.js": "/intikisa-web/static/js/2.d39f3fcd.chunk.js",
     "static/js/2.d39f3fcd.chunk.js.map": "/intikisa-web/static/js/2.d39f3fcd.chunk.js.map",
     "index.html": "/intikisa-web/index.html",
-    "static/css/main.4c98e3cc.chunk.css.map": "/intikisa-web/static/css/main.4c98e3cc.chunk.css.map",
-    "static/js/2.d39f3fcd.chunk.js.LICENSE.txt": "/intikisa-web/static/js/2.d39f3fcd.chunk.js.LICENSE.txt"
+    "static/css/main.032ab6a6.chunk.css.map": "/intikisa-web/static/css/main.032ab6a6.chunk.css.map",
+    "static/js/2.d39f3fcd.chunk.js.LICENSE.txt": "/intikisa-web/static/js/2.d39f3fcd.chunk.js.LICENSE.txt",
+    "static/media/inkagoldenmix.jpg": "/intikisa-web/static/media/inkagoldenmix.7c7de819.jpg",
+    "static/media/intikisachocolate.jpg": "/intikisa-web/static/media/intikisachocolate.37908188.jpg",
+    "static/media/macagelatinizada.jpg": "/intikisa-web/static/media/macagelatinizada.008a4f8d.jpg",
+    "static/media/machupicchugoldenmix.jpg": "/intikisa-web/static/media/machupicchugoldenmix.202f6f44.jpg",
+    "static/media/zapallolochedeshidratado.jpg": "/intikisa-web/static/media/zapallolochedeshidratado.085f313e.jpg",
+    "static/media/zapallolochenpasta.jpg": "/intikisa-web/static/media/zapallolochenpasta.be93b1f6.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.1b30d4d4.js",
     "static/js/2.d39f3fcd.chunk.js",
-    "static/css/main.4c98e3cc.chunk.css",
-    "static/js/main.c575ba7b.chunk.js"
+    "static/css/main.032ab6a6.chunk.css",
+    "static/js/main.b2839753.chunk.js"
   ]
 }
