@@ -8,8 +8,9 @@
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 30px;
         list-style-type: none;
-        width: 70%;
+        width: 65%;
         margin: auto;
+        padding: 0;
 
         .producto{
             display: flex;
@@ -19,36 +20,43 @@
             border-radius: 9px;
             width: 280px;
 
-            .img_producto{
-                width: 100%;
-                margin: auto;
-                height: 250px;
-                object-fit: cover;
-            }
+            .cuadro_producto{
 
-            .producto_info{
-                padding: 8px;
-                border: 1px solid black;
-                h5{
-                    margin: 9px;
-                    font-weight: 900;
-                    font-size: 14px;
+                .img_producto{
+                    width: 100%;
+                    margin: auto;
+                    height: 250px;
+                    object-fit: cover;
                 }
 
-                .boton_producto{
-                    color: white;
-                    font-weight: 900;
-                    background-color: rgb(108, 216, 0);
-                    border: none;
-                    padding: 6px 20px;
-                    border-radius: 16px;
-                }
-                
-                .boton_producto:hover{
-                    cursor: pointer;
-                    background-color: rgb(93, 185, 0);
+                .producto_info{
+                    padding: 8px;
+                    border: 1px solid black;
+                    h5{
+                        margin: 9px;
+                        font-weight: 900;
+                        font-size: 14px;
+                    }
+    
+                    .boton_producto{
+                        color: white;
+                        font-weight: 900;
+                        background-color: rgb(108, 216, 0);
+                        border: none;
+                        padding: 6px 20px;
+                        border-radius: 16px;
+                    }
+                    
+                    .boton_producto:hover{
+                        cursor: pointer;
+                        background-color: rgb(93, 185, 0);
+                    }
                 }
             }
+
+            
+
+            
         }
 
         .producto:hover{
@@ -58,3 +66,7 @@
         
     }
 }
+
+@media only screen and (max-width: 600px) {
+    
+  }

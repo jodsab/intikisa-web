@@ -1,5 +1,6 @@
-import './contenido.scss';
 import productos from '../productos/productos.json'
+
+import './contenido.scss';
 
 function Contenido() {
     return(
