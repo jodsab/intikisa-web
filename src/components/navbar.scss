@@ -77,23 +77,22 @@
 
         justify-content: space-between;
 
+        .img_logo{
+            width: 120px;
+        }
+
         .navbar_nav{
             display: flex;
             flex-direction: column-reverse;
-            position: relative;
+            position: absolute;
             top: 120px;
-            left: -730px;
+            left: -100%;
             transition: all .5s ease-in-out;
 
-            .navbar_nav_menu{
-                border-bottom: 1px solid black;
-            }
         }
 
         .navbar_nav.active{
-            position: relative;
-            top: 120px;
-            left: -50px;
+            left: 25%;
             align-items: center;
         }
 

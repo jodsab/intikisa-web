@@ -20,7 +20,7 @@ function Navbar() {
     return(
         <div className='navbar_container'>
             <div>
-                <img src={require('../img/navbar/logointikisa.png').default} />
+                <img src={require('../img/navbar/logointikisa.png').default} className='img_logo'/>
             </div>
             <div className={sidebar ? 'navbar_nav active' : 'navbar_nav'} >
                 <div className='navbar_nav_menu'>
