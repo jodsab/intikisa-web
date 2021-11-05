@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/intikisa-web/static/css/main.9af6c496.chunk.css",
-    "main.js": "/intikisa-web/static/js/main.3edbefcc.chunk.js",
-    "main.js.map": "/intikisa-web/static/js/main.3edbefcc.chunk.js.map",
+    "main.css": "/intikisa-web/static/css/main.52822342.chunk.css",
+    "main.js": "/intikisa-web/static/js/main.b69c4580.chunk.js",
+    "main.js.map": "/intikisa-web/static/js/main.b69c4580.chunk.js.map",
     "runtime-main.js": "/intikisa-web/static/js/runtime-main.1b30d4d4.js",
     "runtime-main.js.map": "/intikisa-web/static/js/runtime-main.1b30d4d4.js.map",
     "static/js/2.1b7c746b.chunk.js": "/intikisa-web/static/js/2.1b7c746b.chunk.js",
     "static/js/2.1b7c746b.chunk.js.map": "/intikisa-web/static/js/2.1b7c746b.chunk.js.map",
     "index.html": "/intikisa-web/index.html",
-    "static/css/main.9af6c496.chunk.css.map": "/intikisa-web/static/css/main.9af6c496.chunk.css.map",
+    "static/css/main.52822342.chunk.css.map": "/intikisa-web/static/css/main.52822342.chunk.css.map",
     "static/js/2.1b7c746b.chunk.js.LICENSE.txt": "/intikisa-web/static/js/2.1b7c746b.chunk.js.LICENSE.txt",
     "static/media/ARANDANOS IMAGEN 2.png": "/intikisa-web/static/media/ARANDANOS IMAGEN 2.367801c8.png",
     "static/media/ARANDANOS IMAGEN 3.png": "/intikisa-web/static/media/ARANDANOS IMAGEN 3.22766e82.png",
@@ -30,7 +30,7 @@
   "entrypoints": [
     "static/js/runtime-main.1b30d4d4.js",
     "static/js/2.1b7c746b.chunk.js",
-    "static/css/main.9af6c496.chunk.css",
-    "static/js/main.3edbefcc.chunk.js"
+    "static/css/main.52822342.chunk.css",
+    "static/js/main.b69c4580.chunk.js"
   ]
 }
