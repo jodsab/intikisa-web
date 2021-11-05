@@ -1,6 +1,7 @@
 .contenido_container{
     height: 100%;
     padding: 70px 0;
+    font-family: Arial, Helvetica, sans-serif;
 
     .lista_productos{
         display: grid;
@@ -31,17 +32,17 @@
 
                 .producto_info{
                     padding: 8px;
-                    border: 1px solid black;
+                    
                     h5{
                         margin: 9px;
-                        font-weight: 900;
+                        font-weight: 600;
                         font-size: 14px;
                     }
     
                     .boton_producto{
                         color: white;
-                        font-weight: 900;
-                        background-color: rgb(108, 216, 0);
+                        font-weight: 400;
+                        background-color: rgb(129, 68, 11);
                         border: none;
                         padding: 6px 20px;
                         border-radius: 16px;
