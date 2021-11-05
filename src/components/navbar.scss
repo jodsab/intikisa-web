@@ -85,15 +85,16 @@
             display: flex;
             flex-direction: column-reverse;
             position: absolute;
-            top: 120px;
+            top: 80px;
             left: -100%;
             transition: all .5s ease-in-out;
-
+            background-color: white;
         }
 
         .navbar_nav.active{
-            left: 25%;
+            left: 0;
             align-items: center;
+            width: 100vw;
         }
 
         .menu_options{
