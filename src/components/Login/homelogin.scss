@@ -1,0 +1,71 @@
+.welcome_container{
+    display: flex;
+    align-items: center;
+
+    .user-space{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        .user{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .user-display{
+            text-align: center;
+            display: none;
+            transition: all .5 ease-in-out;
+        }
+
+        .user-display{
+            display: block;
+            top:80px;
+        }
+    }
+
+    .logout-btn{
+        border: none;
+        color: blue;
+        background: none;
+    }
+}
+
+.login_container{
+    .login{
+        text-align: center;
+        display: flex;
+
+        .btn-log{
+            display: none;
+        }
+
+        .btn-log.showBtn{
+            display: block;
+        }
+
+        .login_inputs{
+            display: none;
+            flex-direction: column;
+        }
+        .login_inputs.showlogmenu{
+            display: block;
+        }
+    }
+}
+
+.registration_container{
+    .registration{
+        text-align: center;
+
+        .registration_inputs{
+            display: flex;
+            flex-direction: column;
+
+            input{
+
+            }
+        }
+    }
+}

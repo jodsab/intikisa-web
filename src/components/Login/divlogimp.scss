@@ -1,0 +1,38 @@
+.divlogimp_container{
+    
+    .logger_register{
+        background-color: white;
+        padding: 20px;
+        position: absolute;
+        top: 101px;
+        left: -100%;
+        transition: all .5s ease; 
+    }
+
+    .logger_register.show{
+        display: block;
+        left: 0;
+        transition: all .5s ease; 
+    }
+}
+
+@media screen and (max-width: 750px){
+    .divlogimp_container{
+    
+        .logger_register{
+            background-color: white;
+            padding: 20px;
+            position: absolute;
+            top: 78px;
+            left: -100%;
+            transition: all .5s ease; 
+        }
+    
+        .logger_register.show{
+            display: block;
+            left: 0;
+            transition: all .5s ease; 
+        }
+    }
+
+}

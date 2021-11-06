@@ -9,6 +9,7 @@ import {FiSearch} from "react-icons/fi"
 import {BiUser} from "react-icons/bi"
 import {CgShoppingCart} from "react-icons/cg"
 import {HiMenu} from "react-icons/hi"
+import DivLogimp from './Login/DivLogimp';
 
 
 function Navbar() {
@@ -38,9 +39,7 @@ function Navbar() {
                     <a href="">
                     <FiSearch className="rs_icon"/>
                     </a>
-                    <a href="">
-                    <BiUser className="rs_icon"/>
-                    </a>
+                    <DivLogimp />
                     <a href="">
                     <CgShoppingCart className="rs_icon"/>
                     </a>
