@@ -1,7 +1,7 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Contenido from "../components/Contenido";
 import Slider from "../components/Slider";
+import Guia from "../components/GuiaProductos/Guia";
 
 import './home.scss'
 
@@ -12,7 +12,7 @@ function Home(){
             <div className='space'></div>
             <h2 className='prods'>PRODUCTOS</h2>
             <Slider />
-            <Contenido />
+            <Guia />
             <Footer />
         </div>
     )
