@@ -1,0 +1,72 @@
+.guia_container{
+    width: 70%;
+    margin: auto;
+}
+
+.lista_tipos{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    list-style-type: none;
+    padding: 0;
+    
+    .div_tipos_container{
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+
+        .lista_productos{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+
+            .div_producto_container{
+                background-color: rgb(0, 255, 255);
+                list-style-type: none;
+                text-align: center;
+                padding: 8px;
+
+                a{
+                    text-decoration: none;
+                    color: white;
+                    font-weight: 700;
+                }
+
+                .producto_contenido{
+                    display:flex;
+                    flex-direction: column;
+                    align-items: center;
+                   
+
+                    .img{
+                        width: 100px;
+                        height: 100px;
+                        background-color: rgb(245, 141, 141);
+                    }
+                    .ingredientes{
+                        color: rgb(184, 184, 184);
+                        margin: 0;
+                    }
+
+                }
+            }
+        }
+
+        .title_tipo{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                color: white;
+                text-decoration: none;
+                font-weight: 900;
+            }
+        }
+    }
+
+    
+}
