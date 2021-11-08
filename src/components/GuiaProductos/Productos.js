@@ -16,7 +16,7 @@ function Productos(props){
             <ul className='productos_container'>
             {
                 prods.map(e => (
-                    <li className='producto_container'>
+                    <li className='productos_item_container'>
                         <Link to={`/${props.url}/${e.prod_link}`}>
                             <h4 className='nombre_producto'>{e.prod_name} </h4>
                             <img src={require(`../../img/productos/${e.prod_src}`).default} alt={e.prod_name} className='foto_producto'/>

@@ -1,10 +1,13 @@
 .productos_container{
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    justify-items: center;
     list-style-type: none;
+    padding: 0;
+    margin: 0;
 
-    .producto_container{
-        width: 250px;
-        height: 250px;
+    .productos_item_container{
 
         padding: 10px;
         display: flex;
@@ -60,6 +63,20 @@
             .carrito:hover{
                 background-color: rgb(0, 141, 0);
             }
+        }
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .productos_container{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .productos_container{
+        .foto_producto{
+            width: 100%;
         }
     }
 }

@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Link,  HashRouter } from 'react-router-dom';
 import { Route, Routes } from "react-router";
 
-import Cosa from './Cosa';
 import './producto.scss';
 
 import {BsCartPlus} from 'react-icons/bs';

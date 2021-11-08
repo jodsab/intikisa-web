@@ -6,8 +6,7 @@ import { Route, Routes } from "react-router";
 import productos from '../../productos/productos.json'
 import Producto from './Producto';
 import Productos from './Productos';
-
-import Guiasub from './Guiasub';
+import {FcHome} from 'react-icons/fc';
 
 import './guia.scss'
 
@@ -22,7 +21,7 @@ function Guia(){
     return(
         <div className='guia_container'>
             <HashRouter>
-            <Link to='/'>INICIO</Link>  
+            <div className='home'><Link to='/' className='inicio'> <FcHome /> INICIO</Link></div>
                 <ul className={toggleMenu ?'lista_tipos': 'lista_tipos'}>
                 {
                     productos.map(e => (
