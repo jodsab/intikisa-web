@@ -78,22 +78,30 @@
 @media only screen and (max-width: 1150px) {
     .guia_container{
         width: 100%;
+        .prod_tipos_url{
+            width: 95%;
+            margin: auto;
+        }
     }
 }
 
 @media only screen and (max-width: 600px) {
     .guia_container{
+        
         .lista_tipos{
+            grid-template-columns: 1fr 1fr;
             .div_tipos_container{
                 display: grid;
-                grid-template-columns: repeat(auto-fit,minmax(160px,1fr));
+                grid-template-columns: repeat(auto-fit,minmax(50px,1fr));
                 margin: 5px;
 
                 .title_tipo{
+                    font-size: 13px;
+
                     .background_tipo{
-                        border-radius: 18px;
-                        height: 40px;
-                        width: 170px;
+                        
+                        height: 60px;
+                        width: 130px;
                     }
                 }
             }

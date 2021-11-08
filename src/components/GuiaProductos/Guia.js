@@ -20,8 +20,10 @@ function Guia(){
 
     return(
         <div className='guia_container'>
+            
             <HashRouter>
             <div className='home'><Link to='/' className='inicio'> <FcHome /> INICIO</Link></div>
+                <h3 className='prod_tipos_url'>PRODUCTOS :</h3>
                 <ul className={toggleMenu ?'lista_tipos': 'lista_tipos'}>
                 {
                     productos.map(e => (
@@ -57,7 +59,7 @@ function Guia(){
                     {
                         productos.map(f => (
                             f.ctgria_productos.map(g => (
-                                <Route path={`/${f.ctgria_tipo}/${g.prod_link}`} element={<Producto namess={g} />} >
+                                <Route path={`/${f.ctgria_tipo}/${g.prod_link}`} element={<Producto namess={g} pre={f.ctgria_tipo} />} >
                                 
                                 </Route>  
                             ))

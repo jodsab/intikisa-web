@@ -12,7 +12,10 @@ function Productos(props){
     const prods = props.producs;
 
     return(
-        <div>
+        <div className='productos_cont_todo'>
+            <div className='url_tipo'>
+                <h3>{props.url} :</h3>
+            </div>
             <ul className='productos_container'>
             {
                 prods.map(e => (

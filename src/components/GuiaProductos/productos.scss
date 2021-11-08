@@ -1,3 +1,7 @@
+.productos_cont_todo{
+    margin-bottom: 20px;
+}
+
 .productos_container{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -71,10 +75,49 @@
     .productos_container{
         width: 100%;
     }
+    .url_tipo{
+        width: 90%;
+        margin: auto;
+    }
 }
 
 @media only screen and (max-width: 500px) {
     .productos_container{
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+        .productos_item_container{
+            height: 100%;
+            padding: 0;
+            margin: 5px;
+
+            a{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                h4{
+                    font-size: 12px;
+                    width: 80%;
+                    margin: auto;
+                }
+
+                .pagar_ahora{
+                    p{
+                        font-size: 12px;
+                    }
+                    .carrito{
+                        font-size: 15px;
+                    }
+                }
+            }
+            .foto_producto{
+                width: 100px;
+                height: 100px;
+            }
+
+        }
+
         .foto_producto{
             width: 100%;
         }
