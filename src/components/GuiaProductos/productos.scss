@@ -83,7 +83,7 @@
 
 @media only screen and (max-width: 500px) {
     .productos_container{
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
 
         .productos_item_container{
             height: 100%;
@@ -105,6 +105,7 @@
                 .pagar_ahora{
                     p{
                         font-size: 12px;
+                        margin: 5px;
                     }
                     .carrito{
                         font-size: 15px;
