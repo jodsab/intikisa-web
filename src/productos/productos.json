@@ -2,6 +2,7 @@
     {
         "id_ctgria": 1,
         "ctgria_tipo": "DESHIDRATADOS",
+        "ctgria_src": "deshidratados.jpg",
         "ctgria_productos": [
             {
                 "id_prod": 1,
@@ -26,6 +27,7 @@
     {
         "id_ctgria": 2,
         "ctgria_tipo": "PROTEINAS",
+        "ctgria_src": "proteinas.jpg",
         "ctgria_productos": [
             {
                 "id_prod": 1,
@@ -56,6 +58,7 @@
     {
         "id_ctgria": 3,
         "ctgria_tipo": "CACAO",
+        "ctgria_src": "cacao.jpg",
         "ctgria_productos": [
             {
                 "id_prod": 1,
@@ -70,6 +73,7 @@
     {
         "id_ctgria": 4,
         "ctgria_tipo": "MERMELADAS",
+        "ctgria_src": "mermeladas.jpg",
         "ctgria_productos": [
             {
                 "id_prod": 1,
@@ -100,6 +104,7 @@
     {
         "id_ctgria": 5,
         "ctgria_tipo": "PANETONES",
+        "ctgria_src": "panetones.jpg",
         "ctgria_productos": [
             {
                 "id_prod": 1,
@@ -107,7 +112,7 @@
                 "prod_link": "PANETON_INTEGRAL_CON_ARANDANOS",
                 "prod_ingredientes": "MERMELADA, ARÁNDANOS, STEVIA",
                 "prod_src": "macagelatinizada.jpg",
-                "prod_propiedades": ""
+                "prod_propiedades": "Atractivo al paladar por su miga suave. Además, lo novedoso de este panetón es que contiene arándanos el cual nos brinda importantes innumerables beneficios a nuestra salud."
             },
             {
                 "id_prod": 2,
@@ -115,7 +120,7 @@
                 "prod_link": "PANETON_CON_FRUTAS",
                 "prod_ingredientes": "MERMELADA, FRESA, STEVIA",
                 "prod_src": "MACHUPICCHU.png",
-                "prod_propiedades": "Mermelada de fresa hecho con pura fruta y endulzado con Stevia lo cual garantiza un gran saber pero con menos azúcar."
+                "prod_propiedades": "Convierte tus encuentros familiares en momentos inolvidables con nuestro panetón tradicional relleno con pasas y frutas confitadas."
             }
         ]
     }

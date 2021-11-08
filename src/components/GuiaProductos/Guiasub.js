@@ -10,7 +10,7 @@ function Guiasub(){
     return(
         <div>
             <HashRouter>
-                <ul>
+                <ul clasName=''>
                 {
                     productos.map(e => (
                         <li>

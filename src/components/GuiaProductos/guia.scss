@@ -1,0 +1,65 @@
+.guia_container{
+    width: 70%;
+    margin: auto;
+}
+
+.lista_tipos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    list-style-type: none;
+    padding: 0;
+    
+    .div_tipos_container{
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+
+        .title_tipo{
+            height: 200px;
+            width: 200px;
+            background-color: aqua;
+            border-radius: 12px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                filter: brightness(.4);
+            }
+
+            .title_p{
+                position: absolute;
+            }
+
+            .background_tipo{
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                object-position: center;
+                
+
+            }
+
+            a{
+                color: white;
+                font-weight: 800;
+                text-decoration: none;
+            }
+        }
+
+        .title_tipo:hover{
+            img{
+                filter: brightness(1);
+            }
+            
+        }
+
+    }
+    
+}
+
+.lista_tipos.hide{
+    display: none;
+}

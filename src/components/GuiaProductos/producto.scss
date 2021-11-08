@@ -1,0 +1,58 @@
+.producto_container{
+    width: 80%;
+    margin: 10px auto 25px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+
+
+    .img_producto{
+        width: 400px;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .description{
+        h4,p{
+            margin: 0;
+        }
+        h4{
+            margin-bottom: 7px;
+            font-size: 30px;
+        }
+
+        .precio{
+            font-size: 25px;
+            margin: 20px 0;
+        }
+
+        .ingredientes{
+            color: rgb(129, 129, 129);
+        }
+        .propiedades{
+            width: 100%;
+        }
+
+        .carrito{
+            font-size: 40px;
+        }
+
+        .comprar{
+            display: flex;
+            align-items: center;
+
+            .carrito{
+                margin: 0 0 0 12px;
+                background-color: rgb(32, 228, 91);
+                padding: 8px;
+                border-radius: 50%;
+            }
+
+            .carrito:hover{
+                cursor: pointer;
+                background-color: rgb(7, 150, 50);
+            }
+        }
+    }
+}

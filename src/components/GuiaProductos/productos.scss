@@ -1,0 +1,65 @@
+.productos_container{
+    display: flex;
+    list-style-type: none;
+
+    .producto_container{
+        width: 250px;
+        height: 250px;
+
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+
+        .nombre_producto{
+            color: black;
+        }
+
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        p{
+            margin: 10px 0;
+            font-size: 12px;
+            
+        }
+
+        .foto_producto{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+        }
+    
+        .pagar_ahora{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            border-radius: 12px;
+
+            p{
+                margin: 0 20px;
+                padding: 3px 12px;
+                font-size: 20px;
+                font-weight: 700;
+                background-color: rgb(38, 228, 38);
+                border-radius: 12px;
+            }
+            .carrito{
+                font-size: 30px;
+                padding: 7px;
+                background-color: rgb(38, 228, 38);
+                border-radius: 50%;
+            }
+            .carrito:hover{
+                background-color: rgb(0, 141, 0);
+            }
+        }
+    }
+}
