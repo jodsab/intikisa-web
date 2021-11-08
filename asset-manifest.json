@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/intikisa-web/static/css/main.d90f387d.chunk.css",
-    "main.js": "/intikisa-web/static/js/main.69e4a54b.chunk.js",
-    "main.js.map": "/intikisa-web/static/js/main.69e4a54b.chunk.js.map",
+    "main.css": "/intikisa-web/static/css/main.a4c3cbc2.chunk.css",
+    "main.js": "/intikisa-web/static/js/main.75b27d64.chunk.js",
+    "main.js.map": "/intikisa-web/static/js/main.75b27d64.chunk.js.map",
     "runtime-main.js": "/intikisa-web/static/js/runtime-main.1b30d4d4.js",
     "runtime-main.js.map": "/intikisa-web/static/js/runtime-main.1b30d4d4.js.map",
-    "static/js/2.0781209b.chunk.js": "/intikisa-web/static/js/2.0781209b.chunk.js",
-    "static/js/2.0781209b.chunk.js.map": "/intikisa-web/static/js/2.0781209b.chunk.js.map",
+    "static/js/2.309d9231.chunk.js": "/intikisa-web/static/js/2.309d9231.chunk.js",
+    "static/js/2.309d9231.chunk.js.map": "/intikisa-web/static/js/2.309d9231.chunk.js.map",
     "index.html": "/intikisa-web/index.html",
-    "static/css/main.d90f387d.chunk.css.map": "/intikisa-web/static/css/main.d90f387d.chunk.css.map",
-    "static/js/2.0781209b.chunk.js.LICENSE.txt": "/intikisa-web/static/js/2.0781209b.chunk.js.LICENSE.txt",
+    "static/css/main.a4c3cbc2.chunk.css.map": "/intikisa-web/static/css/main.a4c3cbc2.chunk.css.map",
+    "static/js/2.309d9231.chunk.js.LICENSE.txt": "/intikisa-web/static/js/2.309d9231.chunk.js.LICENSE.txt",
     "static/media/ARANDANOS IMAGEN 2.png": "/intikisa-web/static/media/ARANDANOS IMAGEN 2.367801c8.png",
     "static/media/ARANDANOS IMAGEN 3.png": "/intikisa-web/static/media/ARANDANOS IMAGEN 3.22766e82.png",
     "static/media/ARANDANOS IMAGEN.png": "/intikisa-web/static/media/ARANDANOS IMAGEN.a4fecaef.png",
@@ -17,10 +17,15 @@
     "static/media/MACA GELATINIZADO.png": "/intikisa-web/static/media/MACA GELATINIZADO.d89781c4.png",
     "static/media/MACHUPICCHU.png": "/intikisa-web/static/media/MACHUPICCHU.f423b47b.png",
     "static/media/MERMELADA ARANDANOS.png": "/intikisa-web/static/media/MERMELADA ARANDANOS.9b4e64de.png",
+    "static/media/cacao.jpg": "/intikisa-web/static/media/cacao.fe4b6299.jpg",
+    "static/media/deshidratados.jpg": "/intikisa-web/static/media/deshidratados.e0a73f0b.jpg",
     "static/media/inkagoldenmix.jpg": "/intikisa-web/static/media/inkagoldenmix.7c7de819.jpg",
     "static/media/intikisachocolate.jpg": "/intikisa-web/static/media/intikisachocolate.37908188.jpg",
     "static/media/macagelatinizada.jpg": "/intikisa-web/static/media/macagelatinizada.008a4f8d.jpg",
     "static/media/machupicchugoldenmix.jpg": "/intikisa-web/static/media/machupicchugoldenmix.202f6f44.jpg",
+    "static/media/mermeladas.jpg": "/intikisa-web/static/media/mermeladas.71678cf9.jpg",
+    "static/media/panetones.jpg": "/intikisa-web/static/media/panetones.712acb02.jpg",
+    "static/media/proteinas.jpg": "/intikisa-web/static/media/proteinas.9dbc902d.jpg",
     "static/media/tableta.png": "/intikisa-web/static/media/tableta.bc6cf406.png",
     "static/media/zapallolochedeshidratado.jpg": "/intikisa-web/static/media/zapallolochedeshidratado.085f313e.jpg",
     "static/media/zapallolochedeshidratado.png": "/intikisa-web/static/media/zapallolochedeshidratado.b16faab1.png",
@@ -29,8 +34,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.1b30d4d4.js",
-    "static/js/2.0781209b.chunk.js",
-    "static/css/main.d90f387d.chunk.css",
-    "static/js/main.69e4a54b.chunk.js"
+    "static/js/2.309d9231.chunk.js",
+    "static/css/main.a4c3cbc2.chunk.css",
+    "static/js/main.75b27d64.chunk.js"
   ]
 }
