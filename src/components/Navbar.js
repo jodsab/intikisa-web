@@ -24,25 +24,10 @@ function Navbar() {
                 <img src={require('../img/navbar/logointikisa.png').default} className='img_logo'/>
             </div>
             <div className={sidebar ? 'navbar_nav active' : 'navbar_nav'} >
-                <div className='navbar_nav_menu'>
-                    <ul className='nav_list'>
-                        {
-                            navoptions.map((item) => (
-                                <li key={item.id}>
-                                    <p>{item.section}<a href=" "><AiOutlineDown className="rs_icon"/></a></p>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
+                
                 <div className='navbar_nav_options'>
-                    <a href="">
-                    <FiSearch className="rs_icon"/>
-                    </a>
-                    <DivLogimp />
-                    <a href="">
+                    <DivLogimp className="rs_icon"/>
                     <CgShoppingCart className="rs_icon"/>
-                    </a>
                 </div>
             </div>  
             <div className='menu_options'>

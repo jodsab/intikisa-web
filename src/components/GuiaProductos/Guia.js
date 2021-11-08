@@ -5,31 +5,39 @@ import { Route, Routes } from "react-router";
 
 import productos from '../../productos/productos.json'
 import Producto from './Producto';
+import Productos from './Productos';
+import {FcHome} from 'react-icons/fc';
 
-import Guiasub from './Guiasub';
+import './guia.scss'
 
 function Guia(){
 
+    const [toggleMenu, setToggleMenu] = useState('');
+
+    function togglingMenu(){
+        setToggleMenu(!toggleMenu);
+    }
+
     return(
-        <div>
+        <div className='guia_container'>
+            
             <HashRouter>
-                <ul>
-                    <li>
-                        <Link to='/'>INICIO</Link>                            
-                    </li>
+            <div className='home'><Link to='/' className='inicio'> <FcHome /> INICIO</Link></div>
+                <h3 className='prod_tipos_url'>PRODUCTOS :</h3>
+                <ul className={toggleMenu ?'lista_tipos': 'lista_tipos'}>
                 {
                     productos.map(e => (
-                        <li key={e.id_ctgria}>
-                            <Link to={`/${e.ctgria_tipo}`}>{e.ctgria_tipo}</Link> 
-                            <ul>
-                            {
-                                e.ctgria_productos.map(f => (
-                                    <li key={f.id_prod}>
-                                        <Link to={`/${e.ctgria_tipo}/${f.prod_link}`}>{f.prod_name}</Link>
-                                    </li>
-                                ))
-                            }
-                            </ul>    
+                        <li key={e.id_ctgria} className='div_tipos_container' onClick={togglingMenu}>
+                            <div className='title_tipo'>
+                                <Link to={`/${e.ctgria_tipo}`} >
+                                    <div className='title_tipo'>
+                                        <img src={require(`../../img/tipos/${e.ctgria_src}`).default} className='background_tipo' />
+                                        <p className='title_p'>
+                                        {e.ctgria_tipo}
+                                        </p>
+                                    </div>
+                                </Link> 
+                            </div>
                                                    
                         </li>
                     ))
@@ -42,7 +50,7 @@ function Guia(){
                         </Route>  
                     {
                         productos.map(e => (
-                            <Route path={`/${e.ctgria_tipo}`} element={<Producto namess={e.ctgria_tipo} />}>
+                            <Route path={`/${e.ctgria_tipo}`} element={<Productos producs={e.ctgria_productos} url={e.ctgria_tipo} />}>
                                 
                             </Route>  
                         ))
@@ -51,7 +59,7 @@ function Guia(){
                     {
                         productos.map(f => (
                             f.ctgria_productos.map(g => (
-                                <Route path={`/${f.ctgria_tipo}/${g.prod_link}`} element={<Producto namess={g.prod_name} />}>
+                                <Route path={`/${f.ctgria_tipo}/${g.prod_link}`} element={<Producto namess={g} pre={f.ctgria_tipo} />} >
                                 
                                 </Route>  
                             ))

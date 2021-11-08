@@ -1,0 +1,113 @@
+.guia_container{
+    width: 70%;
+    margin: auto;
+    .home{
+        margin: 20px;
+        .inicio{
+            background-color: rgb(255, 255, 255);
+            border: 1px solid rgb(67, 196, 95);
+            padding: 5px 12px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: black;
+        }
+        .inicio:hover{
+            background-color: rgb(36, 196, 70);
+        }
+    }
+}
+
+.lista_tipos{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    
+    .div_tipos_container{
+        display: flex;
+        align-items: center;
+        margin: 10px 0;
+
+        .title_tipo{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                filter: brightness(.4);
+            }
+
+            .title_p{
+                position: absolute;
+            }
+
+            .background_tipo{
+                width: 200px;
+                height: 200px;
+                object-fit: cover;
+                object-position: center;
+                
+
+            }
+
+            a{
+                color: white;
+                font-weight: 800;
+                text-decoration: none;
+            }
+        }
+
+        .title_tipo:hover{
+            img{
+                filter: brightness(1);
+            }
+            
+        }
+
+    }
+    
+}
+
+.lista_tipos.hide{
+    display: none;
+}
+
+@media only screen and (max-width: 1150px) {
+    .guia_container{
+        width: 100%;
+        .prod_tipos_url{
+            width: 95%;
+            margin: auto;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .guia_container{
+        
+        .lista_tipos{
+            grid-template-columns: 1fr 1fr;
+            .div_tipos_container{
+                display: grid;
+                grid-template-columns: repeat(auto-fit,minmax(50px,1fr));
+                margin: 5px;
+
+                .title_tipo{
+                    font-size: 13px;
+
+                    .background_tipo{
+                        
+                        height: 60px;
+                        width: 130px;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+

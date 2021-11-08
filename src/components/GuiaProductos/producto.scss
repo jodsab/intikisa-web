@@ -1,0 +1,109 @@
+.producto_container{
+    width: 80%;
+    margin: 70px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    justify-items: center;
+
+
+    .img_producto{
+        width: 400px;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .description{
+        h4,p{
+            margin: 0;
+        }
+        h4{
+            margin-bottom: 7px;
+            font-size: 30px;
+        }
+
+        .precio{
+            font-size: 25px;
+            margin: 20px 0;
+        }
+
+        .ingredientes{
+            color: rgb(129, 129, 129);
+        }
+        .propiedades{
+            width: 100%;
+        }
+
+        .carrito{
+            font-size: 40px;
+        }
+
+        .comprar{
+            display: flex;
+            align-items: center;
+
+            .carrito{
+                margin: 0 0 0 12px;
+                background-color: rgb(32, 228, 91);
+                padding: 8px;
+                border-radius: 50%;
+            }
+
+            .carrito:hover{
+                cursor: pointer;
+                background-color: rgb(7, 150, 50);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .producto_container{
+        width: 100%;
+
+        .img_producto{
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 1150px) {
+
+    .title_del_producto{
+        width: 90%;
+        margin: auto;
+    }
+
+    .producto_container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        margin: 30px auto;
+
+        a{
+            width: 100%;
+        }
+
+        .foto_producto{
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+    }
+
+    .img_producto{
+        
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .comprar{
+        justify-content: center;
+    }
+}

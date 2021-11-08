@@ -1,0 +1,126 @@
+.productos_cont_todo{
+    margin-bottom: 20px;
+}
+
+.productos_container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
+    justify-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+
+    .productos_item_container{
+
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+
+        .nombre_producto{
+            color: black;
+        }
+
+
+        a{
+            text-decoration: none;
+            color: white;
+        }
+
+        p{
+            margin: 10px 0;
+            font-size: 12px;
+            
+        }
+
+        .foto_producto{
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            object-position: center;
+        }
+    
+        .pagar_ahora{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 10px 0;
+            border-radius: 12px;
+
+            p{
+                margin: 0 20px;
+                padding: 3px 12px;
+                font-size: 20px;
+                font-weight: 700;
+                background-color: rgb(38, 228, 38);
+                border-radius: 12px;
+            }
+            .carrito{
+                font-size: 30px;
+                padding: 7px;
+                background-color: rgb(38, 228, 38);
+                border-radius: 50%;
+            }
+            .carrito:hover{
+                background-color: rgb(0, 141, 0);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1150px) {
+    .productos_container{
+        width: 100%;
+    }
+    .url_tipo{
+        width: 90%;
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .productos_container{
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+
+        .productos_item_container{
+            height: 100%;
+            padding: 0;
+            margin: 5px;
+
+            a{
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                h4{
+                    font-size: 12px;
+                    width: 80%;
+                    margin: auto;
+                }
+
+                .pagar_ahora{
+                    p{
+                        font-size: 12px;
+                        margin: 5px;
+                    }
+                    .carrito{
+                        font-size: 15px;
+                    }
+                }
+            }
+            .foto_producto{
+                width: 100px;
+                height: 100px;
+            }
+
+        }
+
+        .foto_producto{
+            width: 100%;
+        }
+    }
+}
