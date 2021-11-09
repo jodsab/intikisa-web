@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/intikisa-web/static/css/main.9be4f834.chunk.css",
-    "main.js": "/intikisa-web/static/js/main.779d788b.chunk.js",
-    "main.js.map": "/intikisa-web/static/js/main.779d788b.chunk.js.map",
+    "main.js": "/intikisa-web/static/js/main.e031e631.chunk.js",
+    "main.js.map": "/intikisa-web/static/js/main.e031e631.chunk.js.map",
     "runtime-main.js": "/intikisa-web/static/js/runtime-main.1b30d4d4.js",
     "runtime-main.js.map": "/intikisa-web/static/js/runtime-main.1b30d4d4.js.map",
     "static/js/2.f6d027ab.chunk.js": "/intikisa-web/static/js/2.f6d027ab.chunk.js",
@@ -37,6 +37,6 @@
     "static/js/runtime-main.1b30d4d4.js",
     "static/js/2.f6d027ab.chunk.js",
     "static/css/main.9be4f834.chunk.css",
-    "static/js/main.779d788b.chunk.js"
+    "static/js/main.e031e631.chunk.js"
   ]
 }
