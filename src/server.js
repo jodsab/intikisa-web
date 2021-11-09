@@ -65,6 +65,41 @@ app.post('/login', (req,res) => {
     })
 })
 
+app.post('/:user/carrito/agregando', (req,res) => {
+    const user = req.body.user;
+    const producto = req.body.producto;
+
+    connection.query("UPDATE users SET user_carrito = ? WHERE id_user = ?" , [producto, user], (err, result) => {
+        if (err){
+            res.send({err: err});
+        } else{
+            if (result){
+                res.send(result)
+            } else {
+                res.send({message: "Carrito no es posible ingresar"})
+            }
+        }
+    })
+})
+
+app.post('/:user/carrito/leyendo', (req,res) => {
+
+    const {userid} = req.body.userid;
+
+    connection.query("SELECT user_carrito FROM users WHERE id_user = ?", [userid], (err, result) => {
+        if (err){
+            res.send({err: err});
+        } else{
+            if (result){
+                res.send(result)
+                res.send(`<p>User: ${result} </p>`)
+            } else {
+                res.send({message: "Carrito no es posible leer"})
+            }
+        }
+    })
+})
+
 //incializacion
 app.listen(app.get('port'), () => {
     console.log('Server on port ', app.get('port'))

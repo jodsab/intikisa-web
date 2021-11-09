@@ -6,6 +6,7 @@ import Barra from "../components/Barra/Barra";
 import Botmsj from "../components/BotMsj/Botmsj";
 
 import './home.scss'
+import Contacto from "../components/BotMsj/Contacto";
 
 function Home(){
     return(
@@ -17,6 +18,7 @@ function Home(){
             <Barra />
             <Slider />
             <Guia />
+            <Contacto />
             <Footer />
         </div>
     )

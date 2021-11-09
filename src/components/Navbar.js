@@ -10,6 +10,7 @@ import {BiUser} from "react-icons/bi"
 import {CgShoppingCart} from "react-icons/cg"
 import {HiMenu} from "react-icons/hi"
 import DivLogimp from './Login/DivLogimp';
+import CarritoGet from './Carrito/CarritoGet';
 
 
 function Navbar() {
@@ -28,6 +29,7 @@ function Navbar() {
                 <div className='navbar_nav_options'>
                     <DivLogimp className="rs_icon"/>
                     <CgShoppingCart className="rs_icon"/>
+                    <CarritoGet />
                 </div>
             </div>  
             <div className='menu_options'>

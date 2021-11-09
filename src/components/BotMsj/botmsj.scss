@@ -9,12 +9,9 @@
     flex-direction: column-reverse;
     align-items: flex-end;
 
-    .msjbot{
-        width: 65px;
-        height: 65px;
-        cursor: pointer;
-        padding: 15px;
-
+    .btn_msj{
+        background-color: rgba(0,0,0,0);
+        border:none;
     }
     
     .contacto_bot{
@@ -71,3 +68,8 @@
     }
 }
 
+@media only screen and (max-width: 1100px){
+    .botmsj_container{
+        display: none;
+    }
+}

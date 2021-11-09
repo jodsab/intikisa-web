@@ -23,7 +23,7 @@ function Guia(){
             
             <HashRouter>
             <div className='home'><Link to='/' className='inicio'> <FcHome /> INICIO</Link></div>
-                <h3 className='prod_tipos_url'>PRODUCTOS :</h3>
+                <h3 className='prod_tipos_url'>CATALOGO :</h3>
                 <ul className={toggleMenu ?'lista_tipos': 'lista_tipos'}>
                 {
                     productos.map(e => (

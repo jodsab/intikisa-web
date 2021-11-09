@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router";
 import './producto.scss';
 
 import {BsCartPlus} from 'react-icons/bs';
+import CarritoAdd from '../Carrito/CarritoAdd';
 
 function Producto(props){
 
@@ -23,7 +24,7 @@ function Producto(props){
                     <p className='ingredientes'>{procs.prod_ingredientes} </p>
                     <div className='comprar'>
                         <p className='precio'>S/20.00</p>
-                        <BsCartPlus className='carrito' />
+                        <CarritoAdd className='carrito' />
                     </div>
                     <p className='propiedades'>{procs.prod_propiedades} </p>
                 

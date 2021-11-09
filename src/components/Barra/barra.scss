@@ -16,19 +16,22 @@
             margin: 0 32px;
             font-size: 16px;
             padding: 5px 12px;
-            border: 1px solid rgb(212, 212, 212);
-            cursor: pointer;
+            cursor: pointer;            
+        }
+
+        .barra_tipos:hover{
+            outline: 3px solid rgb(65, 190, 65);
         }
 
         .lista_productos_container{
             margin: 0;
             padding: 0;
-            list-style: none;
+            list-style-type: none;
             font-size: 11px;
             position: absolute;
             background-color: white;
-            margin-top: 12px;
-            width: 150px;
+            margin-top: 6px;
+            
 
             .barra_productos{
                 padding: 7px 5px;
@@ -36,13 +39,25 @@
                 border-bottom: 1px solid rgb(236, 236, 236);
                 display: none;
             }
-    
+
             .barra_productos.show{
                 display: block;
+                width: 120px;
             }
+
+            .barra_productos:hover{
+                background-color: rgba(139, 43, 43, 0.1);
+            }
+
         }
 
         
 
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .barra_container{
+        display: none;
     }
 }

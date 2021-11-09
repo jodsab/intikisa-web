@@ -15,8 +15,17 @@
 }
 
 @media screen and (max-width: 600px){
-    .slide_fotos{
-        width: 100%;
-        height: 300px;
+    .slider_container{
+    
+        .cont_img{
+
+            .slide_fotos{
+                height: 300px;
+                width: 100%;
+
+            }
+        }
+    
     }
+
 }
