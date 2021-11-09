@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/intikisa-web/static/css/main.93475b4d.chunk.css",
-    "main.js": "/intikisa-web/static/js/main.f5eeb052.chunk.js",
-    "main.js.map": "/intikisa-web/static/js/main.f5eeb052.chunk.js.map",
+    "main.css": "/intikisa-web/static/css/main.1c967b9c.chunk.css",
+    "main.js": "/intikisa-web/static/js/main.18893bfa.chunk.js",
+    "main.js.map": "/intikisa-web/static/js/main.18893bfa.chunk.js.map",
     "runtime-main.js": "/intikisa-web/static/js/runtime-main.1b30d4d4.js",
     "runtime-main.js.map": "/intikisa-web/static/js/runtime-main.1b30d4d4.js.map",
-    "static/js/2.a24dd68a.chunk.js": "/intikisa-web/static/js/2.a24dd68a.chunk.js",
-    "static/js/2.a24dd68a.chunk.js.map": "/intikisa-web/static/js/2.a24dd68a.chunk.js.map",
+    "static/js/2.165bd950.chunk.js": "/intikisa-web/static/js/2.165bd950.chunk.js",
+    "static/js/2.165bd950.chunk.js.map": "/intikisa-web/static/js/2.165bd950.chunk.js.map",
     "index.html": "/intikisa-web/index.html",
-    "static/css/main.93475b4d.chunk.css.map": "/intikisa-web/static/css/main.93475b4d.chunk.css.map",
-    "static/js/2.a24dd68a.chunk.js.LICENSE.txt": "/intikisa-web/static/js/2.a24dd68a.chunk.js.LICENSE.txt",
+    "static/css/main.1c967b9c.chunk.css.map": "/intikisa-web/static/css/main.1c967b9c.chunk.css.map",
+    "static/js/2.165bd950.chunk.js.LICENSE.txt": "/intikisa-web/static/js/2.165bd950.chunk.js.LICENSE.txt",
     "static/media/ARANDANOS IMAGEN 2.png": "/intikisa-web/static/media/ARANDANOS IMAGEN 2.367801c8.png",
     "static/media/ARANDANOS IMAGEN 3.png": "/intikisa-web/static/media/ARANDANOS IMAGEN 3.22766e82.png",
     "static/media/ARANDANOS IMAGEN.png": "/intikisa-web/static/media/ARANDANOS IMAGEN.a4fecaef.png",
@@ -24,6 +24,7 @@
     "static/media/macagelatinizada.jpg": "/intikisa-web/static/media/macagelatinizada.008a4f8d.jpg",
     "static/media/machupicchugoldenmix.jpg": "/intikisa-web/static/media/machupicchugoldenmix.202f6f44.jpg",
     "static/media/mermeladas.jpg": "/intikisa-web/static/media/mermeladas.71678cf9.jpg",
+    "static/media/msjbot.png": "/intikisa-web/static/media/msjbot.3388be7e.png",
     "static/media/panetones.jpg": "/intikisa-web/static/media/panetones.712acb02.jpg",
     "static/media/proteinas.jpg": "/intikisa-web/static/media/proteinas.9dbc902d.jpg",
     "static/media/tableta.png": "/intikisa-web/static/media/tableta.bc6cf406.png",
@@ -34,8 +35,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.1b30d4d4.js",
-    "static/js/2.a24dd68a.chunk.js",
-    "static/css/main.93475b4d.chunk.css",
-    "static/js/main.f5eeb052.chunk.js"
+    "static/js/2.165bd950.chunk.js",
+    "static/css/main.1c967b9c.chunk.css",
+    "static/js/main.18893bfa.chunk.js"
   ]
 }
