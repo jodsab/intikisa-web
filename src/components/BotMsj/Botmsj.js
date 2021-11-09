@@ -16,7 +16,7 @@ function Botmsj(){
     return(
         <div className='botmsj_container'>
             <button onClick={toggleMsj} className='btn_msj'><ImgMsj /></button>
-            <div className={showMsj ? 'contacto_bots show':'contacto_bots'}>
+            <div className={showMsj ? 'contacto_bots':'contacto_bots show'}>
                 <Contacto className='contact_relative' />
             </div>
         </div>
