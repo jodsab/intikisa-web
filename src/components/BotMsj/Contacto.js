@@ -8,6 +8,7 @@ function Contacto(){
                 <img src={require(`../../img/navbar/logointikisa.png`).default} className='logo_inti'/>
             </div>
             <div className='contacto_sub'>
+                <p>¡Hola!, envianos tu mensaje, dudas o sugerencias son bien recibidas.</p>
                 <label for='nombre'>Nombre: </label>
                 <input type='text' name='nombre' />
                 <label for='email'>Email: </label>

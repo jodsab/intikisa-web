@@ -29,7 +29,6 @@ function Navbar() {
                 <div className='navbar_nav_options'>
                     <DivLogimp className="rs_icon"/>
                     <CgShoppingCart className="rs_icon"/>
-                    <CarritoGet />
                 </div>
             </div>  
             <div className='menu_options'>

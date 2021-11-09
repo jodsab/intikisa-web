@@ -1,18 +1,23 @@
-  .contacto_bot{
+.contacto_bot{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(60, 232, 255, 0.6);
+    background-color: rgba(60, 232, 255, 0.9);
     padding: 20px;
-    margin: 80px auto;
+    margin: auto;
     border-radius: 18px;
-    width: 40%;
+    width: 100%;
+    position: relative;
+    right: 100px;
+    bottom: -70px;
 
     .contacto_sup{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding-right: 6px;
 
         .contacto_intikisa{
             margin: 10px 0;
@@ -42,17 +47,22 @@
             width: 80%;
             margin: auto;
         }
+
+        input:focus, textarea:focus{
+            background-color: rgba(201, 255, 146, .3);
+        }
+
         label{
             margin: 6px 0;
         }
 
-        
-
         textarea{
+            border: none;
             resize: none;
             margin: auto;
             width: 80%;
             height: 200px;
+            margin-top: 6px;
         }
 
         .send{
@@ -60,7 +70,8 @@
             width: 70px;
             margin: 10px auto;
             border:none;
-            border: 1px solid green;
+            border: 1px solid rgb(97, 214, 97);
+            background-color: rgba(227, 255, 66, 0.4);
             border-radius: 8px;
         }
 
@@ -71,12 +82,27 @@
     }  
     }
 
-@media only screen and (max-width: 1100px){
-    .botmsj_container{
-        display: none;
+@media only screen and (max-width: 1200px){
+    
+    .contacto_bot{
+        flex-direction: column;
+        width: 80%;
+        position:static;
+        margin: 20px auto;
+
+        .contacto_sup{
+            padding: 0;
+        }
+
+        .contacto_sub{
+            border: 0;
+            padding: 0;
+            width: 85%;
+
+            input, textarea{
+                width: 95%;
+            }
+        }
     }
 
-    .contacto_bot{
-        display: none;
-    }
 }

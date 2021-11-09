@@ -7,68 +7,31 @@
     z-index: 9999;
     display: flex;
     flex-direction: column-reverse;
-    align-items: flex-end;
+    align-items: flex-end;    
 
     .btn_msj{
         background-color: rgba(0,0,0,0);
         border:none;
     }
     
-    .contacto_bot{
+    .contacto_bots{
         display: flex;
         flex-direction: column;
-        background-color: rgba(60, 232, 255, 0.6);
         padding: 20px;
         margin: 0 20px 0 0;
         border-radius: 14px;
-        display: none;
         width: 100%;
-
-        .logo_inti{
-            width: 80%;
-            margin: auto;
-        }
-
-        input{
-            border: none;
-            border-radius: 9px;
-            padding: 6px 8px;
-        }
-        label{
-            margin: 6px 0;
-        }
-
-        .contacto_intikisa{
-            margin: 10px 0;
-            font-size: 20px;
-            text-align: center;
-        }
-
-        textarea{
-            resize: none;
-        }
-
-        .send{
-            padding: 5px 0;
-            width: 70px;
-            margin: 10px auto;
-            border:none;
-            border: 1px solid green;
-            border-radius: 8px;
-        }
-
-        .send:hover{
-            background-color: rgba(96, 107, 255, .5);
-            cursor: pointer;
-        }
+        display: block;
+        position: relative;
+        bottom: 0;
     }
 
-    .contacto_bot.show{
-        display: flex;
+    .contacto_bots.show{
+        display: none;
     }
 }
 
-@media only screen and (max-width: 1100px){
+@media only screen and (max-width: 1200px){
     .botmsj_container{
         display: none;
     }

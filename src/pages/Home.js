@@ -18,7 +18,10 @@ function Home(){
             <Barra />
             <Slider />
             <Guia />
-            <Contacto />
+            <div className='contact_cuerpo'>  
+                <Contacto />
+            </div>
+            
             <Footer />
         </div>
     )
