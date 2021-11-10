@@ -7,6 +7,7 @@ import Botmsj from "../components/BotMsj/Botmsj";
 
 import './home.scss'
 import Contacto from "../components/BotMsj/Contacto";
+import Promo from "../components/Promos/Promo";
 
 function Home(){
     return(
@@ -14,8 +15,8 @@ function Home(){
             <Botmsj />
             <Navbar />
             <div className='space'></div>
-            <h2 className='prods'>PRODUCTOS</h2>
-            <Barra />
+            <h2 className='prods'>BIENVENIDO A INTIKISA</h2>
+            <Promo />
             <Slider />
             <Guia />
             <div className='contact_cuerpo'>  

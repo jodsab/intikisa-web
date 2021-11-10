@@ -1,5 +1,7 @@
 import {useState} from 'react';
 import productos from '../../productos/productos.json';
+import { BrowserRouter as Router, Link,  HashRouter } from 'react-router-dom';
+import { Route, Routes } from "react-router";
 
 import './barra.scss';
 
@@ -18,6 +20,7 @@ function Barra(){
 
     return(
         <div className='barra_container'>
+            <HashRouter>
             <ul className='lista_tipos_container'>
             {productos.map(e=>(
                 <li className='barra_tipos' onMouseOver ={showingMenu} onMouseOut={hideMenu}>
@@ -28,9 +31,11 @@ function Barra(){
                         {
                             e.ctgria_productos.map(f => (
                                 <li className={showMenu ? 'barra_productos ':`barra_productos show`} >
+                                    <Link to={`/${e.ctgria_tipo}/${f.prod_link}`}>
                                     {
                                         f.prod_name
                                     }
+                                    </Link>
                                 </li>
                             ))
                         }
@@ -38,6 +43,7 @@ function Barra(){
                 </li>
             ))}
             </ul>
+            </HashRouter>
         </div>
     )
 }

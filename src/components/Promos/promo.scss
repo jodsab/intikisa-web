@@ -1,0 +1,40 @@
+.promo_container{
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(150, 207, 93);
+    display: flex;
+
+
+    .promo{
+        padding: 4px;
+        font-size: 17px;
+        font-weight: 600;
+        color: rgb(18, 119, 81);
+        margin: 0;
+        position: relative;
+        animation: promox 15s linear infinite;
+    }
+}
+
+@keyframes promox {
+    0% {left: -41%}
+    25% {left: -5%}
+    50% {left: 30%}
+    75% {left: 65%}
+    100% {left: 100%}
+}
+
+
+@media only screen and (max-width: 600px){
+    .promo{
+        animation: promoxphone 15s linear infinite
+    }
+}
+
+@keyframes promoxphone {
+    0% {left: -400%}
+    25% {left: -100%}
+    50% {left: 200%}
+    75% {left: 65%}
+    100% {left: 200%}
+}
