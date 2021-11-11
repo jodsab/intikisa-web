@@ -6,7 +6,9 @@
     justify-items: center;
 
     .fotos_producto{
-        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
 
         .lista_fotos_productos{
             display: flex;
@@ -129,10 +131,20 @@
             width: 100%;
         }
 
-        .foto_producto{
+        .fotos_producto{
             width: 100%;
             object-fit: cover;
             object-position: center;
+
+            .lista_fotos_productos{
+                width: 60%;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+            }
         }
 
     }
@@ -146,4 +158,45 @@
     .comprar{
         justify-content: center;
     }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .producto_container{
+
+        .fotos_producto{
+
+
+            .lista_fotos_productos{
+                width: 100%;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .producto_container{
+
+        .fotos_producto{
+
+
+            .lista_fotos_productos{
+                .fotos_varias_prod{
+                    width: 30px;
+                }
+
+            }
+        }
+
+    }
+
 }
