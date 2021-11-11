@@ -33,7 +33,7 @@ function Slider(){
     return(
         <div className='slider_container'>
             <div className='cont_img'>
-                <img src={require(`../img/productos${slideImgn}`).default} className='slide_fotos'></img>
+                <img src={require(`../img/productos${slideImgn}`).default} className='slide_fotos' alt={slideImgn} ></img>
             </div>
                 
             

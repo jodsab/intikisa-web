@@ -1,7 +1,4 @@
-import {useState} from 'react';
-
-import { BrowserRouter as Router, Link,  HashRouter } from 'react-router-dom';
-import { Route, Routes } from "react-router";
+import {Link} from 'react-router-dom';
 
 import {BsCartPlus} from 'react-icons/bs';
 

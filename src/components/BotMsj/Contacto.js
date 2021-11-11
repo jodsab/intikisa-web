@@ -5,7 +5,7 @@ function Contacto(){
         <div className='contacto_bot'>
             <div className='contacto_sup'>
                 <h4 className='contacto_intikisa'>INTIKISA CONTACTO</h4>
-                <img src={require(`../../img/navbar/logointikisa.png`).default} className='logo_inti'/>
+                <img src={require(`../../img/navbar/logointikisa.png`).default} className='logo_inti' alt='logo intikisa' />
             </div>
             <div className='contacto_sub'>
                 <p>¡Hola!, envianos tu mensaje, dudas o sugerencias son bien recibidas.</p>

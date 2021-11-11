@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { BrowserRouter as Router, Link, HashRouter } from "react-router-dom";
+import { Link, HashRouter } from "react-router-dom";
 import { Route, Routes } from "react-router";
 
 import productos from "../../productos/productos.json";
@@ -9,7 +9,6 @@ import Productos from "./Productos";
 import { FcHome } from "react-icons/fc";
 
 import "./guia.scss";
-import RutasProds from "../RutasProds/RutasProds";
 
 function Guia() {
   const [toggleMenu, setToggleMenu] = useState("");
@@ -40,6 +39,7 @@ function Guia() {
                     <img
                       src={require(`../../img/tipos/${e.ctgria_src}`).default}
                       className="background_tipo"
+                      alt={e.ctgria_src}
                     />
                     <p className="title_p">{e.ctgria_tipo}</p>
                   </div>

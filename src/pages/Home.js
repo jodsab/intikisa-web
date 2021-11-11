@@ -2,7 +2,6 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Slider from "../components/Slider";
 import Guia from "../components/GuiaProductos/Guia";
-import Barra from "../components/Barra/Barra";
 import Botmsj from "../components/BotMsj/Botmsj";
 
 import './home.scss'

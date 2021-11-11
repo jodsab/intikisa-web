@@ -11,7 +11,7 @@ function Footer() {
     return(
         <div className="footer_container">
          <div>
-         <img src={require('../img/navbar/logointikisa.png').default} className="logo_footer" />
+         <img src={require('../img/navbar/logointikisa.png').default} className="logo_footer" alt='logo intikisa' />
          </div>
          <div className='options_div'>
          <ul className='options_list'>
