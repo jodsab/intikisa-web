@@ -21,7 +21,7 @@
 
         .user-display{
             display: block;
-            top:80px;
+            top: 80px;
         }
     }
 
@@ -33,24 +33,80 @@
 }
 
 .login_container{
+    display: flex;
+    justify-content: center;
+    width: 200px;
+
     .login{
         text-align: center;
-        display: flex;
-
-        .btn-log{
-            display: none;
-        }
-
-        .btn-log.showBtn{
-            display: block;
-        }
+        width: 90%;
 
         .login_inputs{
-            display: none;
+            display: flex;
             flex-direction: column;
-        }
-        .login_inputs.showlogmenu{
-            display: block;
+
+            #entrar{
+                margin: 2px 0;
+                font-size: 22px;
+            }
+
+            input{
+                margin: 6px 0;
+                padding: 6px 12px;
+                border: 1px solid black;
+                border-radius: 15px;
+            }
+
+            input:focus{
+                background-color: rgba(250, 245, 203,.4);
+            }
+
+            #noacc{
+                margin: 40px 0 4px 0;
+                font-size: 16px;
+            }
+
+            .btn_entrar{
+                width: 50%;
+                margin: 5px auto 0 auto;
+                border: 1px solid black;
+                border-radius: 12px;
+                padding: 3px 0;
+            }
+
+            .btn_entrar:hover{
+                cursor: pointer;
+                background-color: rgb(201, 255, 147);
+            }
+
+            .btn_rgster{
+                width: 50%;
+                margin: auto;
+                border: none;
+                background-color: rgba(250, 245, 203,.1);
+                color: blue;
+                text-decoration: underline;
+            }
+
+            .btn_rgster:hover{
+                cursor: pointer;
+            }
+
+            .btn-log{
+                display: none;
+            }
+    
+            .btn-log.showBtn{
+                display: block;
+            }
+    
+            .login_inputs{
+                display: none;
+                flex-direction: column;
+            }
+            .login_inputs.showlogmenu{
+                display: block;
+            }
         }
     }
 }
@@ -58,14 +114,55 @@
 .registration_container{
     .registration{
         text-align: center;
+        width: 200px;
+
+        .regster{
+            margin: 0 0 15px 0;
+            font-size: 22px;
+        }
 
         .registration_inputs{
             display: flex;
             flex-direction: column;
+            label{
+                font-size: 18px;
+            }
 
             input{
-
+                margin: 6px 0;
+                padding: 5px 10px;
+                border: 1px solid black;
+                border-radius: 15px;
             }
+        }
+
+        .alrgth{
+            margin: 35px auto 6px auto;
+            font-size: 16px;
+        }
+
+        .btn_login{
+            width: 50%;
+            margin: 7px auto 0 auto;
+            border: 1px solid black;
+            border-radius: 12px;
+            padding: 3px 0;
+        }
+
+        .btn_login:hover{
+            cursor: pointer;
+            background-color: rgb(201, 255, 147);
+        }
+
+        .btn_lgns{
+            border: none;
+            color: blue;
+            text-decoration: underline;
+            background-color: rgba(250, 245, 203,.1);
+        }
+
+        .btn_lgns:hover{
+            cursor: pointer;
         }
     }
 }

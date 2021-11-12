@@ -62,23 +62,6 @@ function HomeLogin() {
 
     const [ showLogMenu, setShowLogMenu ] = useState(true);
 
-    const [ accedeMsj, setaccedeMsj ] = useState('Accede con tu cuenta');
-
-    const [ showBtnLog, setShowBtnLog ] = useState(true);
-
-    const hideBtnLog = () => {
-        setShowBtnLog(!showBtnLog)
-    }
-
-    const toggleLoginMenu = () => {
-        setShowLogMenu(!showLogMenu)
-    }
-
-    const deleteAccedeMsj = () => {
-        setaccedeMsj('');
-    }
-
-
     if( isLogged && divReg === false && divLog === false ){
         return (
             <div className='welcome_container'>
@@ -102,15 +85,16 @@ function HomeLogin() {
             <div className="login_container">
                 <div className="login">
                     <div className={showLogMenu ? 'login_inputs showlogmenu': 'login_inputs'}>
+                        <p id='entrar'>Entrar</p>
                         <input type="text" placeholder="Username" onChange={(e) => {
                             setUsername(e.target.value);
                         }} required></input>
                         <input type="password" placeholder="Password" onChange={(e) => {
                             setPassword(e.target.value);
                         }} required></input>
-                        <button onClick={login}>Entrar</button>
-                        <p>¿No tienes una cuenta?</p>
-                        <button onClick={changeRegister, changeLogin}>Registrarse</button>
+                        <button onClick={login} className='btn_entrar' >Entrar</button>
+                        <p id='noacc'>¿No tienes una cuenta?</p>
+                        <button onClick={changeRegister, changeLogin} className='btn_rgster' >Registrarse</button>
                     </div>
                     
                 </div>
@@ -121,23 +105,23 @@ function HomeLogin() {
         return(
             <div className="registration_container">
                 <div className="registration">
-                    <h4>Registrarme</h4>
+                    <p className='regster'>Registrarme</p>
                     <div className='registration_inputs'>
-                        <label>Usuario</label>
+                        <label>Usuario:</label>
                         <input type="text" onChange={(e) => {
                             setUsernameReg(e.target.value);
                         }} required></input>
-                        <label>Email</label>
+                        <label>Email:</label>
                         <input type="email" onChange={(e) => {
                             setUserEmailReg(e.target.value);
                         }} required></input>
-                        <label>Contraseña</label>
+                        <label>Contraseña:</label>
                         <input type="password" onChange={(e) => {
                             setPasswordReg(e.target.value);
                         }} required></input>
-                        <button onClick={register}>Registrarse</button>
-                        <p>¿Ya tienes una cuenta?</p>
-                        <button onClick={changeRegister, changeLogin}>Ingresar</button>
+                        <button onClick={register} className='btn_login'>Registrarse</button>
+                        <p className='alrgth'>¿Ya tienes una cuenta?</p>
+                        <button onClick={changeRegister, changeLogin} className='btn_lgns' >Ingresar</button>
                     </div>
                 </div>
             </div>
