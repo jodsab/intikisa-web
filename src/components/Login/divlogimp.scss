@@ -3,7 +3,8 @@
     
     .logger_register{
         background-color: rgb(241, 255, 218);
-        width: 100%;
+        width: 300px;
+        padding: 15px 0;
         position: absolute;
         top: 86px;
         right: -100%;
@@ -12,7 +13,8 @@
     }
 
     .logger_register.show{
-        display: block;
+        display: flex;
+        justify-content: center;
         right: 0;
         transition: all .5s ease; 
     }

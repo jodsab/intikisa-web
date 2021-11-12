@@ -8,18 +8,16 @@ function TelefonoCorreo(){
         <div className='comunicate_container'>
             <div className='div_contact'>
                 <AiOutlinePhone className='icon_msj' />
-                <p className='msj_contacto'>Llámanos: +51 999 999 999</p>
+                <p className='msj_contacto'>Llámanos: +51 971 649 286</p>
             </div> 
             <div className='div_contact'>
                 <AiOutlineMail className='icon_msj' />
-                <p className='msj_contacto'>Email: ventas@intikisaperu.com</p>
+                <p className='msj_contacto'>Email: intikisa.adm@gmail.com</p>
             </div>
             <div className='div_contact'> 
                 <BiTime className='icon_msj' />
-                <p className='msj_contacto'>Horario de Oficina: Lun-Sab: 08:00 am - 11:00 pm</p>
+                <p className='msj_contacto'>Horario de Oficina: Lun-Vie: 09:00 am - 06:00 pm</p>
             </div>
-
-            
             
         </div>
     )
