@@ -3,7 +3,7 @@
     
     .logger_register{
         background-color: rgb(241, 255, 218);
-        padding: 20px;
+        width: 100%;
         position: absolute;
         top: 86px;
         right: -100%;
@@ -24,7 +24,7 @@
         .logger_register{
             background-color: white;
             width: 100%;
-            padding: 20px;
+            padding: 10px 0;
             position: absolute;
             top: 33px;
             left: -200%;
