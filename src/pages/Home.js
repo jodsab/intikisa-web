@@ -12,8 +12,13 @@ import TelefonoCorreo from "../components/Telefono/TelefonoCorreo";
 function Home(){
     return(
         <div className='casa'>
-            <TelefonoCorreo />                
+            <div className='escritorio' >
+                <TelefonoCorreo />     
+            </div>
             <Navbar />
+            <div className='telefono'>
+            <TelefonoCorreo  /> 
+            </div>
             <div className='home_container'>
                 <Botmsj />
                 <div className='space'></div>

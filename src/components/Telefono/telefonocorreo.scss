@@ -1,5 +1,6 @@
 .comunicate_container{
     display: flex;
+    flex-direction: row;
     width: 95%;
     margin: auto;
     justify-content: flex-start;
@@ -18,4 +19,17 @@
             margin: 0 0 0 5px;
         }
     }
+}
+
+
+
+@media screen and (max-width: 600px){
+    .comunicate_container{
+        margin: 5px 3px 5px 0;
+        flex-direction: column;
+        p{
+            font-size: 12px;
+        }
+    }
+
 }
