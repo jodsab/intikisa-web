@@ -9,6 +9,7 @@ import Productos from "./Productos";
 import { FcHome } from "react-icons/fc";
 
 import "./guia.scss";
+import Error404 from "../Error404";
 
 function Guia() {
   const [toggleMenu, setToggleMenu] = useState("");
@@ -50,10 +51,10 @@ function Guia() {
         </ul>
 
         <Routes>
-          <Route path={`/`}></Route>
+          <Route exact path={`/`}></Route>
           {productos.map((e) => (
             <Route
-              path={`/${e.ctgria_tipo}`}
+              exact path={`/${e.ctgria_tipo}`}
               element={
                 <Productos producs={e.ctgria_productos} url={e.ctgria_tipo} />
               }
@@ -62,11 +63,12 @@ function Guia() {
           {productos.map((f) =>
             f.ctgria_productos.map((g) => (
               <Route
-                path={`/${f.ctgria_tipo}/${g.prod_link}`}
+                exact path={`/${f.ctgria_tipo}/${g.prod_link}`}
                 element={<Producto namess={g} pre={f.ctgria_tipo} />}
               ></Route>
             ))
           )}
+          <Route component={Error404} />
         </Routes>
       </HashRouter>
     </div>

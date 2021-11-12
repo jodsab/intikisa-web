@@ -46,7 +46,7 @@
 @media screen and (max-width: 600px) {
 
     .navbar_container{
-
+        height: 56px;
         justify-content: space-between;
 
         .img_logo{
@@ -70,7 +70,8 @@
         }
 
         .menu_options{
-            display: block;
+            display: flex;
+            align-items: center;
         }
     }
 

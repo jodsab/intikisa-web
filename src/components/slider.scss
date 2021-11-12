@@ -1,9 +1,16 @@
+.swiper {
+    width: 600px;
+    height: 300px;
+  }
+
 .slider_container{
     width: 100vw;
+    overflow-x: scroll;
 
     .cont_img{
         display: flex;
         justify-content: center;
+
         .slide_fotos{
             height: 500px;
             width: 100%;
@@ -12,6 +19,10 @@
         }
     }
 
+    
+    .display_img{
+        display: flex;
+    }
 }
 
 @media screen and (max-width: 600px){
