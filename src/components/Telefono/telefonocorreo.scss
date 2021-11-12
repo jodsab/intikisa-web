@@ -1,0 +1,21 @@
+.comunicate_container{
+    display: flex;
+    width: 95%;
+    margin: auto;
+    justify-content: flex-start;
+    border-bottom: 1px solid rgb(19, 134, 19);
+
+    .div_contact{
+        display: flex;
+        align-items: center;
+        padding: 2px 5px;
+
+        .icon_msj{
+            color: green;
+        }
+
+        .msj_contacto{
+            margin: 0 0 0 5px;
+        }
+    }
+}
