@@ -1,12 +1,84 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import Axios from 'axios';
 
 import {AiOutlineUser} from 'react-icons/ai';
 
 import './homelogin.scss';
 
-function HomeLogin() {
+//LOGIN SETUP
+const URL_LOGIN = "http://localhost/ws-login/login.php";
 
+const enviarData = async (url, data) => {
+
+    const resp = await fetch (url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+
+    const json = await resp.json();
+
+    return json;
+}
+
+//REGISTER SETUP
+const URL_REGISTER = "http://localhost/ws-login/registrar.php";
+
+const enviarRegData = async (url, data) => {
+    
+    const regResp = await fetch (url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    console.log(regResp);
+    const regjson = await regResp.json();
+    console.log(regjson);
+
+}
+
+function HomeLogin(props) {
+
+    //LOGIN
+    const [error, setError] = useState(null);
+
+    const refUsuario = useRef(null);
+    const refClave = useRef(null);
+
+    const handleLogin = async () => {
+        const data = {
+            "usuario": refUsuario.current.value,
+            "clave": refClave.current.value
+        }
+
+        const respuestaJson = await enviarData(URL_LOGIN, data);
+        console.log("respuesta desde el evento login", respuestaJson.conectado);
+
+        props.acceder(respuestaJson.conectado)
+        setError(respuestaJson.error)
+    }
+
+    //REGISTER
+    const refRegUsuario = useRef(null);
+    const refRegEmail = useRef(null);
+    const refRegClave = useRef(null);
+
+    const handleRegister = async () => {
+        const regdata = {
+            "usuario": refRegUsuario.current.value,
+            "email": refRegEmail.current.value,
+            "clave": refRegClave.current.value
+        }
+        console.log(regdata);
+        const regRespuestaJson = await enviarRegData(URL_REGISTER, regdata);
+        console.log("respuesta desde el evento register", regRespuestaJson);
+    }
+
+    //DIVS DE LOGIN Y REGISTER
     const [ divReg, setDivReg ] = useState(false);
     const [ divLog, setDivLog ] = useState(true);
 
@@ -20,40 +92,7 @@ function HomeLogin() {
         setDivReg(!divReg)
     }
 
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-
     const [welcomemsj, setWelcomemsj] = useState('');
-
-    const login = () => {
-        Axios.post('http://localhost:4000/login', {username: username, password: password})
-        .then((response) => {
-            if(response.data.length >= 1){
-                console.log(response.data[0].user_name);
-                setWelcomemsj(`${response.data[0].user_name}`);
-                setIsLogged(true);
-                changeLogin();
-            }
-            else{
-                console.log('Usuario no existe')
-
-            }
-        });
-    }
-
-    const [userNameReg, setUsernameReg] = useState('');
-    const [userEmailReg, setUserEmailReg] = useState('');
-    const [passwordReg, setPasswordReg] = useState('');
-
-    const register = () => {
-        Axios.post('http://localhost:4000/register', {username: userNameReg , email: userEmailReg,password: passwordReg} )
-            .then((response) => {
-                console.log(response)
-                setDivReg(false);
-                setDivLog(true);
-
-            }) 
-    }
 
     const logout = () => {
         setIsLogged(false);
@@ -86,15 +125,17 @@ function HomeLogin() {
                 <div className="login">
                     <div className={showLogMenu ? 'login_inputs showlogmenu': 'login_inputs'}>
                         <p id='entrar'>Entrar</p>
-                        <input type="text" placeholder="Username" onChange={(e) => {
-                            setUsername(e.target.value);
-                        }} required></input>
-                        <input type="password" placeholder="Password" onChange={(e) => {
-                            setPassword(e.target.value);
-                        }} required></input>
-                        <button onClick={login} className='btn_entrar' >Entrar</button>
+                        <input type="text" placeholder="Username" ref={refUsuario} required></input>
+                        <input type="password" placeholder="Password" ref={refClave} required></input>
+                            {
+                                error &&
+                                <div className='error_space'>
+                                    <p className='error_alert'>{error}</p>
+                                </div>
+                            }    
+                        <button onClick={handleLogin} className='btn_entrar' >Entrar</button>
                         <p id='noacc'>¿No tienes una cuenta?</p>
-                        <button onClick={changeRegister, changeLogin} className='btn_rgster' >Registrarse</button>
+                        <button  onClick={changeRegister, changeLogin} className='btn_rgster' >Registrarse</button>
                     </div>
                     
                 </div>
@@ -108,20 +149,14 @@ function HomeLogin() {
                     <p className='regster'>Registrarme</p>
                     <div className='registration_inputs'>
                         <label>Usuario:</label>
-                        <input type="text" onChange={(e) => {
-                            setUsernameReg(e.target.value);
-                        }} required></input>
+                        <input type="text" ref={refRegUsuario} required></input>
                         <label>Email:</label>
-                        <input type="email" onChange={(e) => {
-                            setUserEmailReg(e.target.value);
-                        }} required></input>
+                        <input type="email" ref={refRegEmail} required></input>
                         <label>Contraseña:</label>
-                        <input type="password" onChange={(e) => {
-                            setPasswordReg(e.target.value);
-                        }} required></input>
-                        <button onClick={register} className='btn_login'>Registrarse</button>
+                        <input type="password" ref={refRegClave} required></input>
+                        <button onClick={handleRegister} className='btn_login'>Registrarse</button>
                         <p className='alrgth'>¿Ya tienes una cuenta?</p>
-                        <button onClick={changeRegister, changeLogin} className='btn_lgns' >Ingresar</button>
+                        <button onClick={changeRegister,changeLogin} className='btn_lgns' >Ingresar</button>
                     </div>
                 </div>
             </div>

@@ -43,6 +43,14 @@
         width: 100%;
         margin: auto;
 
+        .error_space{
+            .error_alert{
+                font-size: 14px;
+                margin: 4px 0;
+                color: red;
+            }
+        }
+
         .login_inputs{
             display: flex;
             flex-direction: column;
