@@ -1,0 +1,76 @@
+.footer_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 30px #c7c5c5;
+    background-color: #2d2d2d;
+    color: #f1f1f1;
+    .options_div{
+        width: 80%;
+        .options_list {
+            display: grid;
+            text-align: center;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            list-style-type: none;
+            padding: 0;
+        }
+        .options_list strong {
+            font-size: 14px;
+            padding: 4px;
+            border-bottom: 1px solid rgb(84, 224, 138);
+            font-weight: 600;
+        }
+        .options_list p {
+            font-size: 13px;
+            margin: 20px;
+        }
+        .options_list p a {
+            text-decoration: none;
+            color: white;
+            font-size: 13px;
+        }
+        .options_list p a:hover {
+            color: rgb(84, 224, 138);
+            cursor: pointer;
+        }
+        .redes_sociales_container{
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+             
+            .metodos_pago {
+                margin: auto;
+            }
+            .rs_icon{
+                margin: 10px;
+                color: white;
+            }
+            .rs_icon:hover {
+               color: rgb(84, 224, 138);
+            }
+        }
+    }
+    .bottom_footer_container{
+        font-size: 13px;
+        margin: 30px 0 30px 0;
+        display:flex;
+        width: 80%;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        .derechos_container {
+            gap: 5px;
+        }
+            .rs_icon {
+                margin: 5px;
+                font-size: 50px;
+            }
+    }
+}
+@media only screen and (max-width: 600px) {
+    .derechos_container{
+        display: grid;
+        text-align: center;
+    }
+  }

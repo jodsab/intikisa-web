@@ -1,26 +1,31 @@
-import navoptions from './navbar_menu.json';
+import {useState} from 'react';
+
 import './navbar.scss';
+import {CgShoppingCart} from "react-icons/cg"
+import {HiMenu} from "react-icons/hi"
+import DivLogimp from './Login/DivLogimp';
+import TelefonoCorreo from './Telefono/TelefonoCorreo';
 
 function Navbar() {
 
+    const [sidebar, setSidebar] = useState(false);
+
+    const showSidebar = () => setSidebar(!sidebar);
+
     return(
         <div className='navbar_container'>
-            <div className='navbar_logo'>
-                <img src={require('../img/navbar/logointikisa.png').default} />
-                <div className='navbar_nav_menu'>
-                    <ul className='nav_list'>
-                        {
-                            navoptions.map((item) => (
-                                <li key={item.id}>
-                                    <p>{item.section}</p>
-                                </li>
-                            ))
-                        }
-                    </ul>
-                </div>
+            <div>
+                <img src={require('../img/navbar/logointikisa.png').default} className='img_logo' alt='logo intikisa' />
             </div>
-            <div className='navbar_cuenta'>
-                <h1>Iniciar Sesión</h1>
+            <div className={sidebar ? 'navbar_nav active' : 'navbar_nav'} >
+                
+                <div className='navbar_nav_options'>
+                    <DivLogimp className="rs_icon"/>
+                    <CgShoppingCart className="rs_icon"/>
+                </div>
+            </div>  
+            <div className='menu_options'>
+                <HiMenu onClick={showSidebar}/>
             </div>
         </div>
     )

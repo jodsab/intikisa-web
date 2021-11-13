@@ -1,11 +1,24 @@
 .navbar_container{
     display: flex;
-    justify-content: space-evenly;
-    box-shadow: 0 0 30px #c7c5c5;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 5px 0 #c7c5c5;
     background-size: cover;
     height: 80px;
     width: 100%;
+    margin: auto;
     font-family: Arial, Helvetica, sans-serif;
+    background-color: white;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 9999;
+
+    .menu_options{
+        font-size: 50px;
+        display: none;
+    }
+
     .navbar_background{
         position: absolute;
         z-index: -100;
@@ -13,40 +26,54 @@
         object-fit: cover;
         height: 80px;
     }
-    .navbar_logo{
-        display: flex;
-        align-items: center;
 
-        .navbar_nav_menu{
-            .nav_list{
-                display: flex;
-                list-style-type: none;
-                li{
-                    padding: 0 10px;
-                }
-            }
-        }
-    }
     .navbar_logo:hover{
             cursor: pointer;
     }
-    .navbar_cuenta{
-        width: 140px;
-        height: 45px;
-        border-radius: 6px;
-        font-size: 8px;
-        color: white;
+
+    .navbar_nav_options {
         display: flex;
         align-items: center;
-        justify-content: center;
-        background: #a8ff78;  /* fallback for old browsers */
-        background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
-        background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-        margin: 20px 0;
-        font-family: Arial, Helvetica, sans-serif;
-
+        justify-items: center;
+        font-size: 30px;
+        margin: 0 20px;
+        .rs_icon{
+            padding: 0 30px;
+        }
     }
-    .navbar_cuenta:hover{
-        cursor: pointer;
 }
-}
+
+@media screen and (max-width: 600px) {
+
+    .navbar_container{
+        height: 56px;
+        justify-content: space-between;
+
+        .img_logo{
+            width: 120px;
+        }
+
+        .navbar_nav{
+            display: flex;
+            flex-direction: column-reverse;
+            position: absolute;
+            top: 56px;
+            left: -100%;
+            transition: all .5s ease-in-out;
+            background-color: white;
+        }
+
+        .navbar_nav.active{
+            left: 0;
+            align-items: center;
+            width: 100%;
+        }
+
+        .menu_options{
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    
+  }

@@ -1,0 +1,47 @@
+.casa{
+    .telefono{
+        display: none;
+    }
+}
+
+.home_container{
+    width: 100%;
+    overflow-x: hidden;
+
+    .space{
+        height: 5px;
+    }
+
+    .prods{
+        text-align: center;
+        margin: 10px;
+    }
+
+}
+
+@media only screen and (min-width: 1200px){
+    .contact_cuerpo{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .casa{
+        .escritorio{
+            display: none;
+        }
+
+        .telefono{
+            display: block;
+        }
+
+        .space{
+            display: none;
+        }
+
+        .prods{
+            font-size: 18px;
+            margin: 1px 0 4px 0;
+        }
+    }
+}

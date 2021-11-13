@@ -1,0 +1,247 @@
+.producto_container{
+    width: 80%;
+    margin: 70px auto;
+    display: grid;
+    grid-template-columns: 1fr 5fr 4fr;
+    justify-items: center;
+
+    .fotos_producto{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .lista_fotos_productos{
+            display: flex;
+            flex-direction: column;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .fotos_varias_prod{
+            margin: 5px;
+            padding: 4px;
+            width: 45px;
+        }
+
+        .fotos_varias_prod:hover{
+            cursor: pointer;
+            box-shadow: 0 0 2px black;
+        }
+    }
+
+    .container_muestra{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .foto_muestra_producto{
+            width: 400px;
+            height: 400px;
+            background-color: aqua;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    
+
+
+    .img_producto{
+        width: 400px;
+        height: 500px;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .description{
+
+        h4,p{
+            margin: 0;
+        }
+        h4{
+            margin: 7px 0;
+            font-size: 24px;
+        }
+
+        .precio{
+            font-size: 25px;
+            margin: 20px 0;
+        }
+
+        .ingredientes{
+            color: rgb(129, 129, 129);
+        }
+        .propiedades{
+            width: 100%;
+        }
+
+        .carrito{
+            font-size: 40px;
+        }
+
+        .comprar{
+            display: flex;
+            align-items: center;
+
+            .carrito{
+                margin: 0 0 0 12px;
+                background-color: rgb(32, 228, 91);
+                padding: 8px;
+                border-radius: 50%;
+            }
+
+            .carrito:hover{
+                cursor: pointer;
+                background-color: rgb(7, 150, 50);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .producto_container{
+        width: 100%;
+
+        .img_producto{
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+    
+}
+
+@media only screen and (max-width: 1150px) {
+
+    .title_del_producto{
+        width: 90%;
+        margin: auto;
+    }
+
+    .producto_container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        width: 90%;
+        margin: 30px auto;
+
+        a{
+            width: 100%;
+        }
+
+        .fotos_producto{
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+
+            .lista_fotos_productos{
+                width: 60%;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+            }
+        }
+
+    }
+
+    .img_producto{
+        
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .comprar{
+        justify-content: center;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .producto_container{
+        display: grid;
+        grid-template-columns: (1fr);
+
+        .fotos_producto{
+            grid-row: 2;
+            width: 70%;
+            
+            .lista_fotos_productos{
+
+                .fotos_varias_prod{
+                    width: 30px;
+                }
+
+            }
+        }
+
+        .container_muestra{
+            grid-row: 1;
+
+            .foto_muestra_producto{
+                width: 80%;
+                margin: 0 0 12px 0;
+            }
+        }
+
+    }
+    
+    
+    .producto_container{
+
+        .fotos_producto{
+
+
+            .lista_fotos_productos{
+                width: 100%;
+                margin: auto;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+               
+            }
+        }
+
+    }
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .title_del_producto{
+        font-size: 14px;
+    }
+
+    .producto_container{
+        display: grid;
+        grid-template-columns: (1fr);
+
+        .fotos_producto{
+            grid-row: 2;
+            width: 90%;
+
+            .lista_fotos_productos{
+                .fotos_varias_prod{
+                    width: 30px;
+                }
+
+            }
+        }
+
+        .container_muestra{
+            grid-row: 1;
+
+            .foto_muestra_producto{
+                width: 80%;
+                margin: 0 0 12px 0;
+            }
+        }
+
+    }
+
+}
