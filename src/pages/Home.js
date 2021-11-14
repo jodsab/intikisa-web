@@ -23,7 +23,6 @@ function Home(){
                 <Botmsj />
                 <div className='space'></div>
                 <h2 className='prods'>BIENVENIDO A INTIKISA</h2>
-                <Promo />
                 <Slider />
                 <Guia />
                 <div className='contact_cuerpo'>  
