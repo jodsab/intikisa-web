@@ -10,6 +10,7 @@
 
     .logger_register.show{
         display: flex;
+        justify-content: center;
         position: fixed;
         left: 50%;
         top: 50%;
@@ -17,7 +18,7 @@
     }
 }
 
-@media screen and (max-width: 750px){
+@media screen and (max-width: 650px){
     .divlogimp_container{
     
     
