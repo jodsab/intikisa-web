@@ -24,7 +24,7 @@ function DivLogimp() {
         <div className='divlogimp_container'>
           
 
-            <button onClick={toggleDiv}><AiOutlineUser /></button>
+            <div onClick={toggleDiv} ><AiOutlineUser /></div>
             <div className={showDiv ? 'logger_register show':'logger_register'}>
            { conectado ? <Menu /> : <HomeLogin acceder={acceder} />}
             </div>
