@@ -51,8 +51,8 @@ function HomeLogin(props) {
 
     const handleLogin = async () => {
         const data = {
-            "usuario": refUsuario.current.value,
-            "clave": refClave.current.value
+            "user_nombre": refUsuario.current.value,
+            "user_password": refClave.current.value
         }
 
         const respuestaJson = await enviarData(URL_LOGIN, data);
@@ -69,9 +69,9 @@ function HomeLogin(props) {
 
     const handleRegister = async () => {
         const regdata = {
-            "usuario": refRegUsuario.current.value,
-            "email": refRegEmail.current.value,
-            "clave": refRegClave.current.value
+            "user_nombre": refRegUsuario.current.value,
+            "user_email": refRegEmail.current.value,
+            "user_password": refRegClave.current.value
         }
         console.log(regdata);
         const regRespuestaJson = await enviarRegData(URL_REGISTER, regdata);
