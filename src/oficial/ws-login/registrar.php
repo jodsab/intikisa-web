@@ -7,16 +7,15 @@
     session_start();    
     $conn->set_charset('utf8');
 	
-	$usuario= $dataObject-> email;
-	$nombre= $dataObject-> usuario;
-	$apellidos= $dataObject-> usuario;
-	$idTipoUsuario= "2";
-	$password= $dataObject-> clave;	
-	$clave = password_hash($password, PASSWORD_DEFAULT);
+	$user_nombre= $dataObject-> nombre;
+	$user_celular= $dataObject-> celular;
+	$user_direccion= $dataObject-> direccion;
+	$user_email= $dataObject-> email;	
+	$user_password = password_hash($password, PASSWORD_DEFAULT);
 	
 	echo $password;
 	echo "<br/>";
-	echo $clave;
+	echo $user_password;
 	echo "<hr/>";
 	
 
@@ -24,10 +23,10 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO usuarios (usuario, clave, nombre, apellidos, idTipoUsuario)
-VALUES ('$usuario', '$clave', '$nombre', '$apellidos', '$idTipoUsuario' )
-WHERE NOT EXISTS ( SELECT * FROM usuarios
-WHERE usuario = '$usuario' ";
+$sql = "INSERT INTO users (user_nombre, user_password, user_celular, user_direccion, user_email)
+VALUES ('$user_nombre', '$user_password', '$user_celular', '$user_direccion', '$user_email' )
+WHERE NOT EXISTS ( SELECT * FROM users
+WHERE user_nombre = '$user_nombre' ";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";

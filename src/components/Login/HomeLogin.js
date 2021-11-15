@@ -6,7 +6,7 @@ import {AiOutlineUser} from 'react-icons/ai';
 import './homelogin.scss';
 
 //LOGIN SETUP
-const URL_LOGIN = "http://localhost/ws-login/login.php";
+const URL_LOGIN = "http://localhost/oficial/login.php";
 
 const enviarData = async (url, data) => {
 
@@ -24,7 +24,7 @@ const enviarData = async (url, data) => {
 }
 
 //REGISTER SETUP
-const URL_REGISTER = "http://localhost/ws-login/registrar.php";
+const URL_REGISTER = "http://localhost/oficial/registrar.php";
 
 const enviarRegData = async (url, data) => {
     
