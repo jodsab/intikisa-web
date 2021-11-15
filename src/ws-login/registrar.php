@@ -1,19 +1,24 @@
 <?php
+	header('Access-Control-Allow-Origin: *');  
+	header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
+	header("Content-Type: text/html; charset=utf-8");
 	include "conectar.php";
     $conn = conectarDB();
+
+	$JSONData = file_get_contents("php://input");
+	$dataObject = json_decode($JSONData);    
+    session_start();    
+    $conn->set_charset('utf8');
 	
-	$password= "456";
-	
-	
-	$usuario= "jose@correo.tic";
-	$nombre= "Jose";
-	$apellidos= "Jiménez Blanco";
-	$idTipoUsuario= "2";	
-	$clave = password_hash($password, PASSWORD_DEFAULT);
+	$user_nombre= $dataObject-> nombre;
+	$user_celular= $dataObject-> celular;
+	$user_direccion= $dataObject-> direccion;
+	$user_email= $dataObject-> email;	
+	$user_password = password_hash($password, PASSWORD_DEFAULT);
 	
 	echo $password;
 	echo "<br/>";
-	echo $clave;
+	echo $user_password;
 	echo "<hr/>";
 	
 
@@ -21,8 +26,10 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO usuarios (usuario, clave, nombre, apellidos, idTipoUsuario)
-VALUES ('$usuario', '$clave', '$nombre', '$apellidos', '$idTipoUsuario' )";
+$sql = "INSERT INTO users (user_nombre, user_password, user_celular, user_direccion, user_email)
+VALUES ('$user_nombre', '$user_password', '$user_celular', '$user_direccion', '$user_email' )
+WHERE NOT EXISTS ( SELECT * FROM users
+WHERE user_nombre = '$user_nombre' ";
 
 if ($conn->query($sql) === TRUE) {
   echo "New record created successfully";

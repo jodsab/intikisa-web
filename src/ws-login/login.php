@@ -1,5 +1,5 @@
 <?php
-header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Origin: *');  
 header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
 header("Content-Type: text/html; charset=utf-8");
 $method = $_SERVER['REQUEST_METHOD'];
@@ -15,20 +15,20 @@ $method = $_SERVER['REQUEST_METHOD'];
 	$pas =	$dataObject-> clave;
     
   if ($nueva_consulta = $mysqli->prepare("SELECT 
-  usuarios.nombre, usuarios.clave, usuarios.apellidos, usuarios.usuario, usuarios.idTipoUsuario, usuarios.id, tipo_usuario.etiquetaTipoUsuario, tipo_usuario.descripcionTipoUsuario 
-  FROM usuarios 
-  INNER JOIN tipo_usuario ON usuarios.idTipoUsuario = tipo_usuario.idTipoUsuario
+  users.id_user, users.user_fecha_registro, users.user_nombre, users.user_password, users.user_celular, users.user_direccion, users.user_email 
+  FROM users 
+  INNER JOIN carritos ON users.user_nombre = carritos.carrito_user_nombre
   WHERE usuario = ?")) {
         $nueva_consulta->bind_param('s', $usuario);
         $nueva_consulta->execute();
         $resultado = $nueva_consulta->get_result();
         if ($resultado->num_rows == 1) {
             $datos = $resultado->fetch_assoc();
-             $encriptado_db = $datos['clave'];
+             $encriptado_db = $datos['user_password'];
             if (password_verify($pas, $encriptado_db))
             {
-                $_SESSION['usuario'] = $datos['usuario'];
-                echo json_encode(array('conectado'=>true,'usuario'=>$datos['usuario'], 'nombre'=>$datos['nombre'],  'apellidos'=>$datos['apellidos'], 'id'=>$datos['id'], 'idTipoUsuario'=>$datos['idTipoUsuario'], 'etiquetaTipoUsuario'=>$datos['etiquetaTipoUsuario']  ) );
+                $_SESSION['usuario'] = $datos['user_id_nombre'];
+                echo json_encode(array('conectado'=>true,'usuario'=>$datos['id_user'], 'nombre'=>$datos['user_nombre'],  'password'=>$datos['user_password'], 'celular'=>$datos['user_celular'], 'direccion'=>$datos['user_direccion'], 'email'=>$datos['user_email']  ) );
               }
 
                else {

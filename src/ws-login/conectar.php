@@ -1,15 +1,15 @@
 <?php
-header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Origin: *');  
 header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
 header("Content-Type: text/html; charset=utf-8");
 $method = $_SERVER['REQUEST_METHOD'];
 
 function conectarDB(){
 
-  $servidor = "localhost:3307";
-  $usuario = "root";
-  $password = "dcretovida123";
-  $bd = "prueba_login";
+  $servidor = "localhost:3306";
+  $usuario = "luiggir_usrintik";
+  $password = "#(RU~[L-XMen";
+  $bd = "luiggir_intikisaperu.com";
   //$bd = "cajaherr_datos";
   
 
