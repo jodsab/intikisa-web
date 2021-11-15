@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.ebe5fe65.chunk.css",
-    "main.js": "./static/js/main.174bc482.chunk.js",
-    "main.js.map": "./static/js/main.174bc482.chunk.js.map",
+    "main.css": "./static/css/main.59c8e0ce.chunk.css",
+    "main.js": "./static/js/main.3f3fa7a5.chunk.js",
+    "main.js.map": "./static/js/main.3f3fa7a5.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.cf484e74.js",
     "runtime-main.js.map": "./static/js/runtime-main.cf484e74.js.map",
-    "static/js/2.b3d108c5.chunk.js": "./static/js/2.b3d108c5.chunk.js",
-    "static/js/2.b3d108c5.chunk.js.map": "./static/js/2.b3d108c5.chunk.js.map",
+    "static/js/2.b373503f.chunk.js": "./static/js/2.b373503f.chunk.js",
+    "static/js/2.b373503f.chunk.js.map": "./static/js/2.b373503f.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.ebe5fe65.chunk.css.map": "./static/css/main.ebe5fe65.chunk.css.map",
-    "static/js/2.b3d108c5.chunk.js.LICENSE.txt": "./static/js/2.b3d108c5.chunk.js.LICENSE.txt",
+    "static/css/main.59c8e0ce.chunk.css.map": "./static/css/main.59c8e0ce.chunk.css.map",
+    "static/js/2.b373503f.chunk.js.LICENSE.txt": "./static/js/2.b373503f.chunk.js.LICENSE.txt",
     "static/media/ARANDANOS IMAGEN 2.png": "./static/media/ARANDANOS IMAGEN 2.367801c8.png",
     "static/media/ARANDANOS IMAGEN 3.png": "./static/media/ARANDANOS IMAGEN 3.22766e82.png",
     "static/media/ARANDANOS IMAGEN.png": "./static/media/ARANDANOS IMAGEN.a4fecaef.png",
@@ -35,8 +35,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.cf484e74.js",
-    "static/js/2.b3d108c5.chunk.js",
-    "static/css/main.ebe5fe65.chunk.css",
-    "static/js/main.174bc482.chunk.js"
+    "static/js/2.b373503f.chunk.js",
+    "static/css/main.59c8e0ce.chunk.css",
+    "static/js/main.3f3fa7a5.chunk.js"
   ]
 }
