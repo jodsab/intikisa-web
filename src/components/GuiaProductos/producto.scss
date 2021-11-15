@@ -65,8 +65,9 @@
         }
 
         .precio{
-            font-size: 25px;
+            font-size: 35px;
             margin: 20px 0;
+            font-family: 'Kanit', sans-serif;
         }
 
         .ingredientes{
@@ -230,6 +231,12 @@
                     width: 30px;
                 }
 
+            }
+        }
+
+        .description{
+            .precio{
+                font-size: 30px;
             }
         }
 

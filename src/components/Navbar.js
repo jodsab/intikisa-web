@@ -4,13 +4,15 @@ import './navbar.scss';
 import {CgShoppingCart} from "react-icons/cg"
 import {HiMenu} from "react-icons/hi"
 import DivLogimp from './Login/DivLogimp';
-import TelefonoCorreo from './Telefono/TelefonoCorreo';
+import Menu from './Login/Menu';
 
 function Navbar() {
 
     const [sidebar, setSidebar] = useState(false);
 
     const showSidebar = () => setSidebar(!sidebar);
+
+    const [connected, setConnected] = useState(false);
 
     return(
         <div className='navbar_container'>

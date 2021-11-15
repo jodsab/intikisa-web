@@ -10,8 +10,8 @@
                 "prod_link": "ZAPALLO_LOCHE_DESHIDRATADO",
                 "prod_ingredientes": "ZAPALLO LOCHE",
                 "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
-                "prod_propiedades": "Este producto contiene 100% zapallo loche y no cuenta con preservantes, fue elaborado con la idea de que nuestros clientes puedan agregarlo con practicidad a las comidas de su dia a dia."
-    
+                "prod_propiedades": "Este producto contiene 100% zapallo loche y no cuenta con preservantes, fue elaborado con la idea de que nuestros clientes puedan agregarlo con practicidad a las comidas de su dia a dia.",
+                "prod_precio": 20.00 
             },
             {
                 "id_prod": 2,
@@ -19,8 +19,8 @@
                 "prod_link": "ZAPALLO_LOCHE_EN_PASTA",
                 "prod_ingredientes": "ZAPALLO LOCHE",
                 "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
-                "prod_propiedades": "Este producto contiene 100% zapallo loche y no cuenta con preservantes, fue elaborado en presentación de pasta con la idea de que nuestros clientes puedan agregarlo con practicidad a las comidas de su dia a dia."
-
+                "prod_propiedades": "Este producto contiene 100% zapallo loche y no cuenta con preservantes, fue elaborado en presentación de pasta con la idea de que nuestros clientes puedan agregarlo con practicidad a las comidas de su dia a dia.",
+                "prod_precio": 20.00 
             }
         ]
     },
@@ -35,7 +35,8 @@
                 "prod_link": "MACA_GELATINIZADA_EN_POLVO",
                 "prod_ingredientes": "MACA AMARILLA",
                 "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
-                "prod_propiedades": "La maca gelatinizada en polvo de Intikisa Perú está elaborada con 100% maca andina el cual está lleno de propiedades y beneficios para nuestra salud, además de impulsar nuestra energía."
+                "prod_propiedades": "La maca gelatinizada en polvo de Intikisa Perú está elaborada con 100% maca andina el cual está lleno de propiedades y beneficios para nuestra salud, además de impulsar nuestra energía.",
+                "prod_precio": 21.99 
             },
             {
                 "id_prod": 2,
@@ -43,7 +44,8 @@
                 "prod_link": "MACHU_PICCHU_GOLDEN_MIX",
                 "prod_ingredientes": "MACA, QUINUA, CACAO",
                 "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
-                "prod_propiedades": "Machu picchu Golden mix es una mezcla de sabores andinos y de la amazonia de nuestro Perú; La quinua con su alto valor nutritivo, la maca con sus fuentes de vitaminas y el cacao con su fuente energética hacen de este mix el indicado para tu alimentación diaria por sus innumerables beneficios."
+                "prod_propiedades": "Machu picchu Golden mix es una mezcla de sabores andinos y de la amazonia de nuestro Perú; La quinua con su alto valor nutritivo, la maca con sus fuentes de vitaminas y el cacao con su fuente energética hacen de este mix el indicado para tu alimentación diaria por sus innumerables beneficios.",
+                "prod_precio": 47.99 
             },
             {
                 "id_prod": 3,
@@ -51,7 +53,8 @@
                 "prod_link": "INKA_GOLDEN_MIX",
                 "prod_ingredientes": "TARWI, MACA, CACAO",
                 "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
-                "prod_propiedades": "INKA GOLDEN MIX es una mezcla de sabores andinos de nuestro Perú; El Tarwi con su fuente proteínas, la maca con sus fuentes de vitaminas y el cacao con su fuente energética hacen de este mix el indicado para tu alimentación diaria por sus innumerables beneficios."
+                "prod_propiedades": "INKA GOLDEN MIX es una mezcla de sabores andinos de nuestro Perú; El Tarwi con su fuente proteínas, la maca con sus fuentes de vitaminas y el cacao con su fuente energética hacen de este mix el indicado para tu alimentación diaria por sus innumerables beneficios.",
+                "prod_precio": 44.99 
             }
         ]
     },
@@ -66,7 +69,8 @@
                 "prod_link": "CHOCOLATE_DE_TAZA",
                 "prod_ingredientes": "100 % CACAO",
                 "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
-                "prod_propiedades": "Intikisa chocolate de taza contiene 100% cacao lo cual trae muchos beneficios a nuestra salud, ya que presenta una gran concentración de antioxidantes. Además es un alimento rico en magnesio y hierro."
+                "prod_propiedades": "Intikisa chocolate de taza contiene 100% cacao lo cual trae muchos beneficios a nuestra salud, ya que presenta una gran concentración de antioxidantes. Además es un alimento rico en magnesio y hierro.",
+                "prod_precio": 16.99 
             }
         ]
     },
@@ -81,7 +85,8 @@
                 "prod_link": "MERMELADA_DE_ARANDANOS_CON_STEVIA",
                 "prod_ingredientes": "MERMELADA, ARÁNDANOS, STEVIA",
                 "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
-                "prod_propiedades": "Mermelada de arándanos hecho con pura fruta y endulzado con Stevia lo cual garantiza un gran saber pero con menos azúcar."
+                "prod_propiedades": "Mermelada de arándanos hecho con pura fruta y endulzado con Stevia lo cual garantiza un gran saber pero con menos azúcar.",
+                "prod_precio": 20.00 
             },
             {
                 "id_prod": 2,
@@ -89,7 +94,8 @@
                 "prod_link": "MERMELADA_DE_FRESA_CON_STEVIA",
                 "prod_ingredientes": "MERMELADA, FRESA, STEVIA",
                 "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
-                "prod_propiedades": "Mermelada de fresa hecho con pura fruta y endulzado con Stevia lo cual garantiza un gran saber pero con menos azúcar."
+                "prod_propiedades": "Mermelada de fresa hecho con pura fruta y endulzado con Stevia lo cual garantiza un gran saber pero con menos azúcar.",
+                "prod_precio": 20.00
             },
             {
                 "id_prod": 3,
@@ -97,7 +103,8 @@
                 "prod_link": "MERMELADA_DE_AGUAYMANTO_CON_STEVIA",
                 "prod_ingredientes": "MERMELADA, AGUAYMANTO, STEVIA",
                 "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
-                "prod_propiedades": "Mermelada de aguaymanto hecho con pura fruta y endulzado con Stevia lo cual garantiza un gran saber pero con menos azúcar."
+                "prod_propiedades": "Mermelada de aguaymanto hecho con pura fruta y endulzado con Stevia lo cual garantiza un gran saber pero con menos azúcar.",
+                "prod_precio": 20.00
             }
         ]
     },
@@ -112,7 +119,8 @@
                 "prod_link": "PANETON_INTEGRAL_CON_ARANDANOS",
                 "prod_ingredientes": "MERMELADA, ARÁNDANOS, STEVIA",
                 "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
-                "prod_propiedades": "Atractivo al paladar por su miga suave. Además, lo novedoso de este panetón es que contiene arándanos el cual nos brinda importantes innumerables beneficios a nuestra salud."
+                "prod_propiedades": "Atractivo al paladar por su miga suave. Además, lo novedoso de este panetón es que contiene arándanos el cual nos brinda importantes innumerables beneficios a nuestra salud.",
+                "prod_precio": 20.00
             },
             {
                 "id_prod": 2,
@@ -120,7 +128,8 @@
                 "prod_link": "PANETON_CON_FRUTAS",
                 "prod_ingredientes": "MERMELADA, FRESA, STEVIA",
                 "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
-                "prod_propiedades": "Convierte tus encuentros familiares en momentos inolvidables con nuestro panetón tradicional relleno con pasas y frutas confitadas."
+                "prod_propiedades": "Convierte tus encuentros familiares en momentos inolvidables con nuestro panetón tradicional relleno con pasas y frutas confitadas.",
+                "prod_precio": 20.00
             }
         ]
     }

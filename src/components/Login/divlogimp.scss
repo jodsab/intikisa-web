@@ -1,5 +1,56 @@
 .divlogimp_container{
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .usuario{
+        display: flex;
+        align-items: center;
+        .usuario_welcome{
+            font-size: 16px;
+        }
+        strong{
+            font-size: 18px;
+        }
+
+    }
+
+    .btn_iniciar_sesion{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        background-color: white;
+
+
+        .icon{
+            color: rgb(255, 255, 255);
+            padding: 7px;
+            font-size: 35px;
+            border-radius: 50%;
+            background-color: rgb(65, 255, 166);
+            outline:  5px solid white;
+            z-index: 2;
+        }
+        p{
+            font-size: 19px;
+            color: rgb(160, 160, 160);
+            padding: 5px 12px;
+            background-color: rgb(65, 255, 166);
+            border-radius: 14px;
+        }
+    }
+
+    .btn_iniciar_sesion:hover{
+        cursor: pointer;
+        .icon,p{
+            color: black;
+            background: rgb(15,36,0);
+            background: linear-gradient(90deg, rgba(15,36,0,1) 0%, rgba(65,255,166,1) 0%, rgba(255,230,213,1) 100%);
+        }
+        
+    }
     
     .logger_register{
         background-color: rgb(241, 255, 218);

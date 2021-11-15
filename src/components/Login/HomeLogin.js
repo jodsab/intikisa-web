@@ -1,12 +1,11 @@
 import React, {useState, useRef} from 'react'
-import Axios from 'axios';
 
 import {AiOutlineUser} from 'react-icons/ai';
 
 import './homelogin.scss';
 
 //LOGIN SETUP
-const URL_LOGIN = "http://108.167.181.54/oficial/login.php";
+const URL_LOGIN = "https://intikisaperu.com/oficial/login.php";
 
 const enviarData = async (url, data) => {
 
@@ -19,12 +18,13 @@ const enviarData = async (url, data) => {
     })
 
     const json = await resp.json();
+    console.log(json);
 
     return json;
 }
 
 //REGISTER SETUP
-const URL_REGISTER = "http://108.167.181.54/oficial/registrar.php";
+const URL_REGISTER = "https://intikisaperu.com/oficial/registrar.php";
 
 const enviarRegData = async (url, data) => {
     
@@ -60,6 +60,7 @@ function HomeLogin(props) {
 
         props.acceder(respuestaJson.conectado)
         setError(respuestaJson.error)
+        props.userName(respuestaJson.nombre)
     }
 
     //REGISTER
@@ -76,6 +77,8 @@ function HomeLogin(props) {
         console.log(regdata);
         const regRespuestaJson = await enviarRegData(URL_REGISTER, regdata);
         console.log("respuesta desde el evento register", regRespuestaJson);
+
+        console.log(regRespuestaJson.registro);
     }
 
     //DIVS DE LOGIN Y REGISTER

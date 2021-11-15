@@ -34,7 +34,7 @@ function Producto(props){
                     <h4 className='nombre'>{procs.prod_name} </h4>
                     <p className='ingredientes'>{procs.prod_ingredientes} </p>
                     <div className='comprar'>
-                        <p className='precio'>S/20.00</p>
+                        <p className='precio'>S/.{procs.prod_precio} </p>
                         <CarritoAdd className='carrito' />
                     </div>
                     <p className='propiedades'>{procs.prod_propiedades} </p>
