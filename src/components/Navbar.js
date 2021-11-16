@@ -19,16 +19,12 @@ function Navbar() {
             <div>
                 <img src={require('../img/navbar/logointikisa.png').default} className='img_logo' alt='logo intikisa' />
             </div>
-            <div className={sidebar ? 'navbar_nav active' : 'navbar_nav'} >
-                
-                <div className='navbar_nav_options'>
-                    <DivLogimp className="rs_icon"/>
-                    <CgShoppingCart className="rs_icon"/>
-                </div>
-            </div>  
-            <div className='menu_options'>
-                <HiMenu onClick={showSidebar}/>
+            <div className='navbar_nav_options'>
+                <DivLogimp className="rs_icon"/>
+                <CgShoppingCart className="rs_icon"/>
             </div>
+
+
         </div>
     )
 }

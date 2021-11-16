@@ -3,31 +3,39 @@ import {useState} from 'react';
 
 import {CgShoppingCart} from "react-icons/cg"
 
+const URL_AGARRAR_CARRITO = "https://intikisaperu.com/oficial/obtenercarrito.php";
+
+const enviarData = async (url, data) => {
+
+    const resp = await fetch (url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+
+    const json = await resp.json();
+    console.log(json);
+
+    return json;
+}
+
 function CarritoGet(props){
 
-    const [userid, SetUserId] = useState(1);
-    const [productos, setProductos] = useState('');
+    const obtenercarrito = async () => {
+        const data = {
+            "user_nombre": 'camilo',
+        }
 
-    const getCart = () => {
-        Axios.post(`http://localhost:4000/1/carrito/leyendo`,{userid: userid})
-        .then((response) => {
-            if(response){
-                console.log(response);
-                setProductos(response.data);
-                if(response.data.length==0){
-                    setProductos('VACIO')
-                }
-
-            }
-            else{
-                console.log(response);
-            }
-        })
+        const respuestaJson = await enviarData(URL_AGARRAR_CARRITO, data);
+        console.log("respuesta desde el evento get carrito", respuestaJson);
+        
     }
 
     return(
         <div>
-            <CgShoppingCart className="rs_icon" onClick={getCart} />
+            <CgShoppingCart className="rs_icon" onClick={obtenercarrito} />
             <p>PRODUCTOS: {productos}</p>
         </div>
     )

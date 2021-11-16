@@ -1,8 +1,10 @@
 import React, {useState, useRef} from 'react'
 
 import {BsCartPlus} from 'react-icons/bs';
+import DivLogimp from '../Login/DivLogimp';
+import HomeLogin from '../Login/HomeLogin';
 
-//LOGIN SETUP
+//INSERTAR CARRITO
 const URL_INSERTAR_CARRITO = "https://intikisaperu.com/oficial/insertarcarrito.php";
 
 const enviarData = async (url, data) => {
@@ -21,37 +23,41 @@ const enviarData = async (url, data) => {
     return json;
 }
 
-function CarritoAdd(){
+function CarritoAdd(props){
+
+    const [userNombre, setUserNombre] = useState(null);
+
+    const logUser = (nombre) => {
+        setUserNombre(nombre)
+    }
+
+    const [conectado, setConectado] = useState(false);
+
+    const vamosConect = (estado) => {
+        setConectado(estado)
+    }
 
     //ADDCARRITO
 
-    const refUsuario = useRef(null);
-    const refFecha = useRef(null);
-    const refProducto = useRef(null);
-    const refPrecio = useRef(null);
-
     const insertarCarrito = async () => {
         const data = {
-            //"user_nombre": refUsuario.current.value,
-            //"carrito_fecha": refFecha.current.value,
-            //"carrito_producto": refProducto.current.value,
-            //"carrito_precio": refPrecio.current.value,
-            "user_nombre": "sadsa",
+            "user_nombre": userNombre,
             "carrito_fecha": "10/10/10",
-            "carrito_producto": "dasdad",
-            "carrito_precio": 14,
+            "carrito_producto": 'refProducto',
+            "carrito_precio": 24
         }
 
         console.log(data);
         const respuestaJson = await enviarData(URL_INSERTAR_CARRITO, data);
         console.log("respuesta desde el evento insertar carrito", respuestaJson);
+        
     }
-
+ 
     return(
         <div>
             <button onClick={insertarCarrito}>
                 <BsCartPlus className='carrito' />
-            </button>
+            </button>            
         </div>
     )
 }
