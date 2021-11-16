@@ -1,22 +1,27 @@
 {
   "files": {
-    "main.css": "./static/css/main.25c2bbcc.chunk.css",
-    "main.js": "./static/js/main.141727ed.chunk.js",
-    "main.js.map": "./static/js/main.141727ed.chunk.js.map",
+    "main.css": "./static/css/main.78714890.chunk.css",
+    "main.js": "./static/js/main.4da258c9.chunk.js",
+    "main.js.map": "./static/js/main.4da258c9.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.cf484e74.js",
     "runtime-main.js.map": "./static/js/runtime-main.cf484e74.js.map",
-    "static/js/2.7c2e502c.chunk.js": "./static/js/2.7c2e502c.chunk.js",
-    "static/js/2.7c2e502c.chunk.js.map": "./static/js/2.7c2e502c.chunk.js.map",
+    "static/js/2.7e00d54d.chunk.js": "./static/js/2.7e00d54d.chunk.js",
+    "static/js/2.7e00d54d.chunk.js.map": "./static/js/2.7e00d54d.chunk.js.map",
     "index.html": "./index.html",
-    "static/css/main.25c2bbcc.chunk.css.map": "./static/css/main.25c2bbcc.chunk.css.map",
-    "static/js/2.7c2e502c.chunk.js.LICENSE.txt": "./static/js/2.7c2e502c.chunk.js.LICENSE.txt",
+    "static/css/main.78714890.chunk.css.map": "./static/css/main.78714890.chunk.css.map",
+    "static/js/2.7e00d54d.chunk.js.LICENSE.txt": "./static/js/2.7e00d54d.chunk.js.LICENSE.txt",
     "static/media/ARANDANOS IMAGEN 2.png": "./static/media/ARANDANOS IMAGEN 2.367801c8.png",
     "static/media/ARANDANOS IMAGEN 3.png": "./static/media/ARANDANOS IMAGEN 3.22766e82.png",
     "static/media/ARANDANOS IMAGEN.png": "./static/media/ARANDANOS IMAGEN.a4fecaef.png",
+    "static/media/CHOCOLATE INTIKISA.png": "./static/media/CHOCOLATE INTIKISA.54d6999b.png",
     "static/media/Fwd__PNG.zip": "./static/media/Fwd__PNG.447613eb.zip",
+    "static/media/LOCHE INTIKISA.png": "./static/media/LOCHE INTIKISA.6404bf83.png",
     "static/media/MACA GELATINIZADO.png": "./static/media/MACA GELATINIZADO.d89781c4.png",
+    "static/media/MACA INTIKISA.png": "./static/media/MACA INTIKISA.b99c1d2b.png",
     "static/media/MACHUPICCHU.png": "./static/media/MACHUPICCHU.f423b47b.png",
     "static/media/MERMELADA ARANDANOS.png": "./static/media/MERMELADA ARANDANOS.9b4e64de.png",
+    "static/media/PROTEINAS INKA GOLDEN POWER.png": "./static/media/PROTEINAS INKA GOLDEN POWER.917f3ad9.png",
+    "static/media/PROTEINAS MACHU PICCHU GOLDEN MIX.png": "./static/media/PROTEINAS MACHU PICCHU GOLDEN MIX.02261594.png",
     "static/media/cacao.jpg": "./static/media/cacao.fe4b6299.jpg",
     "static/media/deshidratados.jpg": "./static/media/deshidratados.e0a73f0b.jpg",
     "static/media/inkagoldenmix.jpg": "./static/media/inkagoldenmix.7c7de819.jpg",
@@ -35,8 +40,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.cf484e74.js",
-    "static/js/2.7c2e502c.chunk.js",
-    "static/css/main.25c2bbcc.chunk.css",
-    "static/js/main.141727ed.chunk.js"
+    "static/js/2.7e00d54d.chunk.js",
+    "static/css/main.78714890.chunk.css",
+    "static/js/main.4da258c9.chunk.js"
   ]
 }
