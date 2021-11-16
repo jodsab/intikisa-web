@@ -39,6 +39,8 @@ const enviarRegData = async (url, data) => {
     const regjson = await regResp.json();
     console.log(regjson);
 
+    return regjson;
+
 }
 
 function HomeLogin(props) {
@@ -79,6 +81,7 @@ function HomeLogin(props) {
         console.log("respuesta desde el evento register", regRespuestaJson);
 
         console.log(regRespuestaJson.registro);
+
     }
 
     //DIVS DE LOGIN Y REGISTER

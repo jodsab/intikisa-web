@@ -3,6 +3,7 @@ import {useState} from 'react';
 import './producto.scss';
 
 import CarritoAdd from '../Carrito/CarritoAdd';
+import { CarritoPut } from '../Carrito/CarritoGet';
 
 function Producto(props){
 
@@ -35,7 +36,7 @@ function Producto(props){
                     <p className='ingredientes'>{procs.prod_ingredientes} </p>
                     <div className='comprar'>
                         <p className='precio'>S/.{procs.prod_precio} </p>
-                        <CarritoAdd className='carrito' />
+                        <CarritoPut className='carrito' />
                     </div>
                     <p className='propiedades'>{procs.prod_propiedades} </p>
                 

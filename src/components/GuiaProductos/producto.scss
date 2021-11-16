@@ -38,20 +38,9 @@
         .foto_muestra_producto{
             width: 400px;
             height: 400px;
-            background-color: aqua;
-            object-fit: cover;
+            object-fit: contain;
             object-position: center;
         }
-    }
-
-    
-
-
-    .img_producto{
-        width: 400px;
-        height: 500px;
-        object-fit: cover;
-        object-position: center;
     }
 
     .description{

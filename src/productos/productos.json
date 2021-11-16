@@ -9,7 +9,7 @@
                 "prod_name": "ZAPALLO LOCHE DESHIDRATADO",
                 "prod_link": "ZAPALLO_LOCHE_DESHIDRATADO",
                 "prod_ingredientes": "ZAPALLO LOCHE",
-                "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
+                "prod_src": ["LOCHE INTIKISA.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
                 "prod_propiedades": "Este producto contiene 100% zapallo loche y no cuenta con preservantes, fue elaborado con la idea de que nuestros clientes puedan agregarlo con practicidad a las comidas de su dia a dia.",
                 "prod_precio": 20.00 
             },
@@ -34,7 +34,7 @@
                 "prod_name": "MACA GELATINIZADA EN POLVO",
                 "prod_link": "MACA_GELATINIZADA_EN_POLVO",
                 "prod_ingredientes": "MACA AMARILLA",
-                "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
+                "prod_src": ["MACA INTIKISA.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
                 "prod_propiedades": "La maca gelatinizada en polvo de Intikisa Perú está elaborada con 100% maca andina el cual está lleno de propiedades y beneficios para nuestra salud, además de impulsar nuestra energía.",
                 "prod_precio": 21.99 
             },
@@ -43,7 +43,7 @@
                 "prod_name": "MACHU PICCHU GOLDEN MIX",
                 "prod_link": "MACHU_PICCHU_GOLDEN_MIX",
                 "prod_ingredientes": "MACA, QUINUA, CACAO",
-                "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
+                "prod_src": ["PROTEINAS MACHU PICCHU GOLDEN MIX.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
                 "prod_propiedades": "Machu picchu Golden mix es una mezcla de sabores andinos y de la amazonia de nuestro Perú; La quinua con su alto valor nutritivo, la maca con sus fuentes de vitaminas y el cacao con su fuente energética hacen de este mix el indicado para tu alimentación diaria por sus innumerables beneficios.",
                 "prod_precio": 47.99 
             },
@@ -52,7 +52,7 @@
                 "prod_name": "INKA GOLDEN MIX",
                 "prod_link": "INKA_GOLDEN_MIX",
                 "prod_ingredientes": "TARWI, MACA, CACAO",
-                "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
+                "prod_src": ["PROTEINAS INKA GOLDEN POWER.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
                 "prod_propiedades": "INKA GOLDEN MIX es una mezcla de sabores andinos de nuestro Perú; El Tarwi con su fuente proteínas, la maca con sus fuentes de vitaminas y el cacao con su fuente energética hacen de este mix el indicado para tu alimentación diaria por sus innumerables beneficios.",
                 "prod_precio": 44.99 
             }
@@ -68,7 +68,7 @@
                 "prod_name": "CHOCOLATE DE TAZA",
                 "prod_link": "CHOCOLATE_DE_TAZA",
                 "prod_ingredientes": "100 % CACAO",
-                "prod_src": ["zapallolochedeshidratado.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
+                "prod_src": ["CHOCOLATE INTIKISA.png","zapallolochenpasta.png","inkagoldenmix.jpg","macagelatinizada.jpg","inkagoldenmix.jpg"],
                 "prod_propiedades": "Intikisa chocolate de taza contiene 100% cacao lo cual trae muchos beneficios a nuestra salud, ya que presenta una gran concentración de antioxidantes. Además es un alimento rico en magnesio y hierro.",
                 "prod_precio": 16.99 
             }

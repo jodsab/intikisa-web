@@ -5,6 +5,8 @@ import {CgShoppingCart} from "react-icons/cg"
 import {HiMenu} from "react-icons/hi"
 import DivLogimp from './Login/DivLogimp';
 import Menu from './Login/Menu';
+import CarritoGet from './Carrito/CarritoGet';
+
 
 function Navbar() {
 
@@ -20,11 +22,10 @@ function Navbar() {
                 <img src={require('../img/navbar/logointikisa.png').default} className='img_logo' alt='logo intikisa' />
             </div>
             <div className='navbar_nav_options'>
-                <DivLogimp className="rs_icon"/>
-                <CgShoppingCart className="rs_icon"/>
+                <div className="container">
+                    <CarritoGet />
+                </div>
             </div>
-
-
         </div>
     )
 }

@@ -4,6 +4,7 @@ import {BsCartPlus} from 'react-icons/bs';
 
 import './productos.scss';
 import CarritoAdd from '../Carrito/CarritoAdd';
+import { CarritoPut } from '../Carrito/CarritoGet';
 
 function Productos(props){
 
@@ -24,7 +25,7 @@ function Productos(props){
                         </Link>
                             <div className='pagar_ahora'>
                                 <p>S/.{e.prod_precio}</p>
-                                <CarritoAdd className='carrito'/>
+                                <CarritoPut className='carrito'/>
                             </div>
                     </li>
                 ))
