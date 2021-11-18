@@ -4,6 +4,10 @@ import {AiOutlineUser} from 'react-icons/ai';
 
 import './homelogin.scss';
 
+import {setToken, setCurrentUser,getToken,getUserName,delenteToken} from '../Helpers/auth-helpers';
+
+import swal from 'sweetalert';
+
 //LOGIN SETUP
 const URL_LOGIN = "https://intikisaperu.com/oficial/login.php";
 
@@ -16,7 +20,7 @@ const enviarData = async (url, data) => {
             'Content-Type': 'application/json'
         }
     })
-
+    console.log(resp);
     const json = await resp.json();
     console.log(json);
 
@@ -45,6 +49,16 @@ const enviarRegData = async (url, data) => {
 
 function HomeLogin(props) {
 
+    const alertaLogged = (nombre) => {
+        swal({
+            title: "Loggeado",
+            text: `Bienvenido ${nombre}`,
+            alert: "success",
+            button: "Aceptar",
+            timer: "2000"
+        })
+    }
+
     //LOGIN
     const [error, setError] = useState(null);
 
@@ -60,9 +74,13 @@ function HomeLogin(props) {
         const respuestaJson = await enviarData(URL_LOGIN, data);
         console.log("respuesta desde el evento login", respuestaJson.conectado);
 
-        props.acceder(respuestaJson.conectado)
+        if(respuestaJson.conectado){
+            props.acceder(respuestaJson.conectado)
+            props.userName(respuestaJson.nombre)
+            setCurrentUser(data.user_nombre)
+            alertaLogged(respuestaJson.nombre)
+        }
         setError(respuestaJson.error)
-        props.userName(respuestaJson.nombre)
     }
 
     //REGISTER
@@ -131,8 +149,8 @@ function HomeLogin(props) {
                 <div className="login">
                     <div className={showLogMenu ? 'login_inputs showlogmenu': 'login_inputs'}>
                         <p id='entrar'>Entrar</p>
-                        <input type="text" placeholder="Username" ref={refUsuario} required></input>
-                        <input type="password" placeholder="Password" ref={refClave} required></input>
+                        <input type="text" placeholder="Usuario" ref={refUsuario} required></input>
+                        <input type="password" placeholder="Contraseña" ref={refClave} required></input>
                             {
                                 error &&
                                 <div className='error_space'>

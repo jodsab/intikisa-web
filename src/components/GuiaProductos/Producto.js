@@ -3,7 +3,6 @@ import {useState} from 'react';
 import './producto.scss';
 
 import CarritoAdd from '../Carrito/CarritoAdd';
-import { CarritoPut } from '../Carrito/CarritoGet';
 
 function Producto(props){
 
@@ -12,7 +11,7 @@ function Producto(props){
     const [fotoMuestra, setFotoMuestra] = useState(procs.prod_src[0]);
 
     return(
-        <div>
+        <div className='producto_container_xdd'>
             <div className='title_del_producto'>
                 <h3>{props.pre}: {procs.prod_name} </h3>
             </div>
@@ -35,8 +34,12 @@ function Producto(props){
                     <h4 className='nombre'>{procs.prod_name} </h4>
                     <p className='ingredientes'>{procs.prod_ingredientes} </p>
                     <div className='comprar'>
-                        <p className='precio'>S/.{procs.prod_precio} </p>
-                        <CarritoPut className='carrito' />
+                        <p className='precio'>S/.{procs.prod_precio}.00 </p>
+                        <div className='div_icon_add_tocart'>
+                            <CarritoAdd className='carrito' nombre={`${procs.prod_name}`} precio={`${procs.prod_precio}`} />
+                            <p className='add_to_cart'>Agregar al carrito</p>
+                        </div>
+                        
                     </div>
                     <p className='propiedades'>{procs.prod_propiedades} </p>
                 

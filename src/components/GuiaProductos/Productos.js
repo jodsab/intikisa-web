@@ -1,10 +1,7 @@
 import {Link} from 'react-router-dom';
 
-import {BsCartPlus} from 'react-icons/bs';
-
 import './productos.scss';
 import CarritoAdd from '../Carrito/CarritoAdd';
-import { CarritoPut } from '../Carrito/CarritoGet';
 
 function Productos(props){
 
@@ -24,8 +21,11 @@ function Productos(props){
                             <img src={require(`../../img/productos/${e.prod_src[0]}`).default} alt={e.prod_name} className='foto_producto'/>
                         </Link>
                             <div className='pagar_ahora'>
-                                <p>S/.{e.prod_precio}</p>
-                                <CarritoPut className='carrito'/>
+                                <p>S/.{e.prod_precio}.00</p>
+                                <div className='add_to_cart_div'>
+                                    <CarritoAdd className='carrito' nombre={`${e.prod_name}`} precio={`${e.prod_precio}`} />
+                                    <p className='add_to_cart'>Agregar</p>
+                                </div>
                             </div>
                     </li>
                 ))

@@ -68,7 +68,7 @@
             }
 
             input:focus{
-                background-color: rgba(250, 245, 203,.4);
+                background-color: rgba(166, 249, 255, 0.4);
             }
 
             #noacc{
@@ -77,16 +77,19 @@
             }
 
             .btn_entrar{
-                width: 50%;
+                width: 40%;
                 margin: 5px auto 0 auto;
                 border: 1px solid black;
                 border-radius: 12px;
-                padding: 3px 0;
+                padding: 5px 0;
+                background-color: rgb(138, 255, 144);
+                border: 1px solid rgb(13, 255, 25);
+
             }
 
             .btn_entrar:hover{
                 cursor: pointer;
-                background-color: rgb(201, 255, 147);
+                background-color: rgb(173, 255, 92);
             }
 
             .btn_rgster{
@@ -135,7 +138,8 @@
             display: flex;
             flex-direction: column;
             label{
-                font-size: 18px;
+                font-size: 15px;
+                align-self: start;
             }
 
             input{
@@ -157,11 +161,13 @@
             border: 1px solid black;
             border-radius: 12px;
             padding: 3px 0;
+            background-color: rgb(201, 255, 147);
+            border: 1px solid rgb(140, 252, 140);
         }
 
         .btn_login:hover{
             cursor: pointer;
-            background-color: rgb(201, 255, 147);
+            background-color: rgb(239, 255, 147);
         }
 
         .btn_lgns{

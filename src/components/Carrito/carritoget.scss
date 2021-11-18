@@ -60,8 +60,138 @@
             border-radius: 50%;
             z-index: 99999999;
         }
+
+        .div_items_carrito{
+            
+            .div_productos{
+                
+                height: 500px;
+                width: 400px;
+                padding: 4px 6px;
+                background-color: rgb(242, 255, 242);
+                border: 1px solid rgb(226, 226, 226);
+                border-radius: 8px;
+                position: absolute;
+                top: 90px;
+                right: 10px;
+                cursor: default;
+                display: none;
+
+                p{
+                    margin: 0;
+                    font-size: 28px;
+                }
+
+                ul{
+                    padding: 0;
+                    overflow-y: scroll;
+                    height: 350px;
+                    margin: 15px 0;
+
+                    .div_productos_itemss{
+                        padding: 2px 6px;
+                        margin: 1px 0;
+                        background-color: rgb(144, 255, 162);
+                        border-radius: 8px;
+                        display: flex;
+                        justify-content: flex-start;
+                        align-items: center;
+
+                        .simbolo_menos{
+                            font-size: 15px;
+                            color: red;
+                            cursor: pointer;
+                        }
+
+                        .flex_items_div{
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            width: 94%;
+
+                            .foto_espacio{
+                                margin: 0 5px;
+                                width: 50px;
+                                height: 50px;
+
+                                .foto_png_producto_div{
+                                    width: 100%;
+                                    height: 100%;
+                                    object-fit: contain;
+                                    object-position: center;
+                                }
+                            }
+
+                            .nombre_precio{
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 0 0 0 4px;
+
+                                p{
+                                    margin: 0;
+                                    font-size: 13px;
+                                    .precio{
+                                        font-size: 16px;
+                                        justify-self: end;
+                                    }
+                                }
+
+                            }
+
+                            
+
+                            
+                        }
+                    }
+                    .div_productos_itemss:hover{
+                        cursor: pointer;
+                        background-color: rgba(255, 0, 0, .6);
+                    }
+                }
+
+                .btn_pagar{
+                    border: none;
+                    padding: 3px 5px;
+                    margin: 0;
+                    background-color: rgb(105, 255, 138);
+                }
+
+                .btn_pagar:hover{
+                    background-color: rgb(36, 255, 83);
+                    cursor: pointer;
+                }
+            }
+            .div_productos.show{
+                display: block;
+            }
+        }
+
     }
     .divcarrito:hover{
         cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .div_items_carrito{
+        width: 95%;
+
+        .div_productos{
+            width: 250px;
+        }
+
+        .div_productos.show{
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translateX( -50%);
+            
+        }
+
+        .div_productos_itemss{
+            width: 100%;
+        }
     }
 }

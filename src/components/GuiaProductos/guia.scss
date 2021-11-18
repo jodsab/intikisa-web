@@ -1,21 +1,30 @@
 .guia_container{
-    width: 70%;
-    margin: auto;
+    width: 100%;
+    margin: 0 auto;
 
-    .home{
-        margin: 20px;
-        .inicio{
-            background-color: rgb(255, 255, 255);
-            border: 1px solid rgb(67, 196, 95);
-            padding: 5px 12px;
-            border-radius: 12px;
-            text-decoration: none;
-            color: black;
-        }
-        .inicio:hover{
-            background-color: rgb(36, 196, 70);
+    .display_flex_productos_ul{
+        display: grid;
+        width: 85%;
+        margin: auto;
+        list-style: none;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 10px;
+        margin: 40px auto;
+
+        .cada_producto_li{
+            height: 450px;
+            width: 300px;
+            margin: auto;
+            border: 1px solid rgba(44, 172, 39, .4);
+            border-radius: 15px;
         }
     }
+
+
+    .inicio:hover{
+        background-color: rgb(36, 196, 70);
+    }
+
 }
 
 .lista_tipos{
@@ -25,24 +34,36 @@
     justify-items: center;
     list-style-type: none;
     padding: 0;
-    width: 100%;
-    
+    width: 80%;
+    margin: 10px auto ;
+
     .div_tipos_container{
         display: flex;
         align-items: center;
-        margin: 10px 0;
+        margin: 0;
+       
+        
 
         .title_tipo{
             display: flex;
             justify-content: center;
             align-items: center;
+            
 
-            img{
-                filter: brightness(.4);
+            a{
+                color: black;
             }
 
             .title_p{
-                position: absolute;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 140px;
+                margin: 0;
+                padding: 6px 8px;
+                border: 1px solid rgba(182, 182, 182, .3);
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
             }
 
             .background_tipo{
@@ -55,17 +76,9 @@
             }
 
             a{
-                color: white;
                 font-weight: 800;
                 text-decoration: none;
             }
-        }
-
-        .title_tipo:hover{
-            img{
-                filter: brightness(1);
-            }
-            
         }
 
     }
@@ -79,10 +92,7 @@
 @media only screen and (max-width: 1150px) {
     .guia_container{
         width: 100%;
-        .prod_tipos_url{
-            width: 95%;
-            margin: auto;
-        }
+
     }
 }
 

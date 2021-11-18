@@ -1,6 +1,7 @@
 .productos_cont_todo{
+    width: 80%;
+    margin: auto;
     margin-bottom: 20px;
-    
 }
 
 .productos_container{
@@ -13,7 +14,10 @@
     margin: 0;
 
     .productos_item_container{
-
+        border: 1px solid rgb(238, 238, 238);
+        box-shadow: 0 0 3px rgba(39, 255, 122, .6);
+        border-radius: 18px;
+        width: 275px;
         padding: 10px;
         display: flex;
         flex-direction: column;
@@ -52,6 +56,17 @@
             margin: 10px 0;
             border-radius: 12px;
 
+            .add_to_cart_div{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .add_to_cart{
+                    font-size: 14px;
+                    margin: 0;
+                }
+            }
+
             p{
                 margin: 0 20px;
                 padding: 3px 12px;
@@ -65,11 +80,12 @@
             .carrito{
                 font-size: 30px;
                 padding: 7px;
-                background-color: rgb(38, 228, 38);
+                background-color: rgb(83, 255, 135);
                 border-radius: 50%;
             }
             .carrito:hover{
-                background-color: rgb(0, 141, 0);
+                cursor: pointer;
+                background-color: rgb(30, 211, 84);
             }
         }
     }
@@ -77,7 +93,8 @@
 
 @media only screen and (max-width: 1150px) {
     .productos_container{
-        width: 100%;
+        width: 90%;
+        margin: auto;
     }
     .url_tipo{
         width: 90%;
@@ -87,7 +104,7 @@
 
 @media only screen and (max-width: 500px) {
     .productos_container{
-        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        
 
         .productos_item_container{
             height: 100%;

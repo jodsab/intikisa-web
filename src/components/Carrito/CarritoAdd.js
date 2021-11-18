@@ -1,8 +1,14 @@
-import React, {useState, useRef} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
+
+import './carritoadd.scss';
 
 import {BsCartPlus} from 'react-icons/bs';
 import DivLogimp from '../Login/DivLogimp';
 import HomeLogin from '../Login/HomeLogin';
+
+import {setToken, setCurrentUser,getToken,getUserName,delenteToken} from '../Helpers/auth-helpers';
+
+import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 //INSERTAR CARRITO
 const URL_INSERTAR_CARRITO = "https://intikisaperu.com/oficial/insertarcarrito.php";
@@ -18,14 +24,34 @@ const enviarData = async (url, data) => {
     })
 
     const json = await resp.json();
-    console.log(json);
 
     return json;
 }
 
 function CarritoAdd(props){
 
-    const [userNombre, setUserNombre] = useState(null);
+    function createNotification(type) {
+        return () => {
+          switch (type) {
+            case 'info':
+              NotificationManager.info('Info message');
+              break;
+            case 'success':
+              NotificationManager.success('Success message', 'Agregado al carrito');
+              break;
+            case 'warning':
+              NotificationManager.warning('Warning message', 'Close after 3000ms', 3000);
+              break;
+            case 'error':
+              NotificationManager.error('Error message', 'Click me!', 5000, () => {
+                alert('callback');
+              });
+              break;
+          }
+        };
+      };
+
+    const [userNombre, setUserNombre] = useState(getUserName());
 
     const logUser = (nombre) => {
         setUserNombre(nombre)
@@ -41,21 +67,20 @@ function CarritoAdd(props){
 
     const insertarCarrito = async () => {
         const data = {
-            "user_nombre": userNombre,
+            "user_nombre": getUserName(),
             "carrito_fecha": "10/10/10",
-            "carrito_producto": 'refProducto',
-            "carrito_precio": 24
+            "carrito_producto": props.nombre,
+            "carrito_precio": props.precio
         }
 
         console.log(data);
         const respuestaJson = await enviarData(URL_INSERTAR_CARRITO, data);
-        console.log("respuesta desde el evento insertar carrito", respuestaJson);
-        
+        createNotification('success')
     }
  
     return(
-        <div>
-            <button onClick={insertarCarrito}>
+        <div className='add_container'>
+            <button onClick={insertarCarrito} className='btn_add'>
                 <BsCartPlus className='carrito' />
             </button>            
         </div>

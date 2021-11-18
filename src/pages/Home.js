@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import Slider from "../components/Slider";
 import Guia from "../components/GuiaProductos/Guia";
 import Botmsj from "../components/BotMsj/Botmsj";
 
@@ -17,13 +16,14 @@ function Home(){
             </div>
             <Navbar />
             <div className='telefono'>
-            <TelefonoCorreo  /> 
+                <TelefonoCorreo  /> 
             </div>
             <div className='home_container'>
                 <Botmsj />
                 <div className='space'></div>
-                <h2 className='prods'>BIENVENIDO A INTIKISA</h2>
-                <Slider />
+
+                <Promo />
+
                 <Guia />
                 <div className='contact_cuerpo'>  
                     <Contacto />

@@ -18,7 +18,7 @@ function Navbar() {
 
     return(
         <div className='navbar_container'>
-            <div>
+            <div onClick={()=>{window.location.reload()}}>
                 <img src={require('../img/navbar/logointikisa.png').default} className='img_logo' alt='logo intikisa' />
             </div>
             <div className='navbar_nav_options'>
