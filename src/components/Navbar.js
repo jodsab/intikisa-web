@@ -18,8 +18,10 @@ function Navbar() {
 
     return(
         <div className='navbar_container'>
-            <div onClick={()=>{window.location.reload()}}>
+            <div>
+                <a href='https://intikisaperu.com'>
                 <img src={require('../img/navbar/logointikisa.png').default} className='img_logo' alt='logo intikisa' />
+                </a>
             </div>
             <div className='navbar_nav_options'>
                 <div className="container">

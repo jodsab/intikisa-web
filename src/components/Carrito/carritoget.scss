@@ -49,9 +49,9 @@
         }
 
         .productos{
-            font-size: 16px;
+            font-size: 14px;
             position: relative;
-            padding: 2px 4px;
+            padding: 1px 4px;
             height: 100%;
             top: 15px;
             right: 15px;
@@ -175,18 +175,30 @@
 }
 
 @media screen and (max-width: 650px){
+
+    .carrito{
+        .divcarrito{
+            .rs_icon{
+                font-size: 15px;
+            }
+        }
+    }
+
     .div_items_carrito{
         width: 95%;
 
         .div_productos{
-            width: 250px;
+            
         }
 
         .div_productos.show{
+            
             position: fixed;
-            left: 50%;
-            top: 50%;
-            transform: translateX( -50%);
+            width: 80%;
+            height: 200px;
+            left: 0;
+            right: 0;
+            margin: auto;
             
         }
 
@@ -194,4 +206,5 @@
             width: 100%;
         }
     }
+
 }

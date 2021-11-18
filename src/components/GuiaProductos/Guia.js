@@ -4,6 +4,7 @@ import { Link, HashRouter } from "react-router-dom";
 import { Route, Routes } from "react-router";
 
 import {AiOutlineHome} from 'react-icons/ai';
+import {AiOutlineMenu} from 'react-icons/ai';
 
 import productos from "../../productos/productos.json";
 import Producto from "./Producto";
@@ -22,6 +23,12 @@ function Guia() {
   }
 
   const[ slider, setSlider] = useState(false)
+
+  const [menuProductos, setMenuProductos] = useState(false);
+
+  const toggleMenuProductos = () => {
+    setMenuProductos(!menuProductos)
+  }
   
   useEffect (()=>{
     if(window.location.href == 'http://localhost:3000/'){
@@ -35,10 +42,13 @@ function Guia() {
 
   return (
     <div className="guia_container">
+      <button className='btn_menu_productos' onClick={toggleMenuProductos} >
+        <AiOutlineMenu />
+      </button>
       <HashRouter>          
-        <ul className={toggleMenu ? "lista_tipos" : "lista_tipos"}>
-          <li className="div_tipos_container">
-            <Link to={'/'}>
+        <ul className={menuProductos ? "lista_tipos show" : "lista_tipos"}>
+          <li className="div_tipos_container" onClick={toggleMenuProductos} >
+            <Link to={'/'} >
               <div className="title_tipo">
                   <div className="title_tipo">
                     <p className="title_p"><AiOutlineHome /></p>
@@ -50,7 +60,7 @@ function Guia() {
             <li
               key={e.id_ctgria}
               className="div_tipos_container"
-              onClick={togglingMenu}
+              onClick={togglingMenu,toggleMenuProductos}
             >
               <div className="title_tipo">
                 <Link to={`/${e.ctgria_tipo}`}>

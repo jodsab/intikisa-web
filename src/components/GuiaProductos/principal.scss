@@ -11,8 +11,11 @@
         list-style-type: none;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        justify-content: center;
+        align-content: center;
         width: 90%;
         margin: 40px auto;
+        padding: 0;
 
         .producto_div_final{
             width: 250px;
@@ -26,6 +29,34 @@
             
         }
     }
+    .div_icon_add_tocart{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .carrito{
+            cursor: pointer;
+            margin: 0 0 0 12px;
+            background-color: rgb(83, 255, 135);
+            padding: 8px;
+            border-radius: 50%;
+            margin: 0;
+            font-size: 40px;
+        }
+
+        .carrito:hover{
+            cursor: pointer;
+            background-color: rgb(30, 211, 84);
+        }
+
+        .add_to_cart{
+            margin: 0;
+            padding: 0 0 5px 0;
+            font-size: 14px;
+            font-weight: 600;
+        }
+    }
     
     .producto_container{
         width: 80%;
@@ -34,6 +65,8 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+
+        
 
         h4{
             color: black;
@@ -78,7 +111,7 @@
     
             .precio{
                 font-size: 35px;
-                margin: 20px 0;
+                margin: 10px 0;
                 font-family: 'Kanit', sans-serif;
             }
     
@@ -97,30 +130,6 @@
                 display: flex;
                 align-items: center;
     
-                .div_icon_add_tocart{
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    .add_to_cart{
-                        font-size: 14px;
-                        font-weight: 600;
-                    }
-                }
-    
-                .carrito{
-                    cursor: pointer;
-                    margin: 0 0 0 12px;
-                    background-color: rgb(83, 255, 135);
-                    padding: 8px;
-                    border-radius: 50%;
-                    margin: 0;
-                }
-    
-                .carrito:hover{
-                    cursor: pointer;
-                    background-color: rgb(30, 211, 84);
-                }
             }
         }
     }
@@ -130,6 +139,11 @@
 
 
 @media only screen and (max-width: 1500px) {
+
+    .lista_productos_menu_principal{
+        width: 100%;
+    }
+
     .principal_container{
         .producto_container{
             width: 100%;
@@ -145,61 +159,6 @@
     
 }
 
-
-@media only screen and (max-width: 900px) {
-    .principal_container{
-        .producto_container{
-            display: grid;
-            grid-template-columns: (1fr);
-    
-            .fotos_producto{
-                grid-row: 2;
-                width: 70%;
-                
-                .lista_fotos_productos{
-    
-                    .fotos_varias_prod{
-                        width: 30px;
-                    }
-    
-                }
-            }
-    
-            .container_muestra{
-                grid-row: 1;
-    
-                .foto_muestra_producto{
-                    width: 80%;
-                    margin: 0 0 12px 0;
-                }
-            }
-    
-        }
-        
-        
-        .producto_container{
-    
-            .fotos_producto{
-    
-    
-                .lista_fotos_productos{
-                    width: 100%;
-                    margin: auto;
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: space-between;
-                   
-                }
-            }
-    
-        }
-    }
-
-    
-
-}
-
 @media only screen and (max-width: 600px) {
     .principal_container{
         .title_del_producto{
@@ -207,19 +166,9 @@
         }
     
         .producto_container{
-            display: grid;
-            grid-template-columns: (1fr);
-    
-            .fotos_producto{
-                grid-row: 2;
-                width: 90%;
-    
-                .lista_fotos_productos{
-                    .fotos_varias_prod{
-                        width: 30px;
-                    }
-    
-                }
+
+            .nombre{
+                margin: 8px 0 0 0;
             }
     
             .description{

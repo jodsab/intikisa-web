@@ -23,7 +23,7 @@ function Principal(props){
                 productos.map((e) => (
                     e.ctgria_productos.map((f) => (
                         <li className='producto_div_final'>
-                            <a href={`${window.location}${e.ctgria_tipo}/${f.prod_link}`}>
+                            <a href={`https://intikisaperu.com/#/${e.ctgria_tipo}/${f.prod_link}`}>
                         <div className='producto_container'>
                             <h4 className='nombre'>{f.prod_name} </h4>
                             <div className='container_muestra'>
@@ -33,16 +33,18 @@ function Principal(props){
                     
                                 <div className='comprar'>
                                     <p className='precio'>S/.{f.prod_precio}.00 </p>
-                                        <div className='div_icon_add_tocart'>
-                                            <CarritoAdd className='carrito' nombre={`${f.prod_name}`} precio={`${f.prod_precio}`} />
-                                            <p className='add_to_cart'>Agregar</p>
-                                        </div>
+                                        
                         
                                 </div>
                 
                             </div>
                         </div>
                             </a>
+
+                            <div className='div_icon_add_tocart'>
+                                            <CarritoAdd className='carrito' nombre={`${f.prod_name}`} precio={`${f.prod_precio}`} />
+                                            <p className='add_to_cart'>Agregar</p>
+                                        </div>
                         </li>
                     ))
                 ))
