@@ -1,14 +1,12 @@
 import React, {useState, useRef, useEffect} from 'react'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import './carritoadd.scss';
 
 import {BsCartPlus} from 'react-icons/bs';
-import DivLogimp from '../Login/DivLogimp';
-import HomeLogin from '../Login/HomeLogin';
 
 import {setToken, setCurrentUser,getToken,getUserName,delenteToken} from '../Helpers/auth-helpers';
-
-import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 //INSERTAR CARRITO
 const URL_INSERTAR_CARRITO = "https://intikisaperu.com/oficial/insertarcarrito.php";
@@ -29,41 +27,18 @@ const enviarData = async (url, data) => {
 }
 
 function CarritoAdd(props){
-
-    function createNotification(type) {
-        return () => {
-          switch (type) {
-            case 'info':
-              NotificationManager.info('Info message');
-              break;
-            case 'success':
-              NotificationManager.success('Success message', 'Agregado al carrito');
-              break;
-            case 'warning':
-              NotificationManager.warning('Warning message', 'Close after 3000ms', 3000);
-              break;
-            case 'error':
-              NotificationManager.error('Error message', 'Click me!', 5000, () => {
-                alert('callback');
-              });
-              break;
-          }
-        };
-      };
-
-    const [userNombre, setUserNombre] = useState(getUserName());
-
-    const logUser = (nombre) => {
-        setUserNombre(nombre)
-    }
-
-    const [conectado, setConectado] = useState(false);
-
-    const vamosConect = (estado) => {
-        setConectado(estado)
-    }
-
-    //ADDCARRITO
+  //ALERTAS
+  const ingreseAsuCuenta = () => toast("Ingrese a su cuenta primero!", {
+    position: "bottom-right",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: false,
+    draggable: true,
+    progress: undefined,
+  });
+  
+      //ADDCARRITO
 
     const insertarCarrito = async () => {
         const data = {
@@ -75,13 +50,14 @@ function CarritoAdd(props){
 
         console.log(data);
         const respuestaJson = await enviarData(URL_INSERTAR_CARRITO, data);
-        createNotification('success')
     }
  
     return(
         <div className='add_container'>
-            <button onClick={insertarCarrito} className='btn_add'>
+            <button onClick={()=>{getUserName() != null ? insertarCarrito() : ingreseAsuCuenta() } } className='btn_add'>
                 <BsCartPlus className='carrito' />
+                <ToastContainer 
+                />
             </button>            
         </div>
     )

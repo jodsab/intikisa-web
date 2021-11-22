@@ -250,10 +250,11 @@
 
         .container_muestra{
             grid-row: 1;
-
+            height: 300px;
             .foto_muestra_producto{
                 width: 80%;
                 margin: 0 0 12px 0;
+                height: 300px;
             }
         }
 

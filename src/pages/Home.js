@@ -26,7 +26,7 @@ function Home(){
 
                 <Guia />
                 <div className='contact_cuerpo'>  
-                    <Contacto />
+
                 </div>
                 <Footer />
             </div>

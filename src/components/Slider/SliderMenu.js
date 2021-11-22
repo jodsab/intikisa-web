@@ -36,7 +36,7 @@ export default function SliderMenu() {
                     <div
                     key={obj.id}
                     className={slideIndex === index + 1 ? "slide active-anim" : "slide"} >
-                        <img src={process.env.PUBLIC_URL + `/Imgs/Img${index + 1}.jpg`} alt='foto del slider'></img>
+                        <img src={process.env.PUBLIC_URL + `/Imgs/Img${index + 1}.jpg`} alt='foto del slider' className='imgportada' ></img>
                     </div>
                 )
             })}

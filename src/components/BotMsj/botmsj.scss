@@ -9,6 +9,22 @@
     flex-direction: column-reverse;
     align-items: flex-end;    
 
+    .wsp_msj{
+        position: relative;
+        right: 14px;
+        img{
+            width: 75px;
+            height: 75px;
+        }
+        img:hover{
+            transform: scale(110%);
+            
+        }
+        img:active{
+            transform: scale(90%);
+        }
+    }
+
     .btn_msj{
         background-color: rgba(0,0,0,0);
         border:none;

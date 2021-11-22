@@ -60,10 +60,13 @@ function DivLogimp(props) {
             }
             
             <div className={showDiv ? 'logger_register show':'logger_register'}>
+                <button className='cerrar_modal' onClick={()=>{setShowDiv(false)}} ><p className='cerrar_ventana'>X</p></button>
                 {   
                     conectado ? <div className='menu_cerrar_sesion'>
                                     <h5>MENU</h5>
-                                        <button onClick={cerrarSesion}>Cerrar Sesión</button>
+                                    <p className='msg_aqui_se_muestra' >Aqui se mostrarán tus compras</p>
+                                    <p className='aun_no_tiene_compras'>*Aún no tienes compras</p>
+                                        <button className='btn_cerrarsesion' onClick={cerrarSesion}>Cerrar Sesión</button>
                                 </div>
                                 : 
                                 <HomeLogin acceder={acceder} userName={nombreUsuario} />

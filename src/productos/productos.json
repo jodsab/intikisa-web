@@ -86,7 +86,7 @@
                 "prod_ingredientes": "MERMELADA, ARÁNDANOS, STEVIA",
                 "prod_src": ["MERMELADA DE ARANDANOS CON STEVIA.png","MERMELADA DE FRESA CON STEVIA.png","MERMELADA DE AGUAYMANTO CON STEVIA.png"],
                 "prod_propiedades": "Mermelada de arándanos hecho con pura fruta y endulzado con Stevia lo cual garantiza un gran saber pero con menos azúcar.",
-                "prod_precio": 20
+                "prod_precio": 23
             },
             {
                 "id_prod": 2,

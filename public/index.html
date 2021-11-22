@@ -7,7 +7,20 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="Productos peruanos 100% naturales de calidad para exportación"
+    />
+    <meta
+      name="keywords"
+      content="saludable, formula, panetón, pan integral, comida natural, producto peruano, calidad exportación, mermelada, arandanos, stevia, loche"
+    />
+    <meta
+      name="author"
+      content="Yecenia Doris Matienzo"
+    />
+
+    <meta
+      name="generator"
+      content="React PHP VSC"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <!--
@@ -31,6 +44,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
+
+    
     
     <title>INTIKISA PERÚ Natural</title>
   </head>
@@ -47,5 +62,24 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script src="https://sdk.mercadopago.com/js/v2"></script>
+    <script>
+      // Agrega credenciales de SDK
+        const mp = new MercadoPago('APP_USR-c15e5202-9c11-4457-b3fd-bb18e00ddf3a', {
+              locale: 'es-AR'
+        });
+      
+        // Inicializa el checkout
+        mp.checkout({
+            preference: {
+                id: 'YOUR_PREFERENCE_ID'
+            },
+            render: {
+                  container: '.cho-container', // Indica el nombre de la clase donde se mostrará el botón de pago
+                  label: 'Pagar', // Cambia el texto del botón de pago (opcional)
+            }
+      });
+      </script>
+      
   </body>
 </html>

@@ -1,4 +1,3 @@
-import Axios from "axios";
 import {AiFillMinusCircle, AiTwotoneExclamationCircle} from 'react-icons/ai';
 
 import {useState, useEffect} from 'react';
@@ -13,6 +12,27 @@ const URL_AGARRAR_CARRITO = "https://intikisaperu.com/oficial/productosencarrito
 
 const URL_OBTENER_PRODUCTOS_DEL_CARRITO = "https://intikisaperu.com/oficial/obtenercarrito.php";
 
+const URL_BORRAR_PRODUCTO_DEL_CARRITO = "https://intikisaperu.com/oficial/borrardecarrito.php";
+
+const URL_TOTAL_A_PAGAR = "https://intikisaperu.com/oficial/totalapagar.php";
+
+const URL_PASARELA_DE_PAGO = "https://api.mercadopago.com/checkout/preferences?access_token=APP_USR-7887698424202198-111920-4e13e41c68b56cfb2427a8b306243dc0-837446390";
+
+const cobrarCliente = async (url, data) => {
+    
+    const respCobro = await fetch (url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers:{
+            'Content-Type': 'application/json'
+        }
+    })
+
+    const jsonrespCobro = await respCobro.json();
+
+    return jsonrespCobro;
+}
+
 const enviarData = async (url, data) => {
 
     const resp = await fetch (url, {
@@ -23,9 +43,9 @@ const enviarData = async (url, data) => {
         }
     })
 
-    const json = await resp.json();
+    const jsonenviar = await resp.json();
 
-    return json;
+    return jsonenviar;
 }
 
 const cogerCarrito = async (url, data) => {
@@ -43,7 +63,37 @@ const cogerCarrito = async (url, data) => {
     return cogjson;
 }
 
+const borrardeCarrito = async(url, data) => {
+
+    const respBorrar = await fetch (url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+
+    const borrado = await respBorrar.json();
+
+    return borrado;
+}
+
+const totalDelCarrito = async(url, data) => {
+    const resptotal = await fetch(url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+
+    const respuesTotal = await resptotal.json();
+    return respuesTotal
+}
+
 function CarritoGet(props){
+
+    const [urlCobro, setUrlCobro] = useState('');
 
     const [showDivCarrito, setShowDivCarrito] = useState(false);
 
@@ -73,7 +123,6 @@ function CarritoGet(props){
 
         const respuestaJson = await enviarData(URL_AGARRAR_CARRITO, data);
         setProductos(respuestaJson.nproductos)
-        itemscarrito();
     }
 
     const [items, setItems] = useState([]);
@@ -84,16 +133,74 @@ function CarritoGet(props){
         }
 
         const itemsJson = await cogerCarrito(URL_OBTENER_PRODUCTOS_DEL_CARRITO, itemdata);
+        console.log(itemsJson);
         setItems(itemsJson)
     }
 
     const [totalPorPagar, setTotalPorPagar] = useState(0);
 
+    const cuantoPagar = async () => {
+        const totalData = {
+            "user_nombre": getUserName()
+        }
+
+        const totalaPagarxd = await totalDelCarrito(URL_TOTAL_A_PAGAR, totalData);
+        setTotalPorPagar(parseInt(totalaPagarxd.pagoentotal))
+    }
+
+    const borrarCarrito = async (nombreuserx, idprod, producto) => {
+        const itemdeleteData = {
+            "carrito_user_nombre": nombreuserx,
+            "id_carrito": idprod,
+            "carrito_producto_nombre": producto
+        }
+
+        await borrardeCarrito(URL_BORRAR_PRODUCTO_DEL_CARRITO, itemdeleteData);
+    }
+
+    const realizarCobro = async(pagofinal)=>{
+        const itemCobro = {
+            "external_reference": "ABC",
+                
+            "items": [
+                {
+                  "title": "Carrito de Intikisa Peru",
+                  "description": "Comprando diferentes productos de intikisa",
+                  "picture_url": "https://images.app.goo.gl/oNYwH1ssJdWJiKKr5",
+                  "quantity": 1,
+                  "unit_price": pagofinal
+                }
+            ],
+            "back_urls": {
+                "success": "https://intikisaperu.com/#/compraexitosa",
+                "failure": "https://intikisaperu.com/#/comprafallida",
+                "pending": "https://intikisaperu.com/#/comprapendiente"
+            },
+            "auto_return": "approved",
+        }
+
+        const respuestaCobro = await cobrarCliente(URL_PASARELA_DE_PAGO, itemCobro); 
+
+        console.log(respuestaCobro.init_point);
+
+        setUrlCobro(respuestaCobro.init_point)
+
+        return respuestaCobro.init_point;
+
+    }
+
+    const abrirUrlPago = () => {
+        realizarCobro();
+        const urlaux = realizarCobro();
+        setUrlCobro(urlaux);
+        window.open(urlCobro,"_blank")
+    }
+
     useEffect (() => {
         if(getUserName()){
             obtenercarrito();
         }
-    }, [])
+    })
 
     return(
         <div className='carrito'>
@@ -103,34 +210,55 @@ function CarritoGet(props){
                 }
             </div>
             <div className='divcarrito'>
-                <button onClick={obtenercarrito, ()=>{setShowDivCarrito(!showDivCarrito)} } className="rs_icon"><CgShoppingCart  /></button>
+                <button onClick={()=>{obtenercarrito();cuantoPagar();itemscarrito(); setShowDivCarrito(!showDivCarrito)}} className="rs_icon">
+                    <CgShoppingCart  />
+                </button>
+
                 <div className='productos' >
                     {productos}
                 </div>
+
                 <div className='div_items_carrito'>
+
                     <div className={showDivCarrito ? 'div_productos show': 'div_productos'}>
-                        <p>Productos en carrito: </p>
-                        <ul>
+                        <p className='productos_en_carrito'>Productos en carrito: </p>
+                        
+                        <ul className='ul_menos'>
                             {
                                 items.map(e=>(
-                                    <li className='div_productos_itemss'>
-                                        <p className='simbolo_menos'><AiFillMinusCircle/></p>
+                                    <li className='div_productos_itemss' >
+                                        <button className='btn_delete' onClick={() => {borrarCarrito(e.usernombre,e.idprod,e.producto); itemscarrito(); cuantoPagar(); obtenercarrito()}} >
+                                            <p className='simbolomenos'><AiFillMinusCircle /></p>
+                                        </button>
                                         <div className='flex_items_div'>
+
                                             <div className='foto_espacio'>
                                                 <img src={require(`../../img/productos/${e.producto}.png`).default} className='foto_png_producto_div' alt={e.producto} ></img>
                                             </div>
+
                                             <div className='nombre_precio'>
                                                 <p className='nombre'>{e.producto}</p>
                                                 <p className='precio'>S/.{e.precio}.00</p>
                                             </div>
+
                                         </div>
                                     </li>
                                 ))
                             }
                         </ul>
-                        <p className='total_pago'>Total: {totalPorPagar} </p>
-                        <button className='btn_pagar'>Pagar</button>
-                    </div>
+                        <div className='div_pagar'>
+                            <div className='div_pagando'>
+                                <p className='total_pago'>Total: S/.{totalPorPagar}.00 </p>
+                                <button className='btn_pagar cho-container' onClick={()=>{itemscarrito(); cuantoPagar(); obtenercarrito(); realizarCobro(totalPorPagar); abrirUrlPago()} } >Pagar</button>
+                            </div>
+                            <div className='div_foto_pagar'>
+                                <img src={require(`../../img/pagos/bancos.png`).default} ></img>
+                            </div>
+                            <p className='msg_pago'>*Tu dinero seguro con Mercado Pago, VISA, MASTERCARD Y MÁS...</p>
+                        </div>
+
+                        
+                        </div>
                 </div>
             </div>
         </div>

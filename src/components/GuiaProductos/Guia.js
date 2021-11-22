@@ -15,6 +15,10 @@ import Error404 from "../Error404";
 import SliderMenu from "../Slider/SliderMenu";
 import Principal from "./Principal";
 
+import Success from "../RespuestadeCompra/Success";
+import Failure from "../RespuestadeCompra/Failure";
+import Pending from "../RespuestadeCompra/Pending";
+
 function Guia() {
   const [toggleMenu, setToggleMenu] = useState("");
 
@@ -73,27 +77,11 @@ function Guia() {
             </li>
           ))}
         </ul>
-        {/* {
-          slider ? <SliderMenu /> : false
-        }
-        <ul className='display_flex_productos_ul'>
-        
-        {productos.map((f) =>
-            f.ctgria_productos.map((g) => (
-              
-                slider ?  <li className='cada_producto_li'><a href={`${window.location}#/${f.ctgria_tipo}/${g.prod_link}`} ><Principal namess={g} pre={f.ctgria_tipo} /></a></li> : false
-              
-            ))
-        )
-        }
-        
-        </ul> */}
 
         <Routes>
           <Route path={'/'} element={<Principal />}>
             
           </Route>
-
           {productos.map((e) => (
             <Route
               exact
@@ -113,6 +101,21 @@ function Guia() {
             ))
           )}
           <Route component={Error404} />
+          <Route
+            path={'/compraexitosa'}
+            element={<Success/>}
+          >          
+          </Route>
+          <Route
+            path={'/comprafallida'}
+            element={<Failure/>}
+          >          
+          </Route>
+          <Route
+            path={'/comprapendiente'}
+            element={<Pending/>}
+          >          
+          </Route>
         </Routes>
       </HashRouter>
     </div>

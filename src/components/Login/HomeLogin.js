@@ -20,9 +20,8 @@ const enviarData = async (url, data) => {
             'Content-Type': 'application/json'
         }
     })
-    console.log(resp);
+
     const json = await resp.json();
-    console.log(json);
 
     return json;
 }
@@ -39,9 +38,8 @@ const enviarRegData = async (url, data) => {
             'Content-Type': 'application/json'
         }
     })
-    console.log(regResp);
+
     const regjson = await regResp.json();
-    console.log(regjson);
 
     return regjson;
 
@@ -51,11 +49,31 @@ function HomeLogin(props) {
 
     const alertaLogged = (nombre) => {
         swal({
-            title: "Loggeado",
+            title: "Ingreso exitoso",
             text: `Bienvenido ${nombre}`,
             alert: "success",
             button: "Aceptar",
-            timer: "2000"
+            timer: "3000"
+        })
+    }
+
+    const alertRegistrado = () => {
+        swal({
+            title: "Resgitro exitoso",
+            text: `Ahora ingresa con tu nuevo usuario`,
+            alert: "success",
+            button: "Aceptar",
+            timer: "4000"
+        })
+    }
+
+    const failRegister = () => {
+        swal({
+            title: "Resgitro Fallido",
+            text: `Oops! Algo ha pasado, intenta con otro nombre de usuario`,
+            alert: "error",
+            button: "Aceptar",
+            timer: "4000"
         })
     }
 
@@ -87,19 +105,28 @@ function HomeLogin(props) {
     const refRegUsuario = useRef(null);
     const refRegEmail = useRef(null);
     const refRegClave = useRef(null);
+    const refRegCelular = useRef(null);
+    const refRegDireccion = useRef(null);
 
     const handleRegister = async () => {
         const regdata = {
             "user_nombre": refRegUsuario.current.value,
             "user_email": refRegEmail.current.value,
-            "user_password": refRegClave.current.value
+            "user_password": refRegClave.current.value,
+            "user_celular": refRegCelular.current.value,
+            "user_direccion": refRegDireccion.current.value
         }
         console.log(regdata);
         const regRespuestaJson = await enviarRegData(URL_REGISTER, regdata);
         console.log("respuesta desde el evento register", regRespuestaJson);
-
         console.log(regRespuestaJson.registro);
-
+        if(regRespuestaJson.registro == true ){
+            alertRegistrado();
+        } else{
+            failRegister();
+        }
+        changeLogin()
+        changeRegister()
     }
 
     //DIVS DE LOGIN Y REGISTER
@@ -178,6 +205,10 @@ function HomeLogin(props) {
                         <input type="email" ref={refRegEmail} required></input>
                         <label>Contraseña:</label>
                         <input type="password" ref={refRegClave} required></input>
+                        <label>Celular:</label>
+                        <input type='text' ref={refRegCelular} ></input>
+                        <label>Dirección de envío:</label>
+                        <input type='text' ref={refRegDireccion}></input>
                         <button onClick={handleRegister} className='btn_login'>Registrarse</button>
                         <p className='alrgth'>¿Ya tienes una cuenta?</p>
                         <button onClick={changeRegister,changeLogin} className='btn_lgns' >Ingresar</button>
