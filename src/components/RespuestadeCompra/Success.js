@@ -8,6 +8,8 @@ const URL_OBTENER_PRODUCTOS_DEL_CARRITO = "https://intikisaperu.com/oficial/obte
 
 const URL_REGISTRAR_VENTA_DEL_CARRITO = "https://intikisaperu.com/oficial/registrarventa.php";
 
+const URL_OBTENER_VENTAS_POR_USUARIO = "https://intikisaperu.com/oficial/obtenerventa.php";
+
 const cogerCarrito = async (url, data) => {
 
     const resp = await fetch (url, {
@@ -38,6 +40,21 @@ const registrarVenta = async (url, data) => {
     return rrvjson;
 }
 
+const obtenerVenta = async (url, data) => {
+
+    const respObtenerVenta = await fetch (url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+
+    const rovjson = await respObtenerVenta.json();
+
+    return rovjson;
+}
+
 
 function Success(){
 
@@ -63,7 +80,16 @@ function Success(){
         }
 
         const registro = await registrarVenta(URL_REGISTRAR_VENTA_DEL_CARRITO, itemRegistrado);
+    }   
+
+    const obtenerVentas = async () => {
+        const itemObtener = {
+            "user_nombre": getUserName(),
+        }
+
+        const obtenerItemVentas = await obtenerVenta(URL_OBTENER_VENTAS_POR_USUARIO, itemObtener);
     }
+
 
     useEffect(() => {
         itemscarrito();
