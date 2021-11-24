@@ -83,7 +83,10 @@ function HomeLogin(props) {
     const refUsuario = useRef(null);
     const refClave = useRef(null);
 
-    const handleLogin = async () => {
+    const handleLogin = async (e) => {
+
+        e.preventDefault();
+
         const data = {
             "user_nombre": refUsuario.current.value,
             "user_password": refClave.current.value
@@ -176,6 +179,7 @@ function HomeLogin(props) {
                 <div className="login">
                     <div className={showLogMenu ? 'login_inputs showlogmenu': 'login_inputs'}>
                         <p id='entrar'>Entrar</p>
+                        <form onSubmit={handleLogin}>
                         <input type="text" placeholder="Usuario" ref={refUsuario} required></input>
                         <input type="password" placeholder="Contraseña" ref={refClave} required></input>
                             {
@@ -184,9 +188,11 @@ function HomeLogin(props) {
                                     <p className='error_alert'>{error}</p>
                                 </div>
                             }    
-                        <button onClick={handleLogin} className='btn_entrar' >Entrar</button>
+                            <input type='submit' className='btn_entrar' value='ENTRAR'></input>
+                        {/* <button onClick={handleLogin} className='btn_entrar' >Entrar</button> */}
                         <p id='noacc'>¿No tienes una cuenta?</p>
                         <button  onClick={changeRegister, changeLogin} className='btn_rgster' >Registrarse</button>
+                        </form>
                     </div>
                     
                 </div>
@@ -197,8 +203,9 @@ function HomeLogin(props) {
         return(
             <div className="registration_container">
                 <div className="registration">
-                    <p className='regster'>Registrarme</p>
-                    <div className='registration_inputs'>
+                    <p className='regster'>REGISTRATE GRATIS Y COMPRA FÁCIL</p>
+                    <div >
+                        <form onSubmit={handleRegister} className='registration_inputs'>
                         <label>Usuario:</label>
                         <input type="text" ref={refRegUsuario} required></input>
                         <label>Email:</label>
@@ -209,9 +216,11 @@ function HomeLogin(props) {
                         <input type='text' ref={refRegCelular} ></input>
                         <label>Dirección de envío:</label>
                         <input type='text' ref={refRegDireccion}></input>
-                        <button onClick={handleRegister} className='btn_login'>Registrarse</button>
+                       {/*  <button onClick={handleRegister} className='btn_login'>Registrarse</button> */}
+                       <input type='submit' className='btn_login' value='REGISTRARME'></input>
                         <p className='alrgth'>¿Ya tienes una cuenta?</p>
                         <button onClick={changeRegister,changeLogin} className='btn_lgns' >Ingresar</button>
+                        </form>
                     </div>
                 </div>
             </div>

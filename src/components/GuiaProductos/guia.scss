@@ -2,6 +2,7 @@
     width: 100%;
     margin: 0 auto;
 
+
     .display_flex_productos_ul{
         display: grid;
         width: 85%;
@@ -96,10 +97,19 @@
     .div_tipos_container:hover{
         box-shadow: 0 0 3px black;
     }
+
+    .div_submenu{
+        display: none;
+    }
     
+
 }
 
 .lista_tipos.hide{
+    display: none;
+}
+
+.submenu_container{
     display: none;
 }
 
@@ -111,19 +121,53 @@
 }
 
 @media only screen and (max-width: 600px) {
+    .submenu_container{
+        display: block;
+        margin-top: 3px;
+
+        .div_tipos_container2{
+            margin: 0 auto 5px auto;
+
+            a{
+                width: 52%;
+                margin: auto;
+                border: 1px solid rgba(165, 165, 165, .6);
+                border-radius: 10px ;
+                color: black;
+                text-decoration: none;
+                text-align: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p{
+                    margin: 6px auto;
+                    font-size: 13px;
+                    font-weight: 600;
+                }
+            }
+            a:hover{
+                background-color: rgba(165, 165, 165, .1);
+                box-shadow: 0 0 3px rgb(163, 163, 163);
+            }
+        }
+    }
+
 
 
     .btn_menu_productos{
         display: block;
         position: fixed;
         z-index: 99999999;
-        top: 16px;
-        right: 50%;
+        margin: 0;
+        padding: 0;
+        top: 13px;
+        left: 10px;
         translate: transformX(-50%);
         border: none;
         background-color: rgba(204, 204, 204, 0);
-        font-size: 24px;
+        font-size: 32px;
     }
+    
 
     .guia_container{
         
@@ -142,6 +186,10 @@
             border-bottom-left-radius: 6px;
             border-bottom-right-radius: 6px;
             display: none;
+
+            .div_submenu{
+                display: block;
+            }
 
 
             .div_tipos_container{
@@ -183,6 +231,8 @@
         }
 
     }
+    
 }
+
 
 

@@ -130,44 +130,55 @@
         width: 200px;
 
         .regster{
-            margin: 0 0 15px 0;
+            margin: 0 0 10px 0;
             font-size: 22px;
         }
 
         .registration_inputs{
             display: flex;
             flex-direction: column;
+            align-content: center;
+            align-items: center;
+
             label{
                 font-size: 15px;
                 align-self: start;
+                align-self: center;
+                margin: 0 0 2px 0;
             }
 
             input{
-                margin: 6px 0;
+                margin: 0 auto 9px auto;
                 padding: 5px 10px;
                 border: 1px solid black;
                 border-radius: 15px;
             }
+            input:focus{
+                background-color: rgb(245, 255, 234);
+                box-shadow: 0 0 4px rgb(160, 255, 160);
+            }
         }
 
         .alrgth{
-            margin: 35px auto 6px auto;
+            margin: 25px auto 6px auto;
             font-size: 16px;
         }
 
         .btn_login{
-            width: 50%;
+            width: 90%;
+            font-weight: 600;
             margin: 7px auto 0 auto;
             border: 1px solid black;
+            color: rgb(255, 255, 255);
+            font-size: 15px;
             border-radius: 12px;
             padding: 3px 0;
-            background-color: #8aff90;
-            border: 1px solid rgb(140, 252, 140);
+            background-color: rgb(92, 116, 255);
         }
 
         .btn_login:hover{
             cursor: pointer;
-            background-color: rgb(173, 255, 92);
+            background-color: rgb(76, 103, 253);
         }
 
         .btn_lgns{

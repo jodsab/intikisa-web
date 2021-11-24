@@ -2,10 +2,8 @@ import React, {useState, useEffect} from 'react'
 import {AiOutlineUser} from 'react-icons/ai'
 
 import HomeLogin from './HomeLogin'
-import Menu from './Menu'
 
 import './divlogimp.scss'
-import { Axios } from 'axios';
 import { delenteToken, getUserName } from '../Helpers/auth-helpers'
 
 function DivLogimp(props) {

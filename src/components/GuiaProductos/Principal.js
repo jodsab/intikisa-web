@@ -1,5 +1,3 @@
-import {useState, useEffect} from 'react';
-
 import './principal.scss';
 
 import CarritoAdd from '../Carrito/CarritoAdd';
@@ -7,7 +5,6 @@ import CarritoAdd from '../Carrito/CarritoAdd';
 import SliderMenu from '../Slider/SliderMenu';
 
 import productos from "../../productos/productos.json";
-import { Link } from 'react-router-dom';
 
 function Principal(props){
 

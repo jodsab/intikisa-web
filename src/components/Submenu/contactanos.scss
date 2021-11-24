@@ -1,0 +1,106 @@
+.contactanos_container{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+
+    .cajita_contacto{
+        margin: auto;
+
+        .container_caja_contacto{
+            width: 90%;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            h3{
+                font-size: 25px;
+            }
+
+            .informacion_div{
+                margin: 0 20px;
+                div{
+                    div{
+                        p{
+                            font-size: 50px;
+                            display: flex;
+                            align-items: center;
+                            color: green;
+
+                            p{
+                                font-size: 14px;
+                                margin-left: 20px;
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .formulario_div{
+                margin: 0 20px;
+                p{
+                    color: rgb(145, 145, 145);
+                }
+
+                form{
+                    width: 100%;
+
+                    .fila_de_items{
+                        width: 100%;
+
+                        div{
+                            margin: 25px 0;
+                            width: 100%;
+                            border: 1px solid rgb(201, 201, 201);
+                            display: flex;
+                            align-items: center;
+                            padding: 0 0 0 8px;
+                            background-color: rgba(165, 165, 165, .1);
+                            color: rgba(156, 156, 156, .6);
+
+                            input{
+                                border: none;
+                                padding: 15px 0 15px 8px;
+                                margin-left: 8px;
+                                width: 100%;
+                                background-color: rgba(165, 165, 165, 0);
+                            }
+                            input:focus{
+                                border: none;
+                                outline: none;
+                                background-color: white;
+                            }
+
+                        }
+
+                        textarea{
+                            resize: none;
+                            width: 98%;
+                            padding: 8px;
+                            height: 100px;
+                            border: 1px solid rgb(201, 201, 201);
+                            outline: none;
+                            font-family: 'Open Sans', sans-serif;
+                        }
+                        textarea:focus{
+                            border: 1px solid green;
+                            
+                        }
+                    }
+                }
+                .btn_enviar{
+                    color: white;
+                    margin-top: 30px;
+                    padding: 12px 20px;
+                    font-size: 22px;
+                    background-color: rgb(17, 17, 17);
+                }
+                .btn_enviar:hover{
+                    cursor: pointer;
+                    background-color: rgb(22, 110, 16);
+                }
+            }
+        }
+    }
+
+
+}

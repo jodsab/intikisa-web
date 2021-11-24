@@ -5,6 +5,10 @@ import { Route, Routes } from "react-router";
 
 import {AiOutlineHome} from 'react-icons/ai';
 import {AiOutlineMenu} from 'react-icons/ai';
+import {IoIosPeople} from 'react-icons/io';
+import {GiArrowScope} from 'react-icons/gi';
+import {RiHandHeartFill} from 'react-icons/ri';
+import {MdConnectWithoutContact} from 'react-icons/md';
 
 import productos from "../../productos/productos.json";
 import Producto from "./Producto";
@@ -12,12 +16,15 @@ import Productos from "./Productos";
 
 import "./guia.scss";
 import Error404 from "../Error404";
-import SliderMenu from "../Slider/SliderMenu";
 import Principal from "./Principal";
 
 import Success from "../RespuestadeCompra/Success";
 import Failure from "../RespuestadeCompra/Failure";
 import Pending from "../RespuestadeCompra/Pending";
+import Nosotros from "../Submenu/Nosotros";
+import MisionYVision from "../Submenu/MisionYVision";
+import Valores from "../Submenu/Valores";
+import Contactanos from "../Submenu/Contactanos";
 
 function Guia() {
   const [toggleMenu, setToggleMenu] = useState("");
@@ -76,10 +83,28 @@ function Guia() {
               </div>
             </li>
           ))}
+          <div className='submenu_container'>
+            <li className="div_tipos_container2" onClick={toggleMenuProductos} ><Link to='/nosotros' > <p><IoIosPeople/>NOSOTROS</p></Link></li>
+            <li className="div_tipos_container2" onClick={toggleMenuProductos} ><Link to='/misionyvision' ><p><GiArrowScope/> MISION Y VISION</p></Link></li>
+            <li className="div_tipos_container2" onClick={toggleMenuProductos} ><Link to='/valores' ><p> <RiHandHeartFill/>VALORES</p></Link></li>
+            <li className="div_tipos_container2" onClick={toggleMenuProductos} ><Link to='/contactanos' ><p> <MdConnectWithoutContact/>CONTACTANOS</p></Link></li>
+          </div>
         </ul>
 
         <Routes>
           <Route path={'/'} element={<Principal />}>
+            
+          </Route>
+          <Route path={'/nosotros'} element={<Nosotros />}>
+            
+          </Route>
+          <Route path={'/misionyvision'} element={<MisionYVision />}>
+            
+          </Route>
+          <Route path={'/valores'} element={<Valores />}>
+            
+          </Route>
+          <Route path={'/contactanos'} element={<Contactanos />}>
             
           </Route>
           {productos.map((e) => (

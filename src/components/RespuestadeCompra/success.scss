@@ -1,7 +1,7 @@
 .success_container{
-    height: 100vh;
-    width: 80%;
-    margin: auto;
+    height: 100%;
+    width: 70%;
+    margin:  10px auto 20px auto;
 
     .img_container{
         width: 800px;
@@ -11,12 +11,77 @@
             object-position: center;
         }
     }
+
+    .productos_container_div{
+        .productos_lista_ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            .productos_item_li{
+                margin: 4px 0;
+                padding: 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 80%;
+
+                .foto_producto_img{
+                    width: 50px;
+                    height: 50px;
+                    object-fit: cover;
+                    object-position: center;
+                }
+                .nombre_producto{
+                    margin: 0;
+                    padding: 0;
+                }
+                .precio_producto{
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+        }
+    }
 }
 
 @media only screen and (max-width: 600px){
     .success_container{
-        width: 100%;
+        width: 95%;
+        margin: auto;
         height: 400px;
+
+        .productos_container_div{
+            .productos_lista_ul{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                .productos_item_li{
+                    margin: 4px auto;
+                    padding: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 90%;
+    
+                    .foto_producto_img{
+                        width: 35px;
+                        height: 35px;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                    .nombre_producto{
+                        margin: 0;
+                        padding: 0;
+                        font-size: 14px;
+                    }
+                    .precio_producto{
+                        margin: 0;
+                        padding: 0;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
 
         .perfil_foto{
             width: 200px;

@@ -50,7 +50,12 @@
 
     .navbar_container{
         height: 56px;
-        justify-content: space-between;
+        justify-content: flex-end;
+
+        .logo_intik{
+            position: fixed;
+            left: 40px;
+        }
 
         .img_logo{
             width: 120px;

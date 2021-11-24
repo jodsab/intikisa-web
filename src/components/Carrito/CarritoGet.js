@@ -16,6 +16,8 @@ const URL_BORRAR_PRODUCTO_DEL_CARRITO = "https://intikisaperu.com/oficial/borrar
 
 const URL_TOTAL_A_PAGAR = "https://intikisaperu.com/oficial/totalapagar.php";
 
+const URL_REGISTRO_VENTA = "https://intikisaperu.com/oficial/registrarventa.php";
+
 const URL_PASARELA_DE_PAGO = "https://api.mercadopago.com/checkout/preferences?access_token=APP_USR-7887698424202198-111920-4e13e41c68b56cfb2427a8b306243dc0-837446390";
 
 const cobrarCliente = async (url, data) => {
@@ -91,6 +93,20 @@ const totalDelCarrito = async(url, data) => {
     return respuesTotal
 }
 
+const registrandoVentas = async(url,data) => {
+    const respRegistrVenta = await fetch(url ,{
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'applicacion/json'
+        }
+    })
+
+    const respuestaRegVenta = await respRegistrVenta.json();
+    return respuestaRegVenta
+}
+
+
 function CarritoGet(props){
 
     const [urlCobro, setUrlCobro] = useState('');
@@ -133,7 +149,6 @@ function CarritoGet(props){
         }
 
         const itemsJson = await cogerCarrito(URL_OBTENER_PRODUCTOS_DEL_CARRITO, itemdata);
-        console.log(itemsJson);
         setItems(itemsJson)
     }
 
@@ -179,13 +194,15 @@ function CarritoGet(props){
             "auto_return": "approved",
         }
 
+        console.log(realizarCobro);
+
         const respuestaCobro = await cobrarCliente(URL_PASARELA_DE_PAGO, itemCobro); 
 
-        console.log(respuestaCobro.init_point);
+        console.log(respuestaCobro.sandbox_init_point);
 
-        setUrlCobro(respuestaCobro.init_point)
+        setUrlCobro(respuestaCobro.sandbox_init_point)
 
-        return respuestaCobro.init_point;
+        return respuestaCobro.sandbox_init_point;
 
     }
 
