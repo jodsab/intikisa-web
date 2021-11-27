@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+
 import './contactanos.scss'
 import {BsFillPersonFill} from 'react-icons/bs';
 import {FaHome} from 'react-icons/fa';
@@ -10,6 +12,15 @@ import {IoMdPaperPlane} from 'react-icons/io'
 
 
 function Contactanos(){
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+    }, []);
+
     return(
         <div className='contactanos_container'>
             <div className='cajita_contacto'>

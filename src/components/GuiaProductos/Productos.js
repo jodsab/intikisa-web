@@ -1,4 +1,5 @@
 import {Link} from 'react-router-dom';
+import {useEffect} from 'react';
 
 import './productos.scss';
 import CarritoAdd from '../Carrito/CarritoAdd';
@@ -6,6 +7,14 @@ import CarritoAdd from '../Carrito/CarritoAdd';
 function Productos(props){
 
     const prods = props.producs;
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+    }, []);
 
     return(
         <div className='productos_cont_todo'>
@@ -23,8 +32,16 @@ function Productos(props){
                             <div className='pagar_ahora'>
                                 <p>S/.{e.prod_precio}.00</p>
                                 <div className='add_to_cart_div'>
-                                    <CarritoAdd className='carrito' nombre={`${e.prod_name}`} precio={`${e.prod_precio}`} />
-                                    <p className='add_to_cart'>Agregar</p>
+                                    {
+                                        e.prod_status == 0 ? 
+                                        <div>
+                                            <CarritoAdd className='carrito' nombre={`${e.prod_name}`} precio={`${e.prod_precio}`} />
+                                            <p className='add_to_cart'>Agregar</p>
+                                        </div>
+                                        : 
+                                        <p>Pronto</p>
+                                    }
+                                    
                                 </div>
                             </div>
                     </li>

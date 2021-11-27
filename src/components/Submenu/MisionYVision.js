@@ -1,6 +1,17 @@
+import { useEffect } from 'react';
+
 import './misionyvision.scss'
 
 function MisionYVision(){
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+    }, []);
+
     return(
         <div className='misionyvision_container'>
             <div>

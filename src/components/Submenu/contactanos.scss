@@ -2,6 +2,7 @@
     min-height: 80vh;
     display: flex;
     align-items: center;
+    width: 100%;
 
     .cajita_contacto{
         margin: auto;
@@ -103,4 +104,24 @@
     }
 
 
+}
+
+@media only screen and (max-width: 500px){
+    .contactanos_container{
+        margin-bottom: 10px;
+        h3{
+            margin: 10px auto;
+        }
+        .cajita_contacto{
+            margin: 0;
+
+    
+                .container_caja_contacto{
+                    
+                    width: 100%;
+                    grid-template-columns: 1fr;
+                }
+        }
+    }
+    
 }

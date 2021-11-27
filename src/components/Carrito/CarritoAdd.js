@@ -37,13 +37,21 @@ function CarritoAdd(props){
     draggable: true,
     progress: undefined,
   });
+
+  const gettingDate = () => {
+    const d = new Date();
+
+    var fechita = `${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()}`;
+
+    return fechita
+} 
   
       //ADDCARRITO
 
     const insertarCarrito = async () => {
         const data = {
             "user_nombre": getUserName(),
-            "carrito_fecha": "10/10/10",
+            "carrito_fecha": gettingDate(),
             "carrito_producto": props.nombre,
             "carrito_precio": props.precio
         }
@@ -56,8 +64,7 @@ function CarritoAdd(props){
         <div className='add_container'>
             <button onClick={()=>{getUserName() != null ? insertarCarrito() : ingreseAsuCuenta() } } className='btn_add'>
                 <BsCartPlus className='carrito' />
-                <ToastContainer 
-                />
+                
             </button>            
         </div>
     )

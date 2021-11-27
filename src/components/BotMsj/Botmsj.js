@@ -16,12 +16,8 @@ function Botmsj(){
 
     return(
         <div className='botmsj_container'>
-            
-            <button onClick={toggleMsj}  className='btn_msj'><ImgMsj /></button>
-            <a href='https://intikisaperu.com/#/contactanos' className='wsp_msj' target='_blank' ><img src={require('../../img/msj/wsp.png').default}></img></a>
-            <div className={showMsj ? 'contacto_bots':'contacto_bots show'}>
-                <Contacto className='contact_relative' />
-            </div>
+            <a href='https://intikisaperu.com/#/contactanos' className='wsp_msj' className='btn_msj' ><ImgMsj /></a>
+            <a href='https://wa.me/51971649286' className='wsp_msj' target='_blank' ><img src={require('../../img/msj/wsp.png').default}></img></a>
         </div>
     )
 }

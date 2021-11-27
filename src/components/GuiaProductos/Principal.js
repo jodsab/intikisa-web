@@ -37,11 +37,17 @@ function Principal(props){
                             </div>
                         </div>
                             </a>
+                            {
+                                f.prod_status == 0 ?
+                                <div className='div_icon_add_tocart'>
 
-                            <div className='div_icon_add_tocart'>
                                             <CarritoAdd className='carrito' nombre={`${f.prod_name}`} precio={`${f.prod_precio}`} />
                                             <p className='add_to_cart'>Agregar</p>
-                                        </div>
+                                </div>
+                            : <p>Pronto</p>
+                            }
+
+                            
                         </li>
                     ))
                 ))

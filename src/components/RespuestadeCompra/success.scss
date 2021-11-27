@@ -1,5 +1,5 @@
 .success_container{
-    height: 100%;
+    min-height: 60vh;
     width: 70%;
     margin:  10px auto 20px auto;
 
@@ -48,7 +48,7 @@
     .success_container{
         width: 95%;
         margin: auto;
-        height: 400px;
+        min-height: 80vh;
 
         .productos_container_div{
             .productos_lista_ul{
@@ -61,23 +61,23 @@
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
-                    width: 90%;
+                    width: 100%;
     
                     .foto_producto_img{
-                        width: 35px;
-                        height: 35px;
-                        object-fit: cover;
+                        width: 32px;
+                        height: 32px;
+                        object-fit: contain;
                         object-position: center;
                     }
                     .nombre_producto{
                         margin: 0;
                         padding: 0;
-                        font-size: 14px;
+                        font-size: 12px;
                     }
                     .precio_producto{
                         margin: 0;
                         padding: 0;
-                        font-size: 14px;
+                        font-size: 12px;
                     }
                 }
             }

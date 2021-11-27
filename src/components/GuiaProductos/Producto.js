@@ -1,4 +1,4 @@
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
 
 import './producto.scss';
 
@@ -9,6 +9,14 @@ function Producto(props){
     const procs = props.namess;
 
     const [fotoMuestra, setFotoMuestra] = useState(procs.prod_src[0]);
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+    }, []);
 
     return(
         <div className='producto_container_xdd'>
@@ -33,14 +41,18 @@ function Producto(props){
                 <div className='description'>
                     <h4 className='nombre'>{procs.prod_name} </h4>
                     <p className='ingredientes'>{procs.prod_ingredientes} </p>
-                    <div className='comprar'>
-                        <p className='precio'>S/.{procs.prod_precio}.00 </p>
-                        <div className='div_icon_add_tocart'>
-                            <CarritoAdd className='carrito' nombre={`${procs.prod_name}`} precio={`${procs.prod_precio}`} />
-                            <p className='add_to_cart'>Agregar al carrito</p>
-                        </div>
-                        
-                    </div>
+                    {
+                            props.status == 0 ? <div className='comprar'>
+                            <p className='precio'>S/.{procs.prod_precio}.00 </p>
+                            <div className='div_icon_add_tocart'>
+                                    <CarritoAdd className='carrito' nombre={`${procs.prod_name}`} precio={`${procs.prod_precio}`} />
+                                    <p className='add_to_cart'>Agregar al carrito</p>
+                                </div>
+                            </div>
+                            :
+                            <p>Pronto</p>
+                        }
+                    
                     <p className='propiedades'>{procs.prod_propiedades} </p>
                 
                 </div>

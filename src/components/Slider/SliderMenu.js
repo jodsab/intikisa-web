@@ -40,8 +40,8 @@ export default function SliderMenu() {
                     </div>
                 )
             })}
-            <BtnSlider moveSlide={nextSlide} direction={"next"} />
-            <BtnSlider moveSlide={prevSlide} direction={"prev"}/>
+            <BtnSlider moveSlide={nextSlide} direction={"next"} className='btns'/>
+            <BtnSlider moveSlide={prevSlide} direction={"prev"} className='btns'/>
 
             <div className="container-dots">
                 {Array.from({length: 5}).map((item, index) => (

@@ -229,6 +229,7 @@
     .producto_container{
         display: grid;
         grid-template-columns: (1fr);
+        margin-top: 8px;
 
         .fotos_producto{
             grid-row: 2;
@@ -246,15 +247,21 @@
             .precio{
                 font-size: 30px;
             }
+
+            .comprar{
+                .div_icon_add_tocart{
+                    margin: 8px 0;
+                }
+            }
         }
 
         .container_muestra{
             grid-row: 1;
-            height: 300px;
+            height: 260px;
             .foto_muestra_producto{
                 width: 80%;
-                margin: 0 0 12px 0;
-                height: 300px;
+                margin: 0 0 10px 0;
+                height: 260px;
             }
         }
 

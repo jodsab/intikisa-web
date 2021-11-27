@@ -4,9 +4,10 @@ import Guia from "../components/GuiaProductos/Guia";
 import Botmsj from "../components/BotMsj/Botmsj";
 
 import './home.scss'
-import Contacto from "../components/BotMsj/Contacto";
 import Promo from "../components/Promos/Promo";
 import TelefonoCorreo from "../components/Telefono/TelefonoCorreo";
+
+import { ToastContainer } from 'react-toastify';
 
 function Home(){
     return(
@@ -30,6 +31,8 @@ function Home(){
                 </div>
                 <Footer />
             </div>
+            <ToastContainer 
+                />
         </div>
         
     )

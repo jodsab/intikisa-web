@@ -121,7 +121,7 @@ function Guia() {
               <Route
                 exact
                 path={`/${f.ctgria_tipo}/${g.prod_link}`}
-                element={<Producto namess={g} pre={f.ctgria_tipo} />}
+                element={<Producto namess={g} pre={f.ctgria_tipo} status={g.prod_status} />}
               ></Route>
             ))
           )}

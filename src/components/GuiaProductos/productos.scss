@@ -2,94 +2,95 @@
     width: 80%;
     margin: auto;
     margin-bottom: 20px;
-}
-
-.productos_container{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    justify-content: center;
-    justify-items: center;
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-
-    .productos_item_container{
-        border: 1px solid rgb(238, 238, 238);
-        box-shadow: 0 0 3px rgba(39, 255, 122, .6);
-        border-radius: 18px;
-        width: 275px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
+    .productos_container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         justify-content: center;
         justify-items: center;
-        align-items: center;
-        text-align: center;
-
-        .nombre_producto{
-            color: black;
-        }
-
-
-        a{
-            text-decoration: none;
-            color: white;
-        }
-
-        p{
-            margin: 10px 0;
-            font-size: 12px;
-            
-        }
-
-        .foto_producto{
-            width: 200px;
-            height: 200px;
-            object-fit: contain;
-            object-position: center;
-        }
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
     
-        .pagar_ahora{
+        .productos_item_container{
+            border: 1px solid rgb(238, 238, 238);
+            box-shadow: 0 0 3px rgba(39, 255, 122, .6);
+            border-radius: 18px;
+            width: 275px;
+            padding: 10px;
             display: flex;
+            flex-direction: column;
             justify-content: center;
+            justify-items: center;
             align-items: center;
-            margin: 10px 0;
-            border-radius: 12px;
-
-            .add_to_cart_div{
+            text-align: center;
+    
+            .nombre_producto{
+                color: black;
+            }
+    
+    
+            a{
+                text-decoration: none;
+                color: white;
+            }
+    
+            p{
+                margin: 10px 0;
+                font-size: 12px;
+                
+            }
+    
+            .foto_producto{
+                width: 200px;
+                height: 200px;
+                object-fit: contain;
+                object-position: center;
+            }
+        
+            .pagar_ahora{
                 display: flex;
-                flex-direction: column;
                 justify-content: center;
                 align-items: center;
-                .add_to_cart{
-                    font-size: 14px;
-                    margin: 0;
-                }
-            }
-
-            p{
-                margin: 0 20px;
-                padding: 3px 12px;
-                font-size: 25px;
-                font-weight: 100;
-                color: rgb(0, 0, 0);
-                font-weight: 600;
+                margin: 10px 0;
                 border-radius: 12px;
-                font-family: 'Kanit', sans-serif;
-            }
-            .carrito{
-                font-size: 30px;
-                padding: 7px;
-                background-color: rgb(83, 255, 135);
-                border-radius: 50%;
-            }
-            .carrito:hover{
-                cursor: pointer;
-                background-color: rgb(30, 211, 84);
+    
+                .add_to_cart_div{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .add_to_cart{
+                        font-size: 14px;
+                        margin: 0;
+                    }
+                }
+    
+                p{
+                    margin: 0 20px;
+                    padding: 3px 12px;
+                    font-size: 25px;
+                    font-weight: 100;
+                    color: rgb(0, 0, 0);
+                    font-weight: 600;
+                    border-radius: 12px;
+                    font-family: 'Kanit', sans-serif;
+                }
+                .carrito{
+                    font-size: 30px;
+                    padding: 7px;
+                    background-color: rgb(83, 255, 135);
+                    border-radius: 50%;
+                }
+                .carrito:hover{
+                    cursor: pointer;
+                    background-color: rgb(30, 211, 84);
+                }
             }
         }
     }
 }
+
+
 
 @media only screen and (max-width: 1150px) {
     .productos_container{
@@ -103,45 +104,47 @@
 }
 
 @media only screen and (max-width: 500px) {
-    .productos_container{
-        
 
-        .productos_item_container{
-            height: 100%;
-            padding: 0;
-            margin: 5px;
-
-            a{
+    .productos_cont_todo{
+        .productos_container{
+            .productos_item_container{
                 height: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                h4{
-                    font-size: 12px;
-                    width: 80%;
-                    margin: auto;
-                }
-
-                .pagar_ahora{
-                    p{
+                padding: 0;
+                margin: 5px;
+                
+                a{
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    
+                    h4{
                         font-size: 12px;
-                        margin: 5px;
+                        width: 80%;
+                        margin: auto;
                     }
-                    .carrito{
-                        font-size: 15px;
+    
+                    .pagar_ahora{
+                        p{
+                            font-size: 12px;
+                            margin: 5px;
+                        }
+                        .carrito{
+                            font-size: 15px;
+                        }
                     }
                 }
+                .foto_producto{
+                    width: 100px;
+                    height: 100px;
+                }
+    
             }
+    
             .foto_producto{
-                width: 100px;
-                height: 100px;
+                width: 100%;
             }
-
-        }
-
-        .foto_producto{
-            width: 100%;
         }
     }
 }

@@ -1,6 +1,17 @@
+import { useEffect } from 'react';
+
 import './nosotros.scss'
 
 function Nosotros(){
+
+    useEffect(() => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
+    }, []);
+
     return(
         <div className='nosotros_container'>
             <div>

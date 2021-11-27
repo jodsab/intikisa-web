@@ -4,7 +4,7 @@ import {AiOutlineUser} from 'react-icons/ai';
 
 import './homelogin.scss';
 
-import {setToken, setCurrentUser,getToken,getUserName,delenteToken} from '../Helpers/auth-helpers';
+import {setToken, setCurrentUser, setPasswordUser,getToken,getUserName,delenteToken} from '../Helpers/auth-helpers';
 
 import swal from 'sweetalert';
 
@@ -46,6 +46,14 @@ const enviarRegData = async (url, data) => {
 }
 
 function HomeLogin(props) {
+
+    const gettingDate = () => {
+        const d = new Date();
+
+        var fechita = `${d.getFullYear()}/${d.getMonth()+1}/${d.getDate()}`;
+
+        return fechita
+    } 
 
     const alertaLogged = (nombre) => {
         swal({
@@ -93,12 +101,12 @@ function HomeLogin(props) {
         }
 
         const respuestaJson = await enviarData(URL_LOGIN, data);
-        console.log("respuesta desde el evento login", respuestaJson.conectado);
-
+        
         if(respuestaJson.conectado){
             props.acceder(respuestaJson.conectado)
             props.userName(respuestaJson.nombre)
             setCurrentUser(data.user_nombre)
+            setPasswordUser(data.user_password)
             alertaLogged(respuestaJson.nombre)
         }
         setError(respuestaJson.error)
@@ -113,6 +121,7 @@ function HomeLogin(props) {
 
     const handleRegister = async () => {
         const regdata = {
+            "user_fecha": gettingDate(),
             "user_nombre": refRegUsuario.current.value,
             "user_email": refRegEmail.current.value,
             "user_password": refRegClave.current.value,
@@ -213,9 +222,9 @@ function HomeLogin(props) {
                         <label>Contraseña:</label>
                         <input type="password" ref={refRegClave} required></input>
                         <label>Celular:</label>
-                        <input type='text' ref={refRegCelular} ></input>
+                        <input type='text' ref={refRegCelular} required></input>
                         <label>Dirección de envío:</label>
-                        <input type='text' ref={refRegDireccion}></input>
+                        <input type='text' ref={refRegDireccion} required></input>
                        {/*  <button onClick={handleRegister} className='btn_login'>Registrarse</button> */}
                        <input type='submit' className='btn_login' value='REGISTRARME'></input>
                         <p className='alrgth'>¿Ya tienes una cuenta?</p>
