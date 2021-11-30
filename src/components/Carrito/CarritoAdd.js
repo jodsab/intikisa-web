@@ -38,6 +38,16 @@ function CarritoAdd(props){
     progress: undefined,
   });
 
+  const productoAgregado = () => toast("Producto agregado al carrito.", {
+    position: "bottom-right",
+    autoClose: 3000,
+    hideProgressBar: false,
+    closeOnClick: false,
+    pauseOnHover: false,
+    draggable: true,
+    progress: undefined,
+  });
+
   const gettingDate = () => {
     const d = new Date();
 
@@ -55,8 +65,7 @@ function CarritoAdd(props){
             "carrito_producto": props.nombre,
             "carrito_precio": props.precio
         }
-
-        console.log(data);
+        productoAgregado();
         const respuestaJson = await enviarData(URL_INSERTAR_CARRITO, data);
     }
  

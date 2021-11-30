@@ -13,36 +13,20 @@
     position: -webkit-sticky;
     top: 0;
     z-index: 9999;
+
+    .logo_intik{
+        a{
+            .img_logo{
+                cursor: pointer;
+            }
+        }
+    }
     
-    .img_logo{
-        cursor: pointer;
-    }
-
-    .menu_options{
-        font-size: 50px;
-        display: none;
-    }
-
-    .navbar_background{
-        position: absolute;
-        z-index: -100;
-        width: 100%;
-        object-fit: cover;
-        height: 80px;
-    }
-
-    .navbar_logo:hover{
-            cursor: pointer;
-    }
-
     .navbar_nav_options {
         display: flex;
         align-items: center;
         font-size: 30px;
 
-        .rs_icon{
-            padding: 0 30px;
-        }
     }
 }
 
@@ -54,43 +38,14 @@
 
         .logo_intik{
             position: fixed;
+            top: 0;
             left: 40px;
-        }
-
-        .img_logo{
-            width: 120px;
-        }
-
-        .navbar_nav{
-            display: flex;
-            flex-direction: column-reverse;
-            position: absolute;
-            top: 56px;
-            left: -100%;
-            transition: all .5s ease-in-out;
-            background-color: white;
-        }
-
-        .navbar_nav.active{
-            left: 0;
-            align-items: center;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-
-            .navbar_nav_options{
-                width: 30%;
-                height: 100%;
-                display: flex;
+            a{
+                .img_logo{
+                    width: 100px;
+                }
             }
             
         }
-
-        .menu_options{
-            display: flex;
-            align-items: center;
-        }
     }
-
-    
   }

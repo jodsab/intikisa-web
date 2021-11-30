@@ -4,7 +4,7 @@ import {AiOutlineUser} from 'react-icons/ai';
 
 import './homelogin.scss';
 
-import {setToken, setCurrentUser, setPasswordUser,getToken,getUserName,delenteToken} from '../Helpers/auth-helpers';
+import {setCurrentUser, setPasswordUser,setIdUser,setEmailUser,setDireccionUser,setCelularUser} from '../Helpers/auth-helpers';
 
 import swal from 'sweetalert';
 
@@ -107,6 +107,10 @@ function HomeLogin(props) {
             props.userName(respuestaJson.nombre)
             setCurrentUser(data.user_nombre)
             setPasswordUser(data.user_password)
+            setIdUser(respuestaJson.usuario)
+            setEmailUser(respuestaJson.email)
+            setDireccionUser(respuestaJson.direccion)
+            setCelularUser(respuestaJson.celular)
             alertaLogged(respuestaJson.nombre)
         }
         setError(respuestaJson.error)
@@ -198,7 +202,6 @@ function HomeLogin(props) {
                                 </div>
                             }    
                             <input type='submit' className='btn_entrar' value='ENTRAR'></input>
-                        {/* <button onClick={handleLogin} className='btn_entrar' >Entrar</button> */}
                         <p id='noacc'>¿No tienes una cuenta?</p>
                         <button  onClick={changeRegister, changeLogin} className='btn_rgster' >Registrarse</button>
                         </form>
@@ -225,7 +228,6 @@ function HomeLogin(props) {
                         <input type='text' ref={refRegCelular} required></input>
                         <label>Dirección de envío:</label>
                         <input type='text' ref={refRegDireccion} required></input>
-                       {/*  <button onClick={handleRegister} className='btn_login'>Registrarse</button> */}
                        <input type='submit' className='btn_login' value='REGISTRARME'></input>
                         <p className='alrgth'>¿Ya tienes una cuenta?</p>
                         <button onClick={changeRegister,changeLogin} className='btn_lgns' >Ingresar</button>

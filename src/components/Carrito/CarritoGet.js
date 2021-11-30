@@ -194,8 +194,6 @@ function CarritoGet(props){
             "auto_return": "approved",
         }
 
-        console.log(realizarCobro);
-
         const respuestaCobro = await cobrarCliente(URL_PASARELA_DE_PAGO, itemCobro); 
 
         console.log(respuestaCobro.sandbox_init_point);
@@ -206,16 +204,21 @@ function CarritoGet(props){
 
     }
 
-    const abrirUrlPago = () => {
+    async function abrirUrlPago () {
         realizarCobro();
-        const urlaux = realizarCobro();
+        const urlaux = await realizarCobro();
         setUrlCobro(urlaux);
-        window.open(urlCobro,"_blank")
+        await window.open(realizarCobro(),"_blank");
+        /* window.open(realizarCobro(),"_blank"); */
+    }
+
+    async function hacerTodo() {
+        await obtenercarrito();
     }
 
     useEffect (() => {
         if(getUserName()){
-            obtenercarrito();
+            hacerTodo();
         }
     })
 

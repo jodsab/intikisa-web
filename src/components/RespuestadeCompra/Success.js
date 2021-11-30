@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 
 import { getUserName, getPasswordUser } from '../Helpers/auth-helpers';
 
-import './success.scss'
+import './success.scss';
 
 const URL_OBTENER_PRODUCTOS_DEL_CARRITO = "https://intikisaperu.com/oficial/obtenercarrito.php";
 
@@ -13,6 +13,8 @@ const URL_REGISTRAR_VENTA_DEL_CARRITO = "https://intikisaperu.com/oficial/regist
 const URL_OBTENER_VENTAS_POR_USUARIO = "https://intikisaperu.com/oficial/obtenerventa.php";
 
 const URL_BORRAR_TODO_EN_CARRITO = "https://intikisaperu.com/oficial/borrartodoencarrito.php";
+
+const URL_ENVIAR_MENSAJE_A_ADMINISTRADOR_DE_CARRITO_COMPRADO = "https://intikisaperu.com/oficial/mercadopago/mensajeriaphpmailer.php"
 
 const cogerCarrito = async (url, data) => {
 
@@ -89,13 +91,35 @@ const obtenerVenta = async (url, data) => {
     return rovjson;
 }
 
+const enviarMensajeaAdmin = async (url,data) => {
+
+    const respMensaje = await fetch (url, {
+        method: 'POST',
+        body: JSON.stringify(data),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    
+    const respMsg = await respMensaje.json();
+
+    return respMsg;
+}
+
 function Success(){
 
-    const [user, setUser] = useState('');
+    const [userId, setUserId] = useState('');
+    const [userNombre, setUserNombre] = useState('');
+    const [userCelular, setUserCelular] = useState('');
+    const [userDireccion, setUserDireccion] = useState('');
+    const [userEmail, setUserEmail] = useState('');
 
+    const[user, setUser] = useState({});
     const [items, setItems] = useState([]);
 
     const [itemsventas, setItemsVentas] = useState([]);
+
+    
 
     const gettingDate = () => {
         const d = new Date();
@@ -113,9 +137,7 @@ function Success(){
 
         const userJson = await obtenerDatosUser(URL_OBTENER_DATOS_CLIENTE, userdata);
 
-        console.log(userJson);
-
-        setUser(userJson);
+        return userJson;
     }
 
     const itemscarrito = async () => {
@@ -124,14 +146,13 @@ function Success(){
         }
     
         const itemsJson = await cogerCarrito(URL_OBTENER_PRODUCTOS_DEL_CARRITO, itemdata);
-    
-        console.log(itemsJson);
 
-        setItems(itemsJson);
-        itemsJson.map(e => registrandoVentas(e.idprod, e.producto, e.precio))
+        await itemsJson.map(e => registrandoVentas(e.idprod, e.producto, e.precio))
+
+        return itemsJson;
     }
 
-    const registrandoVentas = async (idprod, prodnombre, prodprecio) => {
+    async function registrandoVentas (idprod, prodnombre, prodprecio) {
 
         const itemRegistrado = {
             "venta_user_nombre": getUserName(),
@@ -139,9 +160,9 @@ function Success(){
             "venta_estado_venta": "no entregado",
             "venta_nombre_producto": prodnombre,
             "venta_precio": prodprecio,
-            "venta_user_celular": user.celular,
-            "venta_user_direccion": user.direccion,
-            "venta_user_email": user.email,
+            "venta_user_celular": userId,
+            "venta_user_direccion": userDireccion,
+            "venta_user_email": userEmail,
             "venta_fecha_venta": gettingDate(),
         }
 
@@ -158,6 +179,8 @@ function Success(){
         const obtenerItemVentas = await obtenerVenta(URL_OBTENER_VENTAS_POR_USUARIO, itemObtener);
         console.log(obtenerItemVentas);
         setItemsVentas(obtenerItemVentas)
+
+        return obtenerItemVentas;
     }
 
     const borrarCarritos = async () => {
@@ -169,20 +192,33 @@ function Success(){
         console.log(answ);
     }
 
-    const validarWeb = () => {
+    async function enviarMsgAcmin (ppl, msj) {
+
+        const mensaje = {
+            "id_user": ppl.usuario,
+            "nombre_user": ppl.nombre,
+            "email_user": ppl.email,
+            "direccion_user": ppl.direccion,
+            "celular_user": ppl.celular,
+            "mensaje_contenido": msj,
+        }
+        console.log(mensaje);
+        const resp = await enviarMensajeaAdmin(URL_ENVIAR_MENSAJE_A_ADMINISTRADOR_DE_CARRITO_COMPRADO, mensaje);
+        console.log(resp);
+    }
+
+    const validarWeb = async () => {
         if(window.location.href.search('approved') != -1){
-            cogerDatosUsuario();
-            itemscarrito();
-            borrarCarritos();  
+            const eluser = await cogerDatosUsuario();
+            const lositems = await itemscarrito();
+            await enviarMsgAcmin(eluser,lositems);
+            await borrarCarritos();
         }    
-           
-        obtenerVentas()
     }
 
     useEffect(() => {
-        
         validarWeb()
-
+        obtenerVentas();
         
     },[]);
 
