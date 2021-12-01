@@ -165,10 +165,9 @@ function Success(){
             "venta_user_email": userEmail,
             "venta_fecha_venta": gettingDate(),
         }
-
-        console.log(itemRegistrado);     
+   
         const respRegistroVenta = await registrarVenta(URL_REGISTRAR_VENTA_DEL_CARRITO, itemRegistrado)
-        console.log(respRegistroVenta);
+
     }   
 
     const obtenerVentas = async () => {
@@ -202,9 +201,9 @@ function Success(){
             "celular_user": ppl.celular,
             "mensaje_contenido": msj,
         }
-        console.log(mensaje);
+
         const resp = await enviarMensajeaAdmin(URL_ENVIAR_MENSAJE_A_ADMINISTRADOR_DE_CARRITO_COMPRADO, mensaje);
-        console.log(resp);
+
     }
 
     const validarWeb = async () => {

@@ -16,8 +16,6 @@ const URL_BORRAR_PRODUCTO_DEL_CARRITO = "https://intikisaperu.com/oficial/borrar
 
 const URL_TOTAL_A_PAGAR = "https://intikisaperu.com/oficial/totalapagar.php";
 
-const URL_REGISTRO_VENTA = "https://intikisaperu.com/oficial/registrarventa.php";
-
 const URL_PASARELA_DE_PAGO = "https://api.mercadopago.com/checkout/preferences?access_token=APP_USR-7887698424202198-111920-4e13e41c68b56cfb2427a8b306243dc0-837446390";
 
 const cobrarCliente = async (url, data) => {
@@ -113,6 +111,8 @@ function CarritoGet(props){
 
     const [showDivCarrito, setShowDivCarrito] = useState(false);
 
+    const [totalPorPagar, setTotalPorPagar] = useState(1);
+
     function toggleShowDivCarrito(){
         setShowDivCarrito(!showDivCarrito)
     }
@@ -150,9 +150,9 @@ function CarritoGet(props){
 
         const itemsJson = await cogerCarrito(URL_OBTENER_PRODUCTOS_DEL_CARRITO, itemdata);
         setItems(itemsJson)
-    }
 
-    const [totalPorPagar, setTotalPorPagar] = useState(0);
+        return itemsJson;
+    }
 
     const cuantoPagar = async () => {
         const totalData = {
@@ -161,6 +161,8 @@ function CarritoGet(props){
 
         const totalaPagarxd = await totalDelCarrito(URL_TOTAL_A_PAGAR, totalData);
         setTotalPorPagar(parseInt(totalaPagarxd.pagoentotal))
+
+        return parseInt(totalaPagarxd.pagoentotal);
     }
 
     const borrarCarrito = async (nombreuserx, idprod, producto) => {
@@ -196,8 +198,6 @@ function CarritoGet(props){
 
         const respuestaCobro = await cobrarCliente(URL_PASARELA_DE_PAGO, itemCobro); 
 
-        console.log(respuestaCobro.sandbox_init_point);
-
         setUrlCobro(respuestaCobro.sandbox_init_point)
 
         return respuestaCobro.sandbox_init_point;
@@ -205,22 +205,36 @@ function CarritoGet(props){
     }
 
     async function abrirUrlPago () {
-        realizarCobro();
+        const total = await cuantoPagar();
         const urlaux = await realizarCobro();
         setUrlCobro(urlaux);
-        await window.open(realizarCobro(),"_blank");
         /* window.open(realizarCobro(),"_blank"); */
+    }
+
+    async function abriendourl(){
+        window.open(urlCobro,"_blank");
     }
 
     async function hacerTodo() {
         await obtenercarrito();
+        const pago = await cuantoPagar();
+        await itemscarrito();
+        await realizarCobro(pago);
+    }
+
+    async function btnCobrar() {
+        await obtenercarrito();
+        const pago = await cuantoPagar();
+        await itemscarrito();
+        await realizarCobro(pago);
     }
 
     useEffect (() => {
-        if(getUserName()){
+        if(getUserName() != ''){
             hacerTodo();
         }
-    })
+        
+    },[])
 
     return(
         <div className='carrito'>
@@ -230,7 +244,7 @@ function CarritoGet(props){
                 }
             </div>
             <div className='divcarrito'>
-                <button onClick={()=>{obtenercarrito();cuantoPagar();itemscarrito(); setShowDivCarrito(!showDivCarrito)}} className="rs_icon">
+                <button onClick={()=>{/* obtenercarrito();cuantoPagar();itemscarrito() */hacerTodo(); setShowDivCarrito(!showDivCarrito)}} className="rs_icon">
                     <CgShoppingCart  />
                 </button>
 
@@ -269,7 +283,7 @@ function CarritoGet(props){
                         <div className='div_pagar'>
                             <div className='div_pagando'>
                                 <p className='total_pago'>Total: S/.{totalPorPagar}.00 </p>
-                                <button className='btn_pagar cho-container' onClick={()=>{itemscarrito(); cuantoPagar(); obtenercarrito(); realizarCobro(totalPorPagar); abrirUrlPago()} } >Pagar</button>
+                                <button className='btn_pagar cho-container' onClick={()=>{/* itemscarrito(); cuantoPagar(); obtenercarrito(); realizarCobro(totalPorPagar); */ btnCobrar();abrirUrlPago();abriendourl() } } >Pagar</button>
                             </div>
                             <div className='div_foto_pagar'>
                                 <img src={require(`../../img/pagos/bancos.png`).default} ></img>
