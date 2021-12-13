@@ -33,7 +33,7 @@ function Contactanos(){
                                 <p>
                                     <FiPhoneCall/>
                                     <p>
-                                        +51 971 649 286
+                                        +51 992 851 181
                                     </p>
                                 </p>
                             </div>

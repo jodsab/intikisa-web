@@ -8,7 +8,7 @@ function TelefonoCorreo(){
         <div className='comunicate_container'>
             <div className='div_contact'>
                 <AiOutlinePhone className='icon_msj' />
-                <p className='msj_contacto'>Llámanos: +51 971 649 286</p>
+                <p className='msj_contacto'>Llámanos: +51 992 851 181</p>
             </div> 
             <div className='div_contact'>
                 <AiOutlineMail className='icon_msj' />

@@ -60,13 +60,22 @@ function CarritoAdd(props){
 
     const insertarCarrito = async () => {
         const data = {
-            "user_nombre": getUserName(),
+            "user_nombre": await getUserName(),
             "carrito_fecha": gettingDate(),
             "carrito_producto": props.nombre,
             "carrito_precio": props.precio
         }
-        productoAgregado();
-        const respuestaJson = await enviarData(URL_INSERTAR_CARRITO, data);
+
+        const usersaso = await getUserName();
+        const productaso = props.nombre;
+
+        if(typeof usersaso !== 'undefined'){
+            const respuestaJson = await enviarData(URL_INSERTAR_CARRITO, data);
+
+            productoAgregado();
+        }
+
+
     }
  
     return(

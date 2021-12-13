@@ -26,6 +26,9 @@ import MisionYVision from "../Submenu/MisionYVision";
 import Valores from "../Submenu/Valores";
 import Contactanos from "../Submenu/Contactanos";
 
+import aexportapi from '../api/aexportapi';
+const URL_PRODUCTOS = "https://intikisaperu.com/oficial/api/productos.php";
+
 function Guia() {
   const [toggleMenu, setToggleMenu] = useState("");
 
@@ -37,11 +40,57 @@ function Guia() {
 
   const [menuProductos, setMenuProductos] = useState(false);
 
+  const [categoriasdeProds, setCategoriasDeProds] = useState([]);
+
   const toggleMenuProductos = () => {
     setMenuProductos(!menuProductos)
   }
+  //productos api
+  const [productos, setProductos] = useState([]);
+
+    const llamadaProductos = async () => {
+
+        const data = {
+            "user_nombre": "admin",
+        }
+
+        const respuestaJson = await aexportapi.callProductos(URL_PRODUCTOS, data);
+
+        const productosarray = [];
+
+        respuestaJson.map(e => {
+            const index = productosarray.findIndex(object => object.prodid === e.prodid );
+
+            if(index === -1 ){
+                productosarray.push(e);
+            }
+        } )
+        setProductos(productosarray);
+        console.log(productosarray);
+        return productosarray;
+    }
+
+    const categorias = async () => {
+      const cats = await llamadaProductos();
+
+      const productosarrayCat = [];
+
+        cats.map(e => {
+            const indexx = productosarrayCat.findIndex(object => object.prodcategoria === e.prodcategoria );
+
+            if(indexx === -1 ){
+                productosarrayCat.push(e);
+            }
+        } )
+        console.log(productosarrayCat);
+        setCategoriasDeProds(productosarrayCat)
+        
+    }
   
-  useEffect (()=>{
+
+  useEffect (async ()=>{
+    await llamadaProductos();
+    await categorias();
     if(window.location.href == 'http://localhost:3000/'){
       setSlider(true)
     }
@@ -67,17 +116,17 @@ function Guia() {
               </div>
             </Link>
           </li>
-          {productos.map((e) => (
+          {categoriasdeProds.map((e) => (
             <li
-              key={e.id_ctgria}
+              key={e.prodid}
               className="div_tipos_container"
               onClick={togglingMenu,toggleMenuProductos}
             >
               <div className="title_tipo">
-                <Link to={`/${e.ctgria_tipo}`}>
+                <Link to={`/${e.prodcategoriaurl}`}>
                   <div className="title_tipo">
                   
-                    <p className="title_p">{e.ctgria_tipo}</p>
+                    <p className="title_p">{e.prodcategoriaurl}</p>
                   </div>
                 </Link>
               </div>
@@ -107,23 +156,22 @@ function Guia() {
           <Route path={'/contactanos'} element={<Contactanos />}>
             
           </Route>
-          {productos.map((e) => (
+          {categoriasdeProds.map((e) => (
             <Route
               exact
-              path={`/${e.ctgria_tipo}`}
+              path={`/${e.prodcategoriaurl}`}
               element={
-                <Productos producs={e.ctgria_productos} url={e.ctgria_tipo} />
+                <Productos producs={e.prodnombre} url={e.prodcategoriaurl} categoriaid={e.prodcategoria} namess={productos} />
               }
             ></Route>
           ))}
-          {productos.map((f) =>
-            f.ctgria_productos.map((g) => (
+          {productos.map((e) => (
               <Route
                 exact
-                path={`/${f.ctgria_tipo}/${g.prod_link}`}
-                element={<Producto namess={g} pre={f.ctgria_tipo} status={g.prod_status} />}
+                path={`/${e.prodcategoriaurl}/${e.prodid}`}
+                element={<Producto namess={e} pre={e.prodcategoriaurl} status={e.prodstatus} />}
               ></Route>
-            ))
+            )
           )}
           <Route component={Error404} />
           <Route

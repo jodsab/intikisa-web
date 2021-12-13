@@ -224,7 +224,7 @@ function Success(){
     return(
         <div className='success_container'>
             <h4>Gracias por tu compra.</h4>
-            <p>Compra exitosa, en las proximas 24 horas nos estaremos comunicando contigo para coordinar la entrega.</p>
+            <p>Compra exitosa, en las proximas 24 horas nos estaremos comunicando contigo para coordinar la entrega. Por favor revisa el correo que usaste al registrarte.</p>
             <div className='productos_container_div'>
                 <p>Compras: </p>
                 <ul className='productos_lista_ul'>

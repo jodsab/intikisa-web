@@ -8,13 +8,13 @@ import DivLogimp from "../Login/DivLogimp";
 
 import './carritoget.scss';
 
-const URL_AGARRAR_CARRITO = "https://intikisaperu.com/oficial/productosencarrito.php";
+const URL_AGARRAR_CARRITO = "https://intikisaperu.com/oficial/api/productosencarrito.php";
 
-const URL_OBTENER_PRODUCTOS_DEL_CARRITO = "https://intikisaperu.com/oficial/obtenercarrito.php";
+const URL_OBTENER_PRODUCTOS_DEL_CARRITO = "https://intikisaperu.com/oficial/api/obtenercarrito.php";
 
 const URL_BORRAR_PRODUCTO_DEL_CARRITO = "https://intikisaperu.com/oficial/borrardecarrito.php";
 
-const URL_TOTAL_A_PAGAR = "https://intikisaperu.com/oficial/totalapagar.php";
+const URL_TOTAL_A_PAGAR = "https://intikisaperu.com/oficial/api/totalapagar.php";
 
 const URL_PASARELA_DE_PAGO = "https://api.mercadopago.com/checkout/preferences?access_token=APP_USR-7887698424202198-111920-4e13e41c68b56cfb2427a8b306243dc0-837446390";
 
@@ -79,6 +79,7 @@ const borrardeCarrito = async(url, data) => {
 }
 
 const totalDelCarrito = async(url, data) => {
+
     const resptotal = await fetch(url, {
         method: 'POST',
         body: JSON.stringify(data),
@@ -111,7 +112,7 @@ function CarritoGet(props){
 
     const [showDivCarrito, setShowDivCarrito] = useState(false);
 
-    const [totalPorPagar, setTotalPorPagar] = useState(1);
+    const [totalPorPagar, setTotalPorPagar] = useState(0);
 
     function toggleShowDivCarrito(){
         setShowDivCarrito(!showDivCarrito)
@@ -138,6 +139,7 @@ function CarritoGet(props){
         }
 
         const respuestaJson = await enviarData(URL_AGARRAR_CARRITO, data);
+
         setProductos(respuestaJson.nproductos)
     }
 
@@ -145,13 +147,32 @@ function CarritoGet(props){
 
     const itemscarrito = async () => {
         const itemdata = {
-            "user_nombre": getUserName(),
+            "user_nombre": await getUserName(),
         }
 
-        const itemsJson = await cogerCarrito(URL_OBTENER_PRODUCTOS_DEL_CARRITO, itemdata);
-        setItems(itemsJson)
+        const usersaso = await getUserName();
 
-        return itemsJson;
+        if( typeof usersaso != 'undefined'){
+            const itemsJson = await cogerCarrito(URL_OBTENER_PRODUCTOS_DEL_CARRITO, itemdata);
+
+            const productosarray = [];
+
+            itemsJson.map(e => {
+            const index = productosarray.findIndex(object => object.idprod === e.idprod );
+
+            if(index === -1 ){
+                productosarray.push(e);
+            }
+
+            } )
+
+            setItems(productosarray)
+            return productosarray
+
+        }
+        
+
+
     }
 
     const cuantoPagar = async () => {
@@ -160,9 +181,12 @@ function CarritoGet(props){
         }
 
         const totalaPagarxd = await totalDelCarrito(URL_TOTAL_A_PAGAR, totalData);
-        setTotalPorPagar(parseInt(totalaPagarxd.pagoentotal))
 
-        return parseInt(totalaPagarxd.pagoentotal);
+        const preciaso = Object.values(totalaPagarxd)
+        const pagpreciaso = parseFloat(preciaso[0]);
+        setTotalPorPagar(pagpreciaso.toFixed(2))
+
+        return pagpreciaso
     }
 
     const borrarCarrito = async (nombreuserx, idprod, producto) => {
@@ -198,15 +222,15 @@ function CarritoGet(props){
 
         const respuestaCobro = await cobrarCliente(URL_PASARELA_DE_PAGO, itemCobro); 
 
-        setUrlCobro(respuestaCobro.sandbox_init_point)
+        setUrlCobro(respuestaCobro.init_point)
 
-        return respuestaCobro.sandbox_init_point;
+        return respuestaCobro.init_point;
 
     }
 
     async function abrirUrlPago () {
         const total = await cuantoPagar();
-        const urlaux = await realizarCobro();
+        const urlaux = await realizarCobro(total);
         setUrlCobro(urlaux);
         /* window.open(realizarCobro(),"_blank"); */
     }
@@ -217,16 +241,16 @@ function CarritoGet(props){
 
     async function hacerTodo() {
         await obtenercarrito();
-        const pago = await cuantoPagar();
+        const pagoXp = await cuantoPagar();
         await itemscarrito();
-        await realizarCobro(pago);
+        await realizarCobro(pagoXp);
     }
 
     async function btnCobrar() {
         await obtenercarrito();
-        const pago = await cuantoPagar();
+        const pagoAp = await cuantoPagar();
         await itemscarrito();
-        await realizarCobro(pago);
+        await realizarCobro(pagoAp);
     }
 
     useEffect (() => {
@@ -267,12 +291,12 @@ function CarritoGet(props){
                                         <div className='flex_items_div'>
 
                                             <div className='foto_espacio'>
-                                                <img src={require(`../../img/productos/${e.producto}.png`).default} className='foto_png_producto_div' alt={e.producto} ></img>
+                                                <img src={`${e.url}`} className='foto_png_producto_div' alt={e.producto} ></img>
                                             </div>
 
                                             <div className='nombre_precio'>
                                                 <p className='nombre'>{e.producto}</p>
-                                                <p className='precio'>S/.{e.precio}.00</p>
+                                                <p className='precio'>S/.{e.precio}</p>
                                             </div>
 
                                         </div>
@@ -282,8 +306,8 @@ function CarritoGet(props){
                         </ul>
                         <div className='div_pagar'>
                             <div className='div_pagando'>
-                                <p className='total_pago'>Total: S/.{totalPorPagar}.00 </p>
-                                <button className='btn_pagar cho-container' onClick={()=>{/* itemscarrito(); cuantoPagar(); obtenercarrito(); realizarCobro(totalPorPagar); */ btnCobrar();abrirUrlPago();abriendourl() } } >Pagar</button>
+                                <p className='total_pago'>Total: S/.{totalPorPagar}</p>
+                                <button className='btn_pagar cho-container' onClick={()=>{btnCobrar();abrirUrlPago();abriendourl() } } >Pagar</button>
                             </div>
                             <div className='div_foto_pagar'>
                                 <img src={require(`../../img/pagos/bancos.png`).default} ></img>

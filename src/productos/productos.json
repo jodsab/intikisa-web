@@ -38,7 +38,7 @@
                 "prod_ingredientes": "MACA AMARILLA",
                 "prod_src": ["MACA GELATINIZADA EN POLVO.png","MACA GELATINIZADO.png","MACA GELATINIZADA2.jpg","MACA GELATINIZADA3.jpg","MACA GELATINIZADA4.png"],
                 "prod_propiedades": "La maca gelatinizada en polvo de Intikisa Perú está elaborada con 100% maca andina el cual está lleno de propiedades y beneficios para nuestra salud, además de impulsar nuestra energía.",
-                "prod_precio": 22,
+                "prod_precio": 20,
                 "prod_status": 0
             },
             {
@@ -48,14 +48,14 @@
                 "prod_ingredientes": "MACA, QUINUA, CACAO",
                 "prod_src": ["MACHU PICCHU GOLDEN MIX.png","MACHU PICCHU GOLDEN MIX 2.png","MACHU PICCHU GOLDEN MIX 3.png"],
                 "prod_propiedades": "Machu picchu Golden mix es una mezcla de sabores andinos y de la amazonia de nuestro Perú; La quinua con su alto valor nutritivo, la maca con sus fuentes de vitaminas y el cacao con su fuente energética hacen de este mix el indicado para tu alimentación diaria por sus innumerables beneficios.",
-                "prod_precio": 48,
+                "prod_precio": 50,
                 "prod_status": 0
             },
             {
                 "id_prod": 3,
                 "prod_name": "INKA GOLDEN MIX",
                 "prod_link": "INKA_GOLDEN_MIX",
-                "prod_ingredientes": "TARWI, MACA, CACAO",
+                "prod_ingredientes": "TARWI, CACAO",
                 "prod_src": ["INKA GOLDEN MIX.png"],
                 "prod_propiedades": "INKA GOLDEN MIX es una mezcla de sabores andinos de nuestro Perú; El Tarwi con su fuente proteínas, la maca con sus fuentes de vitaminas y el cacao con su fuente energética hacen de este mix el indicado para tu alimentación diaria por sus innumerables beneficios.",
                 "prod_precio": 45,
@@ -107,16 +107,6 @@
             },
             {
                 "id_prod": 3,
-                "prod_name": "MERMELADA DE ARANDANOS",
-                "prod_link": "MERMELADA_DE_ARANDANOS",
-                "prod_ingredientes": "MERMELADA, ARANDANOS",
-                "prod_src": ["MERMELADA DE ARANDANOS.png"],
-                "prod_propiedades": "Mermelada de arandanos.",
-                "prod_precio": 20,
-                "prod_status": 1
-            },
-            {
-                "id_prod": 4,
                 "prod_name": "MERMELADA DE AGUAYMANTO CON STEVIA",
                 "prod_link": "MERMELADA_DE_AGUAYMANTO_CON_STEVIA",
                 "prod_ingredientes": "MERMELADA, AGUAYMANTO, STEVIA",
@@ -134,22 +124,12 @@
         "ctgria_productos": [
             {
                 "id_prod": 1,
-                "prod_name": "PANETÓN INTEGRAL CON ARANDANOS",
-                "prod_link": "PANETON_INTEGRAL_CON_ARANDANOS",
-                "prod_ingredientes": "MERMELADA, ARÁNDANOS, STEVIA",
-                "prod_src": ["PANETÓN INTEGRAL CON ARANDANOS.png","PANETÓN INTEGRAL CON ARANDANOS2.jpg","PANETÓN CON FRUTAS.png"],
-                "prod_propiedades": "Atractivo al paladar por su miga suave. Además, lo novedoso de este panetón es que contiene arándanos el cual nos brinda importantes innumerables beneficios a nuestra salud.",
-                "prod_precio": 20,
-                "prod_status": 0
-            },
-            {
-                "id_prod": 2,
                 "prod_name": "PANETÓN CON FRUTAS",
                 "prod_link": "PANETON_CON_FRUTAS",
-                "prod_ingredientes": "MERMELADA, FRESA, STEVIA",
+                "prod_ingredientes": "FRUTAS",
                 "prod_src": ["PANETÓN CON FRUTAS.png","PANETÓN CON FRUTAS2.jpg","PANETÓN INTEGRAL CON ARANDANOS.png"],
                 "prod_propiedades": "Convierte tus encuentros familiares en momentos inolvidables con nuestro panetón tradicional relleno con pasas y frutas confitadas.",
-                "prod_precio": 20,
+                "prod_precio": 35,
                 "prod_status": 0
             }
         ]

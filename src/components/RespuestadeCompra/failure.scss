@@ -1,7 +1,10 @@
 .failure_container{
-    height: 100vh;
+    min-height: 100vh;
     width: 80%;
     margin: auto;
+    h5{
+        font-size: 28px;
+    }
     .img_container{
         width: 800px;
         height: 500px;
@@ -14,7 +17,8 @@
 
 @media only screen and (max-width: 600px){
     .failure_container{
-        width: 100%;
+        width: 95%;
+        margin: auto;
         height: 400px;
         .img_container{
             width: 100%;
@@ -25,7 +29,7 @@
             align-items: center;
     
             img{
-                width: 250px;
+                width: 100%;
                 object-fit: contain;
                 object-position: center;
             }
