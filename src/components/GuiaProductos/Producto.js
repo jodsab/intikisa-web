@@ -35,7 +35,7 @@ function Producto(props){
         }
 
         const respuestaJson = await callImages(URL_PRODUCTOS, data);
-        console.log(respuestaJson);
+
         setArrayFotos(respuestaJson)
         return respuestaJson
     }
@@ -52,14 +52,14 @@ function Producto(props){
     return(
         <div className='producto_container_xdd'>
             <div className='title_del_producto'>
-                <h3>{procs.prodcategoriaurl}: {procs.prodnombre} </h3>
+                <h3>{procs.prodcategoriaurl.toUpperCase()}: {procs.prodnombre} </h3>
             </div>
             <div className='producto_container'>
                 <div className='fotos_producto' >
                     <ul className='lista_fotos_productos'>
                         {
                             arrayFotos.map(e => (
-                            <li className='foto_cada_producto'  onClick={() => setFotoMuestra(e.imagen_producto)}>
+                            <li className='foto_cada_producto'  onClick={() => setFotoMuestra(e.imagen_producto)} >
                                 <img src={`${e.imagen_producto}`} className='fotos_varias_prod' alt={e.id_img} />
                             </li>
                             ))

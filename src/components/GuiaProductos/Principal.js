@@ -36,7 +36,7 @@ function Principal(props){
                 productosarray.push(e);
             }
         } )
-        console.log(productosarray);
+
         return productosarray;
     }
 

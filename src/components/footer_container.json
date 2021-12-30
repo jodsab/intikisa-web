@@ -3,21 +3,19 @@
     {
         "id": 1,
         "section": "Compañia",
-        "sub_section": "¿Quienes somos?",
-        "sub_section2": "Únete a nuestra travesia"
+        "sub_section": "¿Quienes somos?"
 
     },
     {
         "id": 2,
         "section": "Atención al cliente",
         "sub_section4": "Contáctanos",
-        "sub_section5": "Comunicate a intikisa.pe@gmail.com"
+        "sub_section5": "Comunicate a intikisa.peru@gmail.com"
     },
     {
         "id": 3,
         "section": "Políticas y términos",
         "sub_section": "Políticas de envío",
-        "sub_section2": "Políticas de reembolso",
         "sub_section3": "Políticas de privacidad"
     },
     {

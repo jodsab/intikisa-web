@@ -92,20 +92,6 @@ const totalDelCarrito = async(url, data) => {
     return respuesTotal
 }
 
-const registrandoVentas = async(url,data) => {
-    const respRegistrVenta = await fetch(url ,{
-        method: 'POST',
-        body: JSON.stringify(data),
-        headers: {
-            'Content-Type': 'applicacion/json'
-        }
-    })
-
-    const respuestaRegVenta = await respRegistrVenta.json();
-    return respuestaRegVenta
-}
-
-
 function CarritoGet(props){
 
     const [urlCobro, setUrlCobro] = useState('');
@@ -113,10 +99,6 @@ function CarritoGet(props){
     const [showDivCarrito, setShowDivCarrito] = useState(false);
 
     const [totalPorPagar, setTotalPorPagar] = useState(0);
-
-    function toggleShowDivCarrito(){
-        setShowDivCarrito(!showDivCarrito)
-    }
 
     const [conected, setConected] = useState(false);
 
@@ -180,13 +162,19 @@ function CarritoGet(props){
             "user_nombre": getUserName()
         }
 
-        const totalaPagarxd = await totalDelCarrito(URL_TOTAL_A_PAGAR, totalData);
+        const useraux = await getUserName();
 
-        const preciaso = Object.values(totalaPagarxd)
-        const pagpreciaso = parseFloat(preciaso[0]);
-        setTotalPorPagar(pagpreciaso.toFixed(2))
-
-        return pagpreciaso
+        if (typeof useraux !== 'undefinded' ){
+                const totalaPagarxd = await totalDelCarrito(URL_TOTAL_A_PAGAR, totalData);
+    
+                const preciaso = Object.values(totalaPagarxd)
+                const pagpreciaso = parseFloat(preciaso[0]);
+                setTotalPorPagar(pagpreciaso.toFixed(2))
+        
+                return pagpreciaso
+            
+        }
+        
     }
 
     const borrarCarrito = async (nombreuserx, idprod, producto) => {
@@ -232,7 +220,6 @@ function CarritoGet(props){
         const total = await cuantoPagar();
         const urlaux = await realizarCobro(total);
         setUrlCobro(urlaux);
-        /* window.open(realizarCobro(),"_blank"); */
     }
 
     async function abriendourl(){
@@ -268,7 +255,7 @@ function CarritoGet(props){
                 }
             </div>
             <div className='divcarrito'>
-                <button onClick={()=>{/* obtenercarrito();cuantoPagar();itemscarrito() */hacerTodo(); setShowDivCarrito(!showDivCarrito)}} className="rs_icon">
+                <button onClick={()=>{hacerTodo(); setShowDivCarrito(!showDivCarrito)}} className="rs_icon">
                     <CgShoppingCart  />
                 </button>
 

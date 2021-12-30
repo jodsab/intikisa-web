@@ -10,6 +10,9 @@ import {GiArrowScope} from 'react-icons/gi';
 import {RiHandHeartFill} from 'react-icons/ri';
 import {MdConnectWithoutContact} from 'react-icons/md';
 
+import { PrivacyPolicy } from "../policy/PrivacyPolicy";
+import { TermsandConditions } from "../policy/TermsandConditions";
+
 import productos from "../../productos/productos.json";
 import Producto from "./Producto";
 import Productos from "./Productos";
@@ -66,7 +69,6 @@ function Guia() {
             }
         } )
         setProductos(productosarray);
-        console.log(productosarray);
         return productosarray;
     }
 
@@ -82,7 +84,6 @@ function Guia() {
                 productosarrayCat.push(e);
             }
         } )
-        console.log(productosarrayCat);
         setCategoriasDeProds(productosarrayCat)
         
     }
@@ -122,11 +123,11 @@ function Guia() {
               className="div_tipos_container"
               onClick={togglingMenu,toggleMenuProductos}
             >
-              <div className="title_tipo">
-                <Link to={`/${e.prodcategoriaurl}`}>
+              <div className="title_tipo" onClick={()=>{window.location.reload()}}>
+                <Link to={`/${e.prodcategoriaurl}`} >
                   <div className="title_tipo">
                   
-                    <p className="title_p">{e.prodcategoriaurl}</p>
+                    <p className="title_p">{e.prodcategoriaurl.toUpperCase()}</p>
                   </div>
                 </Link>
               </div>
@@ -156,9 +157,15 @@ function Guia() {
           <Route path={'/contactanos'} element={<Contactanos />}>
             
           </Route>
+          <Route path={'/policy'} element={<PrivacyPolicy />} >
+            
+          </Route>
+          <Route path={'/termsandconditions'} element={<TermsandConditions />} >
+            
+          </Route>
           {categoriasdeProds.map((e) => (
             <Route
-              exact
+              
               path={`/${e.prodcategoriaurl}`}
               element={
                 <Productos producs={e.prodnombre} url={e.prodcategoriaurl} categoriaid={e.prodcategoria} namess={productos} />

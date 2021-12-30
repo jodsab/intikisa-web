@@ -188,6 +188,7 @@ function HomeLogin(props) {
     }
     else if( isLogged === false && divReg=== false && divLog === true ){
         return (
+            <div className='background_black'>
             <div className="login_container">
                 <div className="login">
                     <div className={showLogMenu ? 'login_inputs showlogmenu': 'login_inputs'}>
@@ -209,6 +210,8 @@ function HomeLogin(props) {
                     
                 </div>
             </div>
+            </div>
+            
         )
     }
     else {

@@ -65,7 +65,7 @@ function Productos(props){
     return(
         <div className='productos_cont_todo'>
             <div className='url_tipo'>
-                <h3>{props.url} :</h3>
+                <h3>{props.url.toUpperCase()} :</h3>
             </div>
             <ul className='productos_container'>
             {

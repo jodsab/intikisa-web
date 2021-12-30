@@ -31,13 +31,13 @@ function Footer() {
                             <li>
                               <strong>Nuestras redes</strong>
                               <div className="redes_sociales_container">
-                                <a href="https://www.facebook.com" target="_blank" >
+                                <a href="https://www.facebook.com/intikisa.peru" target="_blank" >
                                     <FaFacebook className="rs_icon"/>
                                 </a>
-                                <a href="https://www.instagram.com" target="_blank">
+                                <a href="https://www.instagram.com/intikisa.peru/" target="_blank">
                                     <SiInstagram className="rs_icon"/>
                                 </a>
-                                <a href="https://www.tiktok.com" target="_blank">
+                                <a href="https://www.tiktok.com/@intikisaperu?" target="_blank">
                                     <FaTiktok className="rs_icon"/>
                                 </a>
                                </div> 
