@@ -81,8 +81,8 @@ function CarritoAdd(props){
     return(
         <div className='add_container'>
             <button onClick={()=>{getUserName() != null ? insertarCarrito() : ingreseAsuCuenta() } } className='btn_add'>
-                <BsCartPlus className='carrito' />
-                
+                {/* <BsCartPlus className='carrito' /> */}
+                Agregar al carrito
             </button>            
         </div>
     )

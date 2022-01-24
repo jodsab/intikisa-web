@@ -1,0 +1,96 @@
+.alert_container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999999;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+.alert_container.show{
+    display: flex;
+}
+
+.alertx_container{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 90%;
+    margin-right: 17px;
+    max-width: 500px;
+    position: relative;
+
+    .space_alert{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .alerta{
+            width: 100%;
+        }
+        p{
+            color: black;
+            padding: 0 10px;
+            margin: 12px auto;
+            font-size: 25px;
+            text-align: center;
+        }
+        
+    }
+
+    .formulario{
+        margin: 0 0 15px 0;
+        width: 80%;
+        .input_email{
+            width: 100%;
+            padding: 6px 8px;
+        }
+
+        .input_email:focus{
+            outline: none;
+        }
+    }
+
+    .btn_suscribirse{
+        cursor: pointer;
+        border: none;
+        padding: 7px 12px;
+        font-weight: 600;
+        background-color: black;
+        color: white;
+        margin-bottom: 12px;
+    }
+
+    .btn_suscribirse:hover{
+        background-color: rgb(85, 255, 122);
+        color: black;
+    }
+
+    .cerrar_ventana{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        position: absolute;
+        height: 38px;
+        width: 38px;
+        font-size: 30px;
+        border: 1px solid black;
+        border-radius: 50%;
+        background-color: white;
+        font-weight: 600;
+        top: -15px;
+        right: -15px;
+    }
+
+    .cerrar_ventana:hover{
+        color:rgb(85, 255, 122);
+    }
+}

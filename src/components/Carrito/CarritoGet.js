@@ -256,7 +256,8 @@ function CarritoGet(props){
             </div>
             <div className='divcarrito'>
                 <button onClick={()=>{hacerTodo(); setShowDivCarrito(!showDivCarrito)}} className="rs_icon">
-                    <CgShoppingCart  />
+                    <CgShoppingCart className='icon' />
+                    <p>Carrito</p>
                 </button>
 
                 <div className='productos' >

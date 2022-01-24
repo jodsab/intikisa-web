@@ -52,7 +52,7 @@ function Producto(props){
     return(
         <div className='producto_container_xdd'>
             <div className='title_del_producto'>
-                <h3>{procs.prodcategoriaurl.toUpperCase()}: {procs.prodnombre} </h3>
+                <h3> {procs.prodnombre} </h3>
             </div>
             <div className='producto_container'>
                 <div className='fotos_producto' >
@@ -71,19 +71,20 @@ function Producto(props){
                 </div>
                 <div className='description'>
                     <h4 className='nombre'>{procs.prodnombre} </h4>
-                    {/* <p className='ingredientes'>{procs.prod_ingredientes} </p> */}
                     {
-                            procs.prodstatus === 0 ? <div className='comprar'>
-                            <p className='precio'>S/.{procs.proprecio}</p>
-                            <div className='div_icon_add_tocart'>
+                            procs.prodstatus === 0 ? 
+                            <div className='comprar'>
+                                <div className='p_flex'><p className='sku'>ANTES: </p><p className='precioantes'> S/.{procs.proprecio} </p></div>
+                                <p className='precio'>S/.{procs.proprecioferta}</p>
+                                <div className='div_icon_add_tocart'>
                                     <CarritoAdd className='carrito' nombre={`${procs.prodnombre}`} precio={`${procs.proprecio}`} />
-                                    <p className='add_to_cart'>Agregar al carrito</p>
+                                    {/* <p className='add_to_cart'>Agregar al carrito</p> */}
                                 </div>
                             </div>
                             :
                             <p>Pronto</p>
                         }
-                    
+                    <p className='skuletra'>{props.sku}</p>
                     <p className='propiedades'>{procs.proddescripcion} </p>
                 
                 </div>

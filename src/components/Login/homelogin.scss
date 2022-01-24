@@ -1,195 +1,134 @@
-.welcome_container{
+.homelogin_container{
     display: flex;
-    align-items: center;
-
-    .user-space{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        
-        .user{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .user-display{
-            text-align: center;
-            display: none;
-            transition: all .5 ease-in-out;
-        }
-
-        .user-display{
-            display: block;
-            top: 80px;
-        }
-    }
-
-    .logout-btn{
-        border: none;
-        color: blue;
-        background: none;
-    }
-}
-
-.login_container{
-    display: flex;
+    flex-direction: column;
     justify-content: center;
-    width: 80%;
-    margin: auto;
+    align-items: center;
+    margin: 40px auto;
 
-    .login{
-        text-align: center;
-        width: 100%;
-        margin: auto;
-
-        .error_space{
-            .error_alert{
-                font-size: 14px;
-                margin: 4px 0;
-                color: red;
-            }
-        }
-
-        .login_inputs{
+    .btns_tipo_user_empresa{
+        display: flex;
+        button{
+            border: none;
+            background-color: rgba(255, 255, 255, 0);
+            cursor: pointer;
+            color: white;
+            font-weight: 600;
             display: flex;
-            flex-direction: column;
-
-            #entrar{
-                margin: 2px 0;
-                font-size: 22px;
-            }
-
-            input{
-                margin: 6px 0;
-                padding: 6px 12px;
-                border: 1px solid black;
-                border-radius: 15px;
-            }
-
-            input:focus{
-                background-color: rgba(166, 249, 255, 0.4);
-            }
-
-            #noacc{
-                margin: 40px 0 4px 0;
-                font-size: 16px;
-            }
-
-            .btn_entrar{
-                width: 40%;
-                margin: 5px auto 0 auto;
-                border: 1px solid black;
-                border-radius: 12px;
-                padding: 5px 0;
-                background-color: rgb(138, 255, 144);
-                border: 1px solid rgb(13, 255, 25);
-
-            }
-
-            .btn_entrar:hover{
-                cursor: pointer;
-                background-color: rgb(173, 255, 92);
-            }
-
-            .btn_rgster{
-                width: 50%;
-                margin: auto;
-                border: none;
-                background-color: rgba(250, 245, 203,.1);
-                color: blue;
-                text-decoration: underline;
-            }
-
-            .btn_rgster:hover{
-                cursor: pointer;
-            }
-
-            .btn-log{
-                display: none;
-            }
-    
-            .btn-log.showBtn{
-                display: block;
-            }
-    
-            .login_inputs{
-                display: none;
-                flex-direction: column;
-            }
-            .login_inputs.showlogmenu{
-                display: block;
-            }
-        }
-    }
-}
-
-.registration_container{
-    .registration{
-        text-align: center;
-        width: 200px;
-
-        .regster{
-            margin: 0 0 10px 0;
-            font-size: 22px;
-        }
-
-        .registration_inputs{
-            display: flex;
-            flex-direction: column;
-            align-content: center;
             align-items: center;
 
-            label{
-                font-size: 15px;
-                align-self: start;
-                align-self: center;
-                margin: 0 0 2px 0;
+            p{
+                margin: 0 5px;
             }
-
-            input{
-                margin: 0 auto 9px auto;
-                padding: 5px 10px;
-                border: 1px solid black;
-                border-radius: 15px;
-            }
-            input:focus{
-                background-color: rgb(245, 255, 234);
-                box-shadow: 0 0 4px rgb(160, 255, 160);
-            }
+        }      
+        .btn_top{
+            color: rgb(87, 87, 87);
+            border-top-right-radius: 7px;
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.7);
+            padding: 5px 8px;
         }
 
-        .alrgth{
-            margin: 25px auto 6px auto;
+        .btn_top.active{
+            background-color: #74D451;
+            color: white;
+        }
+
+        .btn_top.apagado{
+            background-color: #74D451;
+            color: white;
+        }
+    }
+    .btns_login_registro{
+        .espacio_flex_column{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .msj{
+            width: 80%;
+            margin: 10px auto 5px auto;
+            text-align: center;
             font-size: 16px;
         }
 
-        .btn_login{
-            width: 90%;
+        .foto_cuadro{
+            margin: 5px auto 0;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .btns_flex{
+            display: flex;
+            justify-content: center;
+            height: 35px;
+            margin: 25px auto;
+        }
+
+        .cuadro_grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+            gap: 20px;
+            min-width: 300px;
+            width: 85%;
+            max-width: 900px;
+            margin: auto;
+            .flex_column{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .btn{
+            margin: 0 4px;
+            font-size: 23px;
             font-weight: 600;
-            margin: 7px auto 0 auto;
-            border: 1px solid black;
-            color: rgb(255, 255, 255);
-            font-size: 15px;
-            border-radius: 12px;
-            padding: 3px 0;
-            background-color: rgb(92, 116, 255);
-        }
-
-        .btn_login:hover{
+            color: rgba(112, 112, 112, .6);
             cursor: pointer;
-            background-color: rgb(76, 103, 253);
-        }
-
-        .btn_lgns{
             border: none;
-            color: blue;
-            text-decoration: underline;
-            background-color: rgba(250, 245, 203,.1);
+            background-color: rgba(255, 255, 255, 0);
+            transition: all .2s ease-in-out;
         }
 
-        .btn_lgns:hover{
-            cursor: pointer;
+        .btn:hover{
+            color: rgb(31, 31, 31);
+        }
+
+        .btn_login_usuario.active{
+            color: #74D451;
+            font-size: 27px;
+        }
+
+        .btn_registro_usuario.apagado{
+            color: #74D451;
+            font-size: 27px;
+        }
+
+        .btn_login_empresa.active{
+            color: #74D451;
+            font-size: 27px;
+        }
+
+        .btn_registro_empresa.apagado{
+            color: #74D451;
+            font-size: 27px;
         }
     }
+}
+
+@media (max-width: 650px){
+    .homelogin_container{
+        .btns_login_registro{
+            .cuadro_grid{
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
 }

@@ -51,6 +51,12 @@
 
     .description{
 
+        .skuletra{
+            color: rgb(112, 112, 112);
+            font-size: 20px;
+            margin: 8px auto;
+        }
+
         h4,p{
             margin: 0;
         }
@@ -61,7 +67,7 @@
 
         .precio{
             font-size: 35px;
-            margin: 20px 0;
+            margin: 8px 0;
             font-family: 'Kanit', sans-serif;
         }
 
@@ -78,7 +84,16 @@
 
         .comprar{
             display: flex;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
+            .p_flex{
+                display: flex;
+                align-items: flex-end;
+                .precioantes{
+                    text-decoration:line-through
+                }
+            }
 
             .div_icon_add_tocart{
                 display: flex;
@@ -246,6 +261,7 @@
         .description{
             .precio{
                 font-size: 30px;
+                
             }
 
             .comprar{

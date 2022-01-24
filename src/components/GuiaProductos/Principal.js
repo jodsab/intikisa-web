@@ -2,6 +2,9 @@ import {useState, useEffect} from 'react';
 
 import './principal.scss';
 
+import Izquierda from '../laterales/Izquierda';
+import Derecha from '../laterales/Derecha';
+
 import CarritoAdd from '../Carrito/CarritoAdd';
 
 import SliderMenu from '../Slider/SliderMenu';
@@ -10,6 +13,7 @@ import SliderMenu from '../Slider/SliderMenu';
 
 import aexportapi from '../api/aexportapi';
 const URL_PRODUCTOS = "https://intikisaperu.com/oficial/api/productos.php";
+
 
 function Principal(props){
 
@@ -46,8 +50,11 @@ function Principal(props){
     }, []);
 
     return(
+        <div>
+        <SliderMenu />
         <div className='principal_container'>
-            <SliderMenu />
+            <Izquierda />
+            
             <ul className='lista_productos_menu_principal'>
                 {
                     productos.map((e) => (
@@ -61,7 +68,9 @@ function Principal(props){
                                 <div className='description'>
                     
                                     <div className='comprar'>
-                                        <p className='precio'>S/.{e.proprecio} </p>
+                                        <p className='sku'>SKU: {e.prodsku}</p>
+                                        <div className='p_flex'><p className='sku'>ANTES:</p><p className='precioantes'> S/.{e.proprecio} </p></div>
+                                        <p className='precio'>S/.{e.proprecioferta} </p>
                                     </div>
                 
                                 </div>
@@ -71,54 +80,18 @@ function Principal(props){
                                 e.prodstatus == 0 ?
                                 <div className='div_icon_add_tocart'>
 
-                                            <CarritoAdd className='carrito' nombre={`${e.prodnombre}`} precio={`${e.proprecio}`} />
-                                            <p className='add_to_cart'>Agregar</p>
+                                            <CarritoAdd className='carrito' nombre={`${e.prodnombre}`} precio={`${e.proprecioferta}`} />
+                                            {/* <p className='add_to_cart'>Agregar</p> */}
                                 </div>
                             : <p>Pronto</p>
                             }
                         </li>
                     ))
                 }
-                
-            {/* {
-                productos.map((e) => (
-                    e.ctgria_productos.map((f) => (
-                        <li className='producto_div_final'>
-                            <a href={`https://intikisaperu.com/#/${e.prodcategoriaurl}/${f.prod_link}`}>
-                            <div className='producto_container'>
-                                <h4 className='nombre'>{f.prod_name} </h4>
-                                <div className='container_muestra'>
-                                    <img src={require(`../../img/productos/${f.prod_src[0]}`).default} className='foto_muestra_producto' alt={f.prod_name} ></img>
-                                </div>
-                                <div className='description'>
-                    
-                                    <div className='comprar'>
-                                        <p className='precio'>S/.{f.prod_precio}.00 </p>
-                                        
-                                    </div>
-                
-                                </div>
-                            </div>
-                            </a>
-                            {
-                                f.prod_status == 0 ?
-                                <div className='div_icon_add_tocart'>
-
-                                            <CarritoAdd className='carrito' nombre={`${f.prod_name}`} precio={`${f.prod_precio}`} />
-                                            <p className='add_to_cart'>Agregar</p>
-                                </div>
-                            : <p>Pronto</p>
-                            }
-
-                            
-                        </li>
-                    ))
-                ))
-            } */}
             </ul>
-            
+            <Derecha />
         </div>
-        
+        </div>        
     )
 }
 

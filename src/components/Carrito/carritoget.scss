@@ -30,31 +30,41 @@
         justify-content: center;
 
         .rs_icon{
-            color: rgb(1, 255, 200);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             border: none;
             padding: 6px;
             margin: 0;
-            height: 100%;
-            font-size: 22px;
-            border-radius: 50%;
-            background-color: rgb(44, 44, 43);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 3px;
+            background-color: white;
+            position: relative;
+            margin: 0 5px;
+            .icon{
+                font-size: 30px;
+                padding: 7px;
+            }
+
+            p{
+                margin: 0;
+                font-size: 17px;
+                
+            }
         }
         .rs_icon:hover{
             cursor: pointer;
-            color: honeydew;
+            
         }
 
         .productos{
-            font-size: 14px;
-            position: relative;
-            padding: 1px 4px;
-            height: 100%;
-            top: 15px;
-            right: 15px;
+            font-size: 15px;
+            position: absolute;
+            padding: 3px 6px;
+            top: 10px;
+            right: 10px;
             color: white;
             background-color: red;
             border-radius: 50%;
@@ -223,6 +233,19 @@
 
     .carrito{
         .divcarrito{
+
+            .rs_icon{
+                .icon{
+                    font-size: 30px;
+                }
+                p{
+                    display: none;
+                }
+            }
+            .productos{
+                font-size: 12px;
+            }
+
             .div_items_carrito{
                 .div_productos{
                     position: fixed;

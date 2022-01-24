@@ -2,6 +2,8 @@
     width: 80%;
     margin: auto;
     margin-bottom: 20px;
+    min-height: 50vh;
+
     .productos_container{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -12,9 +14,7 @@
         margin: 0;
     
         .productos_item_container{
-            border: 1px solid rgb(238, 238, 238);
-            box-shadow: 0 0 3px rgba(39, 255, 122, .6);
-            border-radius: 18px;
+            border: 1px solid rgb(209, 209, 209);
             width: 275px;
             padding: 10px;
             display: flex;
@@ -26,6 +26,7 @@
     
             .nombre_producto{
                 color: black;
+                margin: 6px auto;
             }
     
     
@@ -49,6 +50,7 @@
         
             .pagar_ahora{
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 margin: 10px 0;

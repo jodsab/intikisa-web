@@ -2,9 +2,13 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import Guia from "../components/GuiaProductos/Guia";
 import Botmsj from "../components/BotMsj/Botmsj";
+import Izquierda from "../components/laterales/Izquierda";
+import Derecha from "../components/laterales/Derecha";
+import SliderMenu from "../components/Slider/SliderMenu";
+import BarraNav from "../components/navigation/BarraNav";
+import { Alertx } from "../components/alertas/Alertx";
 
 import './home.scss'
-import Promo from "../components/Promos/Promo";
 import TelefonoCorreo from "../components/Telefono/TelefonoCorreo";
 
 import { ToastContainer } from 'react-toastify';
@@ -12,25 +16,20 @@ import { ToastContainer } from 'react-toastify';
 function Home(){
     return(
         <div className='casa'>
+            <Alertx />
             <div className='escritorio' >
                 <TelefonoCorreo />     
             </div>
-            <Navbar />
-            <div className='telefono'>
+{/*             <div className='telefono'>
                 <TelefonoCorreo  /> 
-            </div>
-            <div className='home_container'>
-                <Botmsj />
+            </div> */}
+            <Botmsj />
+
+                
                 <div className='space'></div>
-
-                <Promo />
-
                 <Guia />
-                <div className='contact_cuerpo'>  
-
-                </div>
                 <Footer />
-            </div>
+
             <ToastContainer 
                 />
         </div>

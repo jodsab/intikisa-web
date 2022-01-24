@@ -1,12 +1,16 @@
 import React, {useState, useRef} from 'react'
 
 import {AiOutlineUser} from 'react-icons/ai';
+import {FaRegUser} from 'react-icons/fa'
+import {MdBusiness} from 'react-icons/md'
 
 import './homelogin.scss';
 
 import {setCurrentUser, setPasswordUser,setIdUser,setEmailUser,setDireccionUser,setCelularUser} from '../Helpers/auth-helpers';
-
-import swal from 'sweetalert';
+import { Loguser } from './usuario/Loguser';
+import { Reguser } from './usuario/Reguser';
+import { Logempresa } from './empresario/Logempresa';
+import { Regempresa } from './empresario/Regempresa';
 
 //LOGIN SETUP
 const URL_LOGIN = "https://intikisaperu.com/oficial/login.php";
@@ -55,36 +59,6 @@ function HomeLogin(props) {
         return fechita
     } 
 
-    const alertaLogged = (nombre) => {
-        swal({
-            title: "Ingreso exitoso",
-            text: `Bienvenido ${nombre}`,
-            alert: "success",
-            button: "Aceptar",
-            timer: "3000"
-        })
-    }
-
-    const alertRegistrado = () => {
-        swal({
-            title: "Resgitro exitoso",
-            text: `Ahora ingresa con tu nuevo usuario`,
-            alert: "success",
-            button: "Aceptar",
-            timer: "4000"
-        })
-    }
-
-    const failRegister = () => {
-        swal({
-            title: "Resgitro Fallido",
-            text: `Oops! Algo ha pasado, intenta con otro nombre de usuario`,
-            alert: "error",
-            button: "Aceptar",
-            timer: "4000"
-        })
-    }
-
     //LOGIN
     const [error, setError] = useState(null);
 
@@ -111,7 +85,6 @@ function HomeLogin(props) {
             setEmailUser(respuestaJson.email)
             setDireccionUser(respuestaJson.direccion)
             setCelularUser(respuestaJson.celular)
-            alertaLogged(respuestaJson.nombre)
         }
         setError(respuestaJson.error)
     }
@@ -136,11 +109,7 @@ function HomeLogin(props) {
         const regRespuestaJson = await enviarRegData(URL_REGISTER, regdata);
         console.log("respuesta desde el evento register", regRespuestaJson);
         console.log(regRespuestaJson.registro);
-        if(regRespuestaJson.registro == true ){
-            alertRegistrado();
-        } else{
-            failRegister();
-        }
+
         changeLogin()
         changeRegister()
     }
@@ -168,78 +137,77 @@ function HomeLogin(props) {
 
     const [ showLogMenu, setShowLogMenu ] = useState(true);
 
-    if( isLogged && divReg === false && divLog === false ){
-        return (
-            <div className='welcome_container'>
-                <div className='user-space'>
-                    <div className='user'>
-                        <AiOutlineUser />
-                        <strong>{welcomemsj}</strong>
-                    </div>
-                    
-                    <div className='user-display'>
-                        <p>Productos</p>
-                        <button onClick={logout} className='logout-btn'>Cerrar Sesión</button>
-                    </div>
-                </div>
-                
-            </div> 
-        )
-    }
-    else if( isLogged === false && divReg=== false && divLog === true ){
-        return (
-            <div className='background_black'>
-            <div className="login_container">
-                <div className="login">
-                    <div className={showLogMenu ? 'login_inputs showlogmenu': 'login_inputs'}>
-                        <p id='entrar'>Entrar</p>
-                        <form onSubmit={handleLogin}>
-                        <input type="text" placeholder="Usuario" ref={refUsuario} required></input>
-                        <input type="password" placeholder="Contraseña" ref={refClave} required></input>
+    const [modoEmpresa, setModoEmpresa] = useState(true);
+    const [divlogUser, setDivlogUser] = useState(true);
+    const [divlogEmp, setDivlogEmp] = useState(true);
+
+    return(
+        <div className='homelogin_container'>
+            <div className='btns_tipo_user_empresa'>
+                <button className={modoEmpresa ? 'btn_top active': 'btn_top'} onClick={()=>{setModoEmpresa(true)}}>
+                    <FaRegUser />    
+                    <p>            
+                        Usuario
+                    </p>            
+                </button>
+                <button className={modoEmpresa ? 'btn_top': 'btn_top apagado'} onClick={()=>{setModoEmpresa(false)}}>
+                    <MdBusiness />                
+                    <p>            
+                        Empresa
+                    </p> 
+                </button>
+            </div>
+
+            <div className='btns_login_registro'>
+                {
+                    modoEmpresa ?
+                    <div className='espacio_flex_column'>
+                        <div className='btns_flex'>
+                            <button className={divlogUser ? 'btn btn_login_usuario active' : 'btn btn_login_usuario'} onClick={()=>{setDivlogUser(true)}}>
+                                Login
+                            </button>
+                            <button className={divlogUser ? 'btn btn_registro_usuario' : 'btn btn_registro_usuario apagado'} onClick={()=>{setDivlogUser(false)}}>
+                                Registro
+                            </button>
+                        </div>
+                        <div className='cuadro_grid'>
+                            <div className='flex_column'>
+                                <img className='foto_cuadro' src={require('../../img/usuario.jpg').default} alt='fotousuario' />
+                                <p className='msj'>
+                                    Accede y compra nuestros productos obteniendo descuentos exclusivos.
+                                </p>
+                            </div>
                             {
-                                error &&
-                                <div className='error_space'>
-                                    <p className='error_alert'>{error}</p>
-                                </div>
-                            }    
-                            <input type='submit' className='btn_entrar' value='ENTRAR'></input>
-                        <p id='noacc'>¿No tienes una cuenta?</p>
-                        <button  onClick={changeRegister, changeLogin} className='btn_rgster' >Registrarse</button>
-                        </form>
+                                divlogUser ? <Loguser />:<Reguser />
+                            }
+                        </div>
                     </div>
-                    
-                </div>
-            </div>
-            </div>
-            
-        )
-    }
-    else {
-        return(
-            <div className="registration_container">
-                <div className="registration">
-                    <p className='regster'>REGISTRATE GRATIS Y COMPRA FÁCIL</p>
-                    <div >
-                        <form onSubmit={handleRegister} className='registration_inputs'>
-                        <label>Usuario:</label>
-                        <input type="text" ref={refRegUsuario} required></input>
-                        <label>Email:</label>
-                        <input type="email" ref={refRegEmail} required></input>
-                        <label>Contraseña:</label>
-                        <input type="password" ref={refRegClave} required></input>
-                        <label>Celular:</label>
-                        <input type='text' ref={refRegCelular} required></input>
-                        <label>Dirección de envío:</label>
-                        <input type='text' ref={refRegDireccion} required></input>
-                       <input type='submit' className='btn_login' value='REGISTRARME'></input>
-                        <p className='alrgth'>¿Ya tienes una cuenta?</p>
-                        <button onClick={changeRegister,changeLogin} className='btn_lgns' >Ingresar</button>
-                        </form>
+                    :
+                    <div className='espacio_flex_column'>
+                        <div className='btns_flex'>
+                            <button className={divlogEmp ? 'btn btn_login_empresa active':'btn btn_login_empresa'} onClick={()=>{setDivlogEmp(true)}}>
+                                Login
+                            </button>
+                            <button className={divlogEmp ? 'btn btn_registro_empresa':'btn btn_registro_empresa apagado'} onClick={()=>{setDivlogEmp(false)}}>
+                                Registro
+                            </button>
+                        </div>
+                        <div className='cuadro_grid'>
+                            <div>
+                                <img className='foto_cuadro' src={require('../../img/empresa.jpg').default} alt='fotoempresa' />
+                                <p className='msj'>
+                                    Únete a nosotros y vende nuestros productos, y los tuyos también, trabajemos juntos.
+                                </p>
+                            </div>
+                            {
+                                divlogEmp ? <Logempresa />:<Regempresa />
+                            }
+                        </div>
                     </div>
-                </div>
-            </div>
-        )
-    }
+                }
+            </div>            
+        </div>
+    )
     
 }
 

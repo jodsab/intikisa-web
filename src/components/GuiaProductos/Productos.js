@@ -81,8 +81,8 @@ function Productos(props){
                                     {
                                         e.prodstatus == 0 ? 
                                         <div>
-                                            <CarritoAdd className='carrito' nombre={`${e.prodnombre}`} precio={`${e.proprecio}`} />
-                                            <p className='add_to_cart'>Agregar</p>
+                                            <CarritoAdd className='carrito' nombre={`${e.prodnombre}`} precio={`${e.proprecioferta}`} />
+                                            {/* <p className='add_to_cart'>Agregar</p> */}
                                         </div>
                                         : 
                                         <p>Pronto</p>

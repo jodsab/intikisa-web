@@ -4,171 +4,83 @@
     justify-content: center;
     align-items: center;
 
+    .btn_menu{
+        display: none;
+    }
 
-    .usuario{
+    .flex_buttons{
         display: flex;
-        align-items: center;
-
-        .cerrar_menu_iniciado{
-            color: rgb(255, 255, 255);
-            padding: 7px;
-            font-size: 35px;
-            border: none;
-            border-radius: 12px;
-            background-color: rgb(65, 255, 166);
-            z-index: 2;
+        .btn_iniciar_sesion{
+            cursor: pointer;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-        }
-
-        .usuario_welcome{
-            font-size: 16px;
-            padding: 0 5px;
-        }
-        strong{
-            font-size: 18px;
-        }
-
-    }
-
-    .btn_iniciar_sesion{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: none;
-        background-color: white;
-
-
-        .icon{
-            color: rgb(255, 255, 255);
-            padding: 7px;
-            font-size: 35px;
-            border-radius: 50%;
-            background-color: rgb(65, 255, 166);
-            outline:  5px solid white;
-            z-index: 2;
-        }
-        p{
-            font-size: 19px;
-            color: rgb(160, 160, 160);
-            padding: 5px 12px;
-            background-color: rgb(65, 255, 166);
-            border-radius: 14px;
+            border: none;
+            background-color: white;
+            width: 100px;
+            text-decoration: none;
+            .letra{
+                color: black;
+            }
+    
+            .icon{
+                color:black;
+                padding: 7px 0;
+                font-size: 28px;
+                border-radius: 50%;
+                z-index: 2;
+            }
+            
+            p{
+                font-size: 17px;
+                margin: 0;
+            }
         }
     }
-
     .btn_iniciar_sesion:hover{
-        cursor: pointer;
-        .icon,p{
-            color: black;
-            background: rgb(15,36,0);
-            background: linear-gradient(90deg, rgba(15,36,0,1) 0%, rgba(65,255,166,1) 0%, rgba(255,230,213,1) 100%);
+        .icon{
+            color:#74D451;
         }
         
     }
-    
-    .logger_register{
-        background-color: white;
-        border-radius: 18px;
-        bordeR: 1px solid rgb(191, 255, 191);
-        width: 300px;
-        padding: 15px 0;
-        display: none;
-
-        .cerrar_modal{
-            position: absolute;
-            top: -25px;
-            right: 0px;
-            border: none;
-            background: none;
-
-            p{
-                color:rgb(90, 0, 0);
-                font-size: 25px;
-                font-weight: 900;
-            }
-        }
-        .cerrar_modal:hover{
-            cursor: pointer;
-        }
-
-        .menu_cerrar_sesion{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
-            h5{
-                margin: 10px 0;
-            }
-            p{
-                margin: 0;
-            }
-            .msg_aqui_se_muestra{
-                font-weight: 600;
-                font-size: 18px;
-            }
-            .aun_no_tiene_compras{
-                font-size: 14px;
-                margin: 6px 0;
-            }
-
-            .btn_cerrarsesion{
-                border: none;
-                padding: 5px 10px;
-                background-color: rgba(255, 74, 74, .5);
-            }
-            .btn_cerrarsesion:hover{
-                cursor: pointer;
-                background-color: rgba(255, 74, 74, 1);
-            }
-            .btn_cerrarsesion:active{
-                transform: scale(90%);
-            }
-            
-        }
-    }
-
-    .logger_register.show{
-        display: flex;
-        justify-content: center;
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-    }
 }
 
-@media screen and (max-width: 650px){
+@media screen and (max-width: 600px){
     .divlogimp_container{
-
-        .usuario{
-    
-            .cerrar_menu_iniciado{
-                color: rgb(255, 255, 255);
-                padding:  1px 4px;
-                font-size: 13px;
-                border: none;
-                border-radius: 8px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: rgba(65, 255, 166, .7);
-                z-index: 2;
-            }
-    
-            .usuario_welcome{
-                border: none;
-                font-size: 12px;
-                padding: 0 2px;
-            }
-            strong{
-                font-size: 12px;
-            }
-    
+        .btn_menu{
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 52px;
+            height: 56px;
+            font-size: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+            background-color: white;
         }
+
+        .flex_buttons{
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            top: 60px;
+            left: -100%;
+            transition: all .6s ease-in-out;
+        }
+
+        .flex_buttons.show{
+            background-color: white;
+            top: 60px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
         .btn_iniciar_sesion{    
-    
             .icon{
                 padding: 4px;
                 font-size: 18px;
@@ -181,11 +93,6 @@
                 margin: 0;
                 border-radius: 8px;
             }
-        }
-    
-    
-        .logger_register.show{
-           width: 80%;
         }
     }
 

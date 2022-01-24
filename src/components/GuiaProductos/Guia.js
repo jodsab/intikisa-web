@@ -13,12 +13,10 @@ import {MdConnectWithoutContact} from 'react-icons/md';
 import { PrivacyPolicy } from "../policy/PrivacyPolicy";
 import { TermsandConditions } from "../policy/TermsandConditions";
 
-import productos from "../../productos/productos.json";
 import Producto from "./Producto";
 import Productos from "./Productos";
 
 import "./guia.scss";
-import Error404 from "../Error404";
 import Principal from "./Principal";
 
 import Success from "../RespuestadeCompra/Success";
@@ -30,6 +28,9 @@ import Valores from "../Submenu/Valores";
 import Contactanos from "../Submenu/Contactanos";
 
 import aexportapi from '../api/aexportapi';
+import DivLogimp from "../Login/DivLogimp";
+import HomeLogin from "../Login/HomeLogin";
+import Navbar from "../Navbar";
 const URL_PRODUCTOS = "https://intikisaperu.com/oficial/api/productos.php";
 
 function Guia() {
@@ -103,44 +104,8 @@ function Guia() {
 
   return (
     <div className="guia_container">
-      <button className='btn_menu_productos' onClick={toggleMenuProductos} >
-        <AiOutlineMenu />
-      </button>
       <HashRouter>          
-        <ul className={menuProductos ? "lista_tipos show" : "lista_tipos"}>
-          <li className="div_tipos_container" onClick={toggleMenuProductos} >
-            <Link to={'/'} >
-              <div className="title_tipo">
-                  <div className="title_tipo">
-                    <p className="title_p"><AiOutlineHome /></p>
-                  </div>
-              </div>
-            </Link>
-          </li>
-          {categoriasdeProds.map((e) => (
-            <li
-              key={e.prodid}
-              className="div_tipos_container"
-              onClick={togglingMenu,toggleMenuProductos}
-            >
-              <div className="title_tipo" onClick={()=>{window.location.reload()}}>
-                <Link to={`/${e.prodcategoriaurl}`} >
-                  <div className="title_tipo">
-                  
-                    <p className="title_p">{e.prodcategoriaurl.toUpperCase()}</p>
-                  </div>
-                </Link>
-              </div>
-            </li>
-          ))}
-          <div className='submenu_container'>
-            <li className="div_tipos_container2" onClick={toggleMenuProductos} ><Link to='/nosotros' > <p><IoIosPeople/>NOSOTROS</p></Link></li>
-            <li className="div_tipos_container2" onClick={toggleMenuProductos} ><Link to='/misionyvision' ><p><GiArrowScope/> MISION Y VISION</p></Link></li>
-            <li className="div_tipos_container2" onClick={toggleMenuProductos} ><Link to='/valores' ><p> <RiHandHeartFill/>VALORES</p></Link></li>
-            <li className="div_tipos_container2" onClick={toggleMenuProductos} ><Link to='/contactanos' ><p> <MdConnectWithoutContact/>CONTACTANOS</p></Link></li>
-          </div>
-        </ul>
-
+      <Navbar />          
         <Routes>
           <Route path={'/'} element={<Principal />}>
             
@@ -163,6 +128,9 @@ function Guia() {
           <Route path={'/termsandconditions'} element={<TermsandConditions />} >
             
           </Route>
+          <Route path={'/login'} element={<HomeLogin />} >
+            
+          </Route>
           {categoriasdeProds.map((e) => (
             <Route
               
@@ -176,11 +144,10 @@ function Guia() {
               <Route
                 exact
                 path={`/${e.prodcategoriaurl}/${e.prodid}`}
-                element={<Producto namess={e} pre={e.prodcategoriaurl} status={e.prodstatus} />}
+                element={<Producto namess={e} pre={e.prodcategoriaurl} status={e.prodstatus} sku={e.prodsku} />}
               ></Route>
             )
           )}
-          <Route component={Error404} />
           <Route
             path={'/compraexitosa'}
             element={<Success/>}

@@ -8,6 +8,15 @@
 .home_container{
     width: 100%;
     overflow-x: hidden;
+    .contenido{
+        display: grid;
+        width: 90%;
+        grid-template-columns: 1fr 2fr 1fr;
+        justify-items: center;
+        justify-content: center;
+        align-content: center;
+        margin: 30px auto;
+    }
 
     .space{
         height: 5px;

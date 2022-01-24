@@ -14,6 +14,27 @@
     top: 0;
     z-index: 9999;
 
+    .navbar_micuenta{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        z-index: 999999999;
+        background-color: rgba(116,212,81,.2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .navbar_micuenta2{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
     .logo_intik{
         a{
             .img_logo{
@@ -25,7 +46,41 @@
     .navbar_nav_options {
         display: flex;
         align-items: center;
+        justify-content: center;
         font-size: 30px;
+
+        .nav_opc_menu{
+            display: flex;
+            .btns-menu{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+                border: 1px solid rgb(219, 219, 219);
+                margin: auto 3px;
+                cursor: pointer;
+                background-color: white;
+
+                .icon-menu{
+                    font-size: 26px;
+                    padding: 7px;
+                    color: rgb(95, 95, 95);
+                }
+            }
+
+            .btns-menu:hover{
+                border: 1px solid rgb(170, 170, 170);
+                .icon-menu{
+                    color: #74D451;
+                }
+            }
+
+            p{
+                font-size: 14px;
+                margin: 0;
+            }
+        }
 
     }
 }

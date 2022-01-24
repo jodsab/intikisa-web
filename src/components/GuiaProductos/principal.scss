@@ -10,15 +10,19 @@
 
 .principal_container{
     color: black;
+    display: grid;
+    width: 95%;
+    grid-template-columns: 1fr 5fr 1fr;
+    margin: 25px auto;
+    justify-items: center;
 
     .lista_productos_menu_principal{
+        width: 100%;
         list-style-type: none;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         justify-content: center;
         align-content: center;
-        width: 90%;
-        margin: 40px auto;
         padding: 0;
 
         .producto_div_final{
@@ -65,7 +69,22 @@
                     .description{
                         .comprar{
                             display: flex;
+                            flex-direction: column;
                             align-items: center;
+                            justify-content: center;
+                            .sku{
+                                font-size: 12px;
+                                color: rgb(117, 117, 117);
+                                margin-top: 10px;
+                                padding: 0;
+                            }
+                            .p_flex{
+                                display: flex;
+                                align-items:flex-end;
+                            }
+                            .precioantes{
+                                text-decoration:line-through
+                            }
                             .precio{
                                 color: black;
                                 font-size: 35px;
@@ -146,7 +165,7 @@
                             .comprar{
                                 .precio{
                                     margin: 5px auto;
-                                    font-size: 26px;
+
                                 }
                             }
                         }
@@ -169,6 +188,7 @@
 @media only screen and (max-width: 1100px) {
 
     .principal_container{
+        grid-template-columns: 1fr;
         .lista_productos_menu_principal{
             width: 100%;
             .producto_div_final{
@@ -290,7 +310,7 @@
                         .description{
                             .comprar{
                                 .precio{
-                                    font-size: 20px;
+                                    font-size: 24px;
                                     margin: 0 auto;
                                 }
                             }

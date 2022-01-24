@@ -1,0 +1,48 @@
+.reguser_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    .formulario_container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .input_row{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin: 8px auto;
+
+            input{
+                margin: auto 5px;
+                padding: 6px 9px;
+                border: 1px solid #74d474;
+                border-radius: 8px;
+                outline: none;
+            }
+        }
+        .submit_btn{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 15px auto;
+
+            input{
+                cursor: pointer;
+                border: none;
+                padding: 6px 9px;
+                background-color: #74d474;
+                border: 1px solid #74d474;
+                color: white;
+                font-weight: 600;
+                font-size: 15px;
+            }
+
+            input:hover{
+                background-color: #18b818;
+            }
+        }
+    }
+}
