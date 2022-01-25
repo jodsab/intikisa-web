@@ -1,9 +1,9 @@
-import {AiFillMinusCircle, AiTwotoneExclamationCircle} from 'react-icons/ai';
+import {AiFillMinusCircle} from 'react-icons/ai';
 
 import {useState, useEffect} from 'react';
 
 import {CgShoppingCart} from "react-icons/cg"
-import { getUserName } from "../Helpers/auth-helpers";
+import { getUserName } from "../../Helpers/auth-helpers";
 import DivLogimp from "../Login/DivLogimp";
 
 import './carritoget.scss';
@@ -152,9 +152,6 @@ function CarritoGet(props){
             return productosarray
 
         }
-        
-
-
     }
 
     const cuantoPagar = async () => {
@@ -172,9 +169,7 @@ function CarritoGet(props){
                 setTotalPorPagar(pagpreciaso.toFixed(2))
         
                 return pagpreciaso
-            
         }
-        
     }
 
     const borrarCarrito = async (nombreuserx, idprod, producto) => {

@@ -1,18 +1,6 @@
-import {useState} from 'react';
-
-import ImgMsj from './ImgMsj';
-import Contacto from './Contacto';
-
 import './botmsj.scss';
 
-
 function Botmsj(){
-
-    const [showMsj, setShowMsj] = useState('');
-
-    function toggleMsj(){
-        setShowMsj(!showMsj);
-    }
 
     return(
         <div className='botmsj_container'>

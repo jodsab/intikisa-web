@@ -9,17 +9,12 @@ import CarritoAdd from '../Carrito/CarritoAdd';
 
 import SliderMenu from '../Slider/SliderMenu';
 
-/* import productos from "../../productos/productos.json"; */
-
-import aexportapi from '../api/aexportapi';
+import aexportapi from '../../api/aexportapi';
+import VideoSlider from '../video/VideoSlider';
 const URL_PRODUCTOS = "https://intikisaperu.com/oficial/api/productos.php";
 
 
 function Principal(props){
-
-    /* const procs = props.namess;
-
-    const [fotoMuestra, setFotoMuestra] = useState(procs.prod_src[0]); */
 
     const [productos, setProductos] = useState([]);
 
@@ -51,7 +46,7 @@ function Principal(props){
 
     return(
         <div>
-        <SliderMenu />
+        <VideoSlider />
         <div className='principal_container'>
             <Izquierda />
             
@@ -91,6 +86,7 @@ function Principal(props){
             </ul>
             <Derecha />
         </div>
+        <SliderMenu />
         </div>        
     )
 }

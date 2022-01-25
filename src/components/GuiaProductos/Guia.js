@@ -1,14 +1,7 @@
 import React, { useState, useEffect } from "react";
 
-import { Link, HashRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import { Route, Routes } from "react-router";
-
-import {AiOutlineHome} from 'react-icons/ai';
-import {AiOutlineMenu} from 'react-icons/ai';
-import {IoIosPeople} from 'react-icons/io';
-import {GiArrowScope} from 'react-icons/gi';
-import {RiHandHeartFill} from 'react-icons/ri';
-import {MdConnectWithoutContact} from 'react-icons/md';
 
 import { PrivacyPolicy } from "../policy/PrivacyPolicy";
 import { TermsandConditions } from "../policy/TermsandConditions";
@@ -27,29 +20,17 @@ import MisionYVision from "../Submenu/MisionYVision";
 import Valores from "../Submenu/Valores";
 import Contactanos from "../Submenu/Contactanos";
 
-import aexportapi from '../api/aexportapi';
-import DivLogimp from "../Login/DivLogimp";
+import aexportapi from '../../api/aexportapi'
 import HomeLogin from "../Login/HomeLogin";
 import Navbar from "../Navbar";
 const URL_PRODUCTOS = "https://intikisaperu.com/oficial/api/productos.php";
 
 function Guia() {
-  const [toggleMenu, setToggleMenu] = useState("");
-
-  function togglingMenu() {
-    setToggleMenu(!toggleMenu);
-  }
 
   const[ slider, setSlider] = useState(false)
 
-  const [menuProductos, setMenuProductos] = useState(false);
-
   const [categoriasdeProds, setCategoriasDeProds] = useState([]);
 
-  const toggleMenuProductos = () => {
-    setMenuProductos(!menuProductos)
-  }
-  //productos api
   const [productos, setProductos] = useState([]);
 
     const llamadaProductos = async () => {

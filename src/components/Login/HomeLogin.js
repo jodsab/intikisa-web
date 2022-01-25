@@ -1,12 +1,11 @@
 import React, {useState, useRef} from 'react'
 
-import {AiOutlineUser} from 'react-icons/ai';
 import {FaRegUser} from 'react-icons/fa'
 import {MdBusiness} from 'react-icons/md'
 
 import './homelogin.scss';
 
-import {setCurrentUser, setPasswordUser,setIdUser,setEmailUser,setDireccionUser,setCelularUser} from '../Helpers/auth-helpers';
+import {setCurrentUser, setPasswordUser,setIdUser,setEmailUser,setDireccionUser,setCelularUser} from '../../Helpers/auth-helpers';
 import { Loguser } from './usuario/Loguser';
 import { Reguser } from './usuario/Reguser';
 import { Logempresa } from './empresario/Logempresa';

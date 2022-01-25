@@ -6,7 +6,7 @@ import {BiMessageRounded} from 'react-icons/bi'
 import {BsArrowRightCircle} from 'react-icons/bs'
 
 import './divlogimp.scss'
-import { delenteToken, getUserName } from '../Helpers/auth-helpers'
+import { delenteToken, getUserName } from '../../Helpers/auth-helpers'
 
 function DivLogimp(props) {
 

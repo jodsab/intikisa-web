@@ -4,7 +4,7 @@ import {useEffect, useState} from 'react';
 import './productos.scss';
 import CarritoAdd from '../Carrito/CarritoAdd';
 
-import aexportapi from '../api/aexportapi';
+import aexportapi from '../../api/aexportapi';
 const URL_PRODUCTOS = "https://intikisaperu.com/oficial/api/productos.php";
 
 function Productos(props){

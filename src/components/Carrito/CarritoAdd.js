@@ -1,12 +1,10 @@
-import React, {useState, useRef, useEffect} from 'react'
-import { ToastContainer, toast } from 'react-toastify';
+import React from 'react'
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import './carritoadd.scss';
 
-import {BsCartPlus} from 'react-icons/bs';
-
-import {setToken, setCurrentUser,getToken,getUserName,delenteToken} from '../Helpers/auth-helpers';
+import {getUserName} from '../../Helpers/auth-helpers';
 
 //INSERTAR CARRITO
 const URL_INSERTAR_CARRITO = "https://intikisaperu.com/oficial/insertarcarrito.php";
@@ -81,7 +79,6 @@ function CarritoAdd(props){
     return(
         <div className='add_container'>
             <button onClick={()=>{getUserName() != null ? insertarCarrito() : ingreseAsuCuenta() } } className='btn_add'>
-                {/* <BsCartPlus className='carrito' /> */}
                 Agregar al carrito
             </button>            
         </div>

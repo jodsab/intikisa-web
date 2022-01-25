@@ -1,6 +1,6 @@
 import {useState, useEffect} from 'react';
 
-import { getUserName, getPasswordUser } from '../Helpers/auth-helpers';
+import { getUserName, getPasswordUser } from '../../Helpers/auth-helpers';
 
 import './success.scss';
 
