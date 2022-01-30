@@ -3,6 +3,17 @@
     margin: auto;
     margin-bottom: 20px;
     min-height: 50vh;
+    .title_del_producto{
+        margin-top: 12px;
+        .btn_back{
+            
+            border: none;
+            background-color: rgba(255, 255, 255, 0);
+            color: blue;
+            font-size: 16px;
+            text-decoration: none;
+        }
+    }
 
     .productos_container{
         display: grid;

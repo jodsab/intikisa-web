@@ -26,6 +26,14 @@
     max-width: 500px;
     position: relative;
 
+    .suscripcion{
+        .respuesta{
+            margin: 0;
+            color: red;
+            margin-bottom: 10px;
+        }
+    }
+
     .space_alert{
         display: flex;
         flex-direction: column;

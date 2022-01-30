@@ -35,7 +35,7 @@ function Principal(props){
                 productosarray.push(e);
             }
         } )
-
+        console.log(respuestaJson);
         return productosarray;
     }
 
@@ -45,7 +45,7 @@ function Principal(props){
     }, []);
 
     return(
-        <div>
+        <div className='real_principal_container'>
         <VideoSlider />
         <div className='principal_container'>
             <Izquierda />

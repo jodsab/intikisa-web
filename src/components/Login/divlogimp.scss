@@ -10,6 +10,17 @@
 
     .flex_buttons{
         display: flex;
+        flex-direction: column;
+
+        .categorias_ge{
+            display: none;
+        }
+
+        .flex_btns_real{
+            display: flex;
+            
+        }
+
         .btn_iniciar_sesion{
             cursor: pointer;
             display: flex;
@@ -20,7 +31,7 @@
             background-color: white;
             width: 100px;
             text-decoration: none;
-            .letra{
+            .letra2{
                 color: black;
             }
     
@@ -68,32 +79,51 @@
             position: absolute;
             display: flex;
             justify-content: center;
-            top: 60px;
+            top: 56px;
             left: -100%;
             transition: all .6s ease-in-out;
+            padding-bottom: 5px;
+
+            .flex_btns_real{
+                display: flex;
+                justify-content: center;
+            }
+
+            .categorias_ge{
+                display: block;
+                width: 100%;
+                text-align: center;
+
+                .categorias_container{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            .btn_iniciar_sesion{    
+            
+            
+                .icon{
+                    padding: 4px;
+                    font-size: 22px;
+                    outline:  3px solid white;
+                    z-index: 2;
+                }
+                .letra2{
+                    font-size: 12px;
+                }
+            }
         }
 
         .flex_buttons.show{
-            background-color: white;
-            top: 60px;
+            background-color: rgba(255, 255, 255, 1);
             left: 50%;
             transform: translate(-50%);
+            padding-bottom: 5px;
         }
 
-        .btn_iniciar_sesion{    
-            .icon{
-                padding: 4px;
-                font-size: 18px;
-                outline:  3px solid white;
-                z-index: 2;
-            }
-            p{
-                font-size: 12px;
-                padding: 3px 6px;
-                margin: 0;
-                border-radius: 8px;
-            }
-        }
+
     }
 
 }

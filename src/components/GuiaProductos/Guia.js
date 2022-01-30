@@ -23,6 +23,7 @@ import Contactanos from "../Submenu/Contactanos";
 import aexportapi from '../../api/aexportapi'
 import HomeLogin from "../Login/HomeLogin";
 import Navbar from "../Navbar";
+import Categorias from "../Categorias";
 const URL_PRODUCTOS = "https://intikisaperu.com/oficial/api/productos.php";
 
 function Guia() {
@@ -50,6 +51,7 @@ function Guia() {
                 productosarray.push(e);
             }
         } )
+
         setProductos(productosarray);
         return productosarray;
     }
@@ -87,6 +89,9 @@ function Guia() {
     <div className="guia_container">
       <HashRouter>          
       <Navbar />          
+      <div className="categorias_ga">          
+        <Categorias />          
+      </div>          
         <Routes>
           <Route path={'/'} element={<Principal />}>
             
@@ -114,8 +119,7 @@ function Guia() {
           </Route>
           {categoriasdeProds.map((e) => (
             <Route
-              
-              path={`/${e.prodcategoriaurl}`}
+              exact path={`/${e.prodcategoriaurl}`}
               element={
                 <Productos producs={e.prodnombre} url={e.prodcategoriaurl} categoriaid={e.prodcategoria} namess={productos} />
               }

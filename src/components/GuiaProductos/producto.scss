@@ -1,11 +1,20 @@
 .producto_container_xdd{
     width: 80%;
-    margin: auto;
+    margin: 20px auto;
+    .title_del_producto{
+        .btn_back{
+            border: none;
+            background-color: rgba(255, 255, 255, 0);
+            color: blue;
+            font-size: 16px;
+            text-decoration: none;
+        }
+    }
 }
 
 .producto_container{
     width: 80%;
-    margin: 70px auto;
+    margin: 20px auto;
     display: grid;
     grid-template-columns: 1fr 5fr 4fr;
     justify-items: center;
@@ -142,6 +151,7 @@
     .title_del_producto{
         width: 90%;
         margin: auto;
+
     }
 
     .producto_container{
@@ -239,6 +249,12 @@
 
     .title_del_producto{
         font-size: 14px;
+        .btn_back{
+            border: none;
+            background-color: rgba(255, 255, 255, 0);
+            color: blue;
+            font-size: 15px;
+        }
     }
 
     .producto_container{

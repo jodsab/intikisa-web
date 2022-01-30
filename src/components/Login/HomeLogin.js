@@ -117,7 +117,6 @@ function HomeLogin(props) {
     const [ divReg, setDivReg ] = useState(false);
     const [ divLog, setDivLog ] = useState(true);
 
-    const [ isLogged, setIsLogged ] = useState(false);
 
     function changeLogin(){
         setDivLog(!divLog)
@@ -126,15 +125,6 @@ function HomeLogin(props) {
     function changeRegister(){
         setDivReg(!divReg)
     }
-
-    const [welcomemsj, setWelcomemsj] = useState('');
-
-    const logout = () => {
-        setIsLogged(false);
-
-    }
-
-    const [ showLogMenu, setShowLogMenu ] = useState(true);
 
     const [modoEmpresa, setModoEmpresa] = useState(true);
     const [divlogUser, setDivlogUser] = useState(true);

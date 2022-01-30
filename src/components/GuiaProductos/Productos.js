@@ -8,14 +8,9 @@ import aexportapi from '../../api/aexportapi';
 const URL_PRODUCTOS = "https://intikisaperu.com/oficial/api/productos.php";
 
 function Productos(props){
-
-    const prods = props.producs;
     
     const [categoriasX, setCategoriasDeProds] = useState([]);
 
-    const procs = props.namess;
-
-    const [productos, setProductos] = useState([]);
     const llamadaProductos = async () => {
 
         const data = {
@@ -33,7 +28,6 @@ function Productos(props){
                 productosarray.push(e);
             }
         } )
-        setProductos(productosarray);
         return productosarray;
     }
     const categorias = async () => {
@@ -64,6 +58,9 @@ function Productos(props){
 
     return(
         <div className='productos_cont_todo'>
+            <div className='title_del_producto'>
+                <Link className='btn_back' to='/'> &lt; Atrás </Link>
+            </div>
             <div className='url_tipo'>
                 <h3>{props.url.toUpperCase()} :</h3>
             </div>
@@ -82,7 +79,6 @@ function Productos(props){
                                         e.prodstatus == 0 ? 
                                         <div>
                                             <CarritoAdd className='carrito' nombre={`${e.prodnombre}`} precio={`${e.proprecioferta}`} />
-                                            {/* <p className='add_to_cart'>Agregar</p> */}
                                         </div>
                                         : 
                                         <p>Pronto</p>

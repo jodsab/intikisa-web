@@ -13,3 +13,22 @@
         background-color: #50a033;
     }
 }
+
+@media (max-width: 600px) {
+    .add_container{
+        .btn_add{
+
+            font-size: 13px ;
+            cursor: pointer;
+            padding: 6px 8px;
+            border: none;
+            background-color: #74D451;
+            color: white;
+            margin-bottom: 7px;
+            
+        }    
+        .btn_add:hover{
+            background-color: #50a033;
+        }
+    }
+}

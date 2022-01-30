@@ -1,8 +1,10 @@
 import {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 
 import './producto.scss';
 
 import CarritoAdd from '../Carrito/CarritoAdd';
+import { FaWindowRestore } from 'react-icons/fa';
 
 const URL_PRODUCTOS = "https://intikisaperu.com/oficial/api/imagenes.php";
 export const callImages = async (url, data) => {
@@ -47,12 +49,13 @@ function Producto(props){
             left: 0,
             behavior: 'smooth'
           });
+         
     }, []);
 
     return(
         <div className='producto_container_xdd'>
             <div className='title_del_producto'>
-                <h3> {procs.prodnombre} </h3>
+                <Link className='btn_back' to='/'> &lt; Atrás </Link>
             </div>
             <div className='producto_container'>
                 <div className='fotos_producto' >
@@ -78,7 +81,6 @@ function Producto(props){
                                 <p className='precio'>S/.{procs.proprecioferta}</p>
                                 <div className='div_icon_add_tocart'>
                                     <CarritoAdd className='carrito' nombre={`${procs.prodnombre}`} precio={`${procs.proprecio}`} />
-                                    {/* <p className='add_to_cart'>Agregar al carrito</p> */}
                                 </div>
                             </div>
                             :

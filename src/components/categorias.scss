@@ -1,0 +1,116 @@
+.categorias_container{
+    background-color: white;
+    border: 1px solid #74D451;
+
+    .lista_categorias{
+        list-style-type: none;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 8px 0;
+        margin: 0;
+
+        li.item{
+            color: #74D451;
+            font-size: 18px;
+            font-weight: 600;
+            position: relative;
+            width: 196px;
+
+            .div_item{
+                cursor: pointer;
+                display: flex;
+                align-items: flex-end;
+                padding: 3px 8px;
+                text-decoration: none;
+                color: #74D451;
+            }
+
+            .div_item:hover{
+                color: white;
+                background-color: #74D451;
+            }
+
+            .productos{
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                position: absolute;
+                color: #74D451;
+                background-color: white;
+                z-index: 99999;
+                cursor: pointer;
+
+                .sublista{
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                    text-decoration: none;
+                    color: #74D451;
+
+                    .subitem{
+                        width: 180px;
+                        margin: 0;
+                        font-weight: 100;
+                        font-size: 16px;
+                        padding: 4px 8px;
+                        outline: 1px solid rgba(58, 58, 58, 0.1);
+                        display: none;
+                    }
+                    .subitem:hover{
+                        background-color: #74D451;
+                        color: white;
+                    }
+
+                    .subitem.show{
+                        display: block;
+                    }
+
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .categorias_container{
+        border: none;
+    
+        .lista_categorias{
+            flex-direction: column;
+    
+            li.item{
+                color: black;
+                
+                .div_item{
+                    color: black;
+                }
+    
+                .div_item:hover{
+
+                }
+    
+                .productos{
+                    position: relative;
+    
+                    .sublista{
+                        color: black;
+    
+                        .subitem{
+                            display: block;
+                        }
+                        .subitem:hover{
+
+                        }
+    
+                        .subitem.show{
+                            display: block;
+                        }
+    
+                    }
+    
+                }
+            }
+        }
+    }
+}
